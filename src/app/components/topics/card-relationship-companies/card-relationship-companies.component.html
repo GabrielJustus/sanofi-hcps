@@ -1,0 +1,126 @@
+<app-card-item
+  relativePathIcon="assets/images/icon1.png"
+  title="RELATIONSHIP WITH PHARMACEUTICAL COMPANIES"
+  (toggle)="reloadGraphic($event)"
+>
+  <div class="row">
+    <div class="col-6" style="padding-top: 70px">
+      <div class="row">
+        <div class="col-4" style="margin-top: -10%">
+          <h3 class="title-circle-percent">94%</h3>
+          <p class="text-circle-percent">
+            Physical therapists are the ones who are least contacted by the
+            pharmaceutical industry
+          </p>
+        </div>
+        <div class="col-4" style="margin-left: -20px">
+          <div
+            [chart]="chartSearchChannel"
+            class="section2-content-chart-wrapper"
+          ></div>
+          <div class="">
+            <img src="assets/images/mala.png" class="book-search" />
+          </div>
+        </div>
+        <div class="col-4">
+          <p
+            class="text-circle-percent2"
+            style="margin-top: -20%; margin-left: 40px; font-size: 10px"
+          >
+            The percentage of those who are not visited is also high among
+            nutritionists (40%), pharmacists (51%) and clerks (58%).
+          </p>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-6">
+          <div class="row">
+            <div class="col-3">
+              <img
+                src="assets/images/icon_1_panel_1.png"
+                alt=""
+                class="img-icons-size"
+              />
+            </div>
+            <div class="col-9">
+              <p class="text-percent" style="font-size: 10px">
+                WHAT THEY WOULD LIKE TO GET FROM PHARMACEUTICAL COMPANIES:
+                Educational materials (doctors, nutritionists, physical
+                therapists, and pharmacists) and applications for patients
+                (clerks).
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="col-6">
+          <div class="row">
+            <div class="col-3">
+              <img
+                src="assets/images/icon_1_panel_1.png"
+                alt=""
+                class="img-icons-size"
+              />
+            </div>
+            <div class="col-9">
+              <p class="text-percent" style="font-size: 10px">
+                WHAT THEY WOULD LIKE TO SEE ON A DIGITAL PLATFORM: Scientific
+                content (doctors, nutritionists, physical therapists, and
+                pharmacists) and information on products (clerks).
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-5" style="margin-left: 60px">
+      <div class="row">
+        <div class="col-2">
+          <img
+            src="assets/images/papeis.png"
+            alt=""
+            class="img-icons-size"
+          />
+        </div>
+        <div class="col-9">
+          <p class="text-percent">
+            The main interest in being contacted by the pharmaceutical industry
+            for all categories is receiving educational content and samples.
+          </p>
+        </div>
+      </div>
+	  <br>
+
+      <div class="row">
+        <div class="col-2">
+          <img
+            src="assets/images/tv_mensagem.png"
+            alt=""
+            class="img-icons-size"
+          />
+        </div>
+        <div class="col-9">
+          <p class="text-percent">
+            Doctors, pharmacists, and clerks prefer in-person visits, while
+            nutritionists and physical therapists prefer visits by digital means
+            (e.g.: video call).
+          </p>
+        </div>
+      </div>
+<br>
+	  <div class="row">
+        <div class="col-2">
+          <img
+            src="assets/images/prancheta.png"
+            alt=""
+            class="img-icons-size"
+          />
+        </div>
+        <div class="col-9">
+          <p class="text-percent">
+            FREQUENCY OF VISITS from the representative is the most crucial factor to make a company stand out from the others, for all categories.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</app-card-item>

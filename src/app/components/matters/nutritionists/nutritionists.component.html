@@ -1,0 +1,1723 @@
+<div class="container">
+  <h3 class="title">
+    <img src="assets/images/overview/arrow-right.svg" />
+    Nutritionists
+  </h3>
+
+  <div class="row">
+    <div class="col-6">
+      <img src="assets/images/map.png" width="90%" class="map-h" />
+    </div>
+    <div class="col-6">
+      <br /><br /><br />
+      <h4 class="text-chart">TOTAL</h4>
+      <canvas
+        baseChart
+        [data]="doughnutChartData"
+        [labels]="doughnutChartLabels"
+        [chartType]="doughnutChartType"
+        [colors]="doughnutChartTypeColors"
+        [options]="doughnutChartOpts"
+      >
+      </canvas>
+      <h3 class="text-chart-initial">60<br />nutritionists</h3>
+    </div>
+  </div>
+  <div class="row space-top">
+    <div class="col-3"></div>
+    <div class="col-6">
+      <div class="yellow-bar"></div>
+    </div>
+    <div class="col-3"></div>
+  </div>
+
+  <h3 class="title-footer">How to activate this audience effectively?</h3>
+</div>
+
+<div class="section2">
+  <div class="container">
+    <div class="panel">
+      <div
+        class="item-list-anim"
+        [ngClass]="{ 'item-list': isCollapsed }"
+        (click)="toggleCollapsed1()"
+      >
+        <div class="row">
+          <div class="col-1">
+            <img src="assets/images/icon1.png" class="icon-item" />
+          </div>
+
+          <div class="col-7">
+            <h4 class="text-item">
+              What do nutritionists want to know and where do they search for
+              that information?
+            </h4>
+          </div>
+          <div class="col-2"></div>
+
+          <div class="col-2">
+            <img
+              src="assets/images/icon_expand.png"
+              class="icon-expand"
+              *ngIf="isCollapsed"
+            />
+            <img
+              src="assets/images/icon_retract.png"
+              class="icon-expand"
+              *ngIf="!isCollapsed"
+            />
+          </div>
+        </div>
+      </div>
+
+      <div id="collapseBasic" [collapse]="isCollapsed" [isAnimated]="false">
+        <div class="well well-lg card card-block card-header item-collapsed">
+          <div class="row">
+            <div class="col-6">
+              <div class="row">
+                <div class="col-3">
+                  <p class="text-panel-1">
+                    <b>67%</b><br />ACTIVELY<br />try to stay<br />up to date
+                  </p>
+                </div>
+                <div class="col-1">
+                  <br />
+                  <!-- <img src="assets/images/add.png" height="15%" /> -->
+                  <div
+                    class="add-icon"
+                    style="display: inline-block; width: 28px"
+                  >
+                    <div
+                      class="rec-yellow-tooltip rec-yellow-tooltip--section4"
+                      *ngIf="section1TooltipSearch"
+                      (click)="openSection1TooltipSearch()"
+                      style="top: -40px; left: -115px; z-index: 9"
+                    >
+                      <p class="text-p-tooltip text-p-tooltip--section4">
+                        same insight as for doctors and nutritionists - online
+                        search is important, but on the other hand they want
+                        information from scientific articles/reliable
+                        information - can we act as a bridge between the
+                        convenience of online searching and the credibility of
+                        studies?
+                      </p>
+                    </div>
+
+                    <a (click)="openSection1TooltipSearch()"
+                      ><img src="assets/images/add.png"
+                    /></a>
+                  </div>
+                </div>
+                <div class="col-5">
+                  <h4 class="text-chart-panel">SEARCH<br />CHANNEL</h4>
+                  <br />
+                  <!-- <div class="half-circle"></div> -->
+                  <div
+                    [chart]="chartSearchChannel"
+                    class="section2-content-chart-wrapper"
+                  ></div>
+                  <div class="">
+                    <img
+                      src="assets/images/book_search_icon.png"
+                      class="book-search"
+                    />
+                  </div>
+                </div>
+                <div class="col-1">
+                  <br />
+                </div>
+              </div>
+              <br /><br />
+              <h4 class="text2-chart-panel" style="margin-top: -30px">
+                CONTENT
+              </h4>
+              <div class="row">
+                <div class="col-12">
+                  <div class="row">
+                    <div class="col-3">
+                      <img
+                        src="assets/images/icon_one.png"
+                        alt=""
+                        class="img-icons-size"
+                      />
+                    </div>
+                    <div class="col-9">
+                      <p class="text-percent">
+                        <b>33%</b> seek content on <b>supplements</b> and
+                        <b>compounding of supplements</b> – here is a subject
+                        about which nutritionists understand more than doctors -
+                        Supplementation. And we have seen in the doctors’ survey
+                        that they like to receive content through contact with
+                        other professionals, right? Isn't this an opportunity to
+                        put both audiences in contact to share information and
+                        updates about this category?
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-12" style="height: 120px; margin-top: -10px">
+                  <div class="row" style="margin-top: -40px">
+                    <div class="col-3">
+                      <img
+                        src="assets/images/icon_two.png"
+                        alt=""
+                        class="img-icons-size"
+                      />
+                    </div>
+                    <div class="col-9">
+                      <p class="text-percent" style="padding-top: 40px">
+                        <b>33%</b> seek
+                        <b>updates on nutritional therapy and nutrition</b>
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-12">
+                  <div class="row">
+                    <div class="col-3">
+                      <img
+                        src="assets/images/icon_three.png"
+                        alt=""
+                        class="img-icons-size"
+                      />
+                    </div>
+                    <div class="col-9">
+                      <p class="text-percent">
+                        <b>32%</b> seek content on
+                        <b
+                          >pathologies, various diseases, and chronic diseases
+                          >> vice versa here - some medical specialties may know
+                          more about this subject, which is of interest to
+                          nutritionists. Both sides can contribute</b
+                        >
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-6">
+              <canvas
+                style="margin-left: 20px"
+                baseChart
+                [data]="doughnutChartData3"
+                [labels]="doughnutChartLabels3"
+                [chartType]="doughnutChartType3"
+                [colors]="doughnutChartTypeColors3"
+                [options]="doughnutChartOpts3"
+              >
+              </canvas>
+              <div class="">
+                <img
+                  src="assets/images/world_icon.png"
+                  class="world"
+                />
+              </div>
+
+              <h4 class="text2-chart-panel">FORMAT</h4>
+              <p class="text2-chart-panel-sub">To keep up to date</p>
+              <div
+                [chart]="section2ChartVertical"
+                class="section4-content-chart-wrapper"
+                style="width: 520px; margin-top: -50px"
+              ></div>
+
+              <p class="text-chart-down">
+                Unlike doctors, who have become increasingly interested in
+                video, but the majority of which still prefer text, we see
+                nutritionists are an audience who has become more open to new
+                technologies. We can design our MCE strategy by testing new
+                technologies and formats with them.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div
+        class="item-list-anim"
+        [ngClass]="{ 'item-list': isCollapsed2 }"
+        style="margin-top: 2%"
+        (click)="isCollapsed2 = !isCollapsed2"
+      >
+        <div class="row">
+          <div class="col-1">
+            <img src="assets/images/icon2.png" class="icon-item" />
+          </div>
+
+          <div class="col-7">
+            <h4 class="text-item">Means of access</h4>
+            <p class="sub-text-item">
+              How to share information with nutritionists?
+            </p>
+          </div>
+          <div class="col-2"></div>
+
+          <div class="col-2">
+            <img
+              src="assets/images/icon_expand.png"
+              class="icon-expand"
+              *ngIf="isCollapsed2"
+            />
+            <img
+              src="assets/images/icon_retract.png"
+              class="icon-expand"
+              *ngIf="!isCollapsed2"
+            />
+          </div>
+        </div>
+      </div>
+
+      <div id="collapseBasic2" [collapse]="isCollapsed2" [isAnimated]="false">
+        <div class="well well-lg card card-block card-header item-collapsed">
+          <!-- <p class="panel2-title">
+            In-person is the most preferred format, both for content related to
+            brands and products and for specialty-related general matters
+          </p> -->
+
+          <div class="row">
+            <div class="col-7">
+              <div class="row">
+                <div class="col-3">
+                  <div class="rec-btn">
+                    <img
+                      src="assets/images/like.png"
+                      class="btn-like"
+                    />
+                    <p class="text-btn">PREFERRED<br />MEDIA</p>
+                  </div>
+                  <br />
+                  <div class="rec-btn">
+                    <img
+                      src="assets/images/deslike.png"
+                      class="btn-like"
+                    />
+                    <p class="text-btn">LEAST<br />PREFERRED</p>
+                  </div>
+                </div>
+
+                <div class="col-9">
+                  <div class="rec-panel">
+                    <div class="row">
+                      <div class="col-4">
+                        <div class="topic">
+                          <img src="assets/images/topic1.png" />
+                          <h3 class="title-topic">17%</h3>
+                          <p class="text-topic">Scientific<br />studies</p>
+                        </div>
+                      </div>
+
+                      <div class="col-4">
+                        <div class="topic">
+                          <img src="assets/images/topic2.png" />
+                          <h3 class="title-topic">9%</h3>
+                          <p class="text-topic">
+                            In-person <br />event/seminar
+                          </p>
+                        </div>
+                      </div>
+
+                      <div class="col-4">
+                        <div class="topic">
+                          <img src="assets/images/topic3.png" />
+                          <h3 class="title-topic">8%</h3>
+                          <p class="text-topic-3">
+                            Online search (Google, etc...)
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <br />
+                  <div class="rec-panel">
+                    <div class="row">
+                      <div class="col-5">
+                        <div class="topic">
+                          <img
+                            src="assets/images/topic4.png"
+                            style="height: 20px"
+                          />
+                          <h3 class="title-topic">4%</h3>
+                          <p class="text-topic-3">
+                            Newspapers and magazines /phone conversation with
+                            other professionals/ WhatsApp
+                          </p>
+                        </div>
+                      </div>
+
+                      <div class="col-3">
+                        <div class="topic">
+                          <img
+                            src="assets/images/topic5.png"
+                            style="height: 20px"
+                          />
+                          <h3 class="title-topic">3%</h3>
+                          <p class="text-topic">Video call</p>
+                        </div>
+                      </div>
+
+                      <div class="col-4">
+                        <div class="topic">
+                          <img
+                            src="assets/images/topic6.png"
+                            style="height: 20px"
+                          />
+                          <h3 class="title-topic">2%</h3>
+                          <p class="text-topic-3">SMS/TV</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-5">
+              <div class="circle">
+                <h4 class="text-circle-title" style="padding-top: 80px">
+                  In which event format should<br />we invest?
+                </h4>
+                <p class="text-circle-p">
+                  Mixed approach ensuring that in-person contact fosters
+                  conversations with other professionals, while denser content –
+                  which can be checked afterwards – can be delivered online,
+                  which is an equally accepted medium
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div
+        class="item-list-anim"
+        style="margin-top: 2%"
+        [ngClass]="{ 'item-list': isCollapsed3 }"
+        (click)="isCollapsed3 = !isCollapsed3"
+      >
+        <div class="row">
+          <div class="col-1">
+            <img src="assets/images/icon3.png" class="icon-item" />
+          </div>
+
+          <div class="col-7">
+            <h4 class="text-item">In which event format should we invest?</h4>
+            <p class="sub-text-item">In-person events vs. Online events</p>
+          </div>
+          <div class="col-2"></div>
+
+          <div class="col-2">
+            <img
+              src="assets/images/icon_expand.png"
+              class="icon-expand"
+              *ngIf="isCollapsed3"
+            />
+            <img
+              src="assets/images/icon_retract.png"
+              class="icon-expand"
+              *ngIf="!isCollapsed3"
+            />
+          </div>
+        </div>
+      </div>
+
+      <div id="collapseBasic3" [collapse]="isCollapsed3" [isAnimated]="false">
+        <div
+          class="well well-lg card card-block card-header item-collapsed"
+          style="height: 390px !important"
+        >
+          <div class="row" style="padding-top: 30px">
+            <div class="col-6">
+              <div class="left-frame">
+                <h3 class="text-inperson">IN-PERSON EVENTS</h3>
+                <div class="row">
+                  <div class="col-3">
+                    <img
+                      src="assets/images/icon_people.png"
+                      class="icon-people"
+                    />
+                  </div>
+                  <div class="col-5">
+                    <p class="text-inperson-p">
+                      In-person events are preferred (50%) for addressing
+                      content related to brands and products. As to general
+                      scientific matters or those related to their specialty,
+                      40% prefer in-person meetings and other 40% prefer digital
+                      media
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-6">
+              <div class="right-frame">
+                <h3 class="text-onlineevents">ONLINE EVENTS</h3>
+                <div class="row">
+                  <div class="col-5" style="margin-left: 80px">
+                    <p class="text-inperson-p">
+                      Most participants (83%) preferred to watch recorded
+                      classes/lectures with presentations online; for other
+                      kinds of events (live classes/discussion groups/debates
+                      and immersion courses), in-person was chosen as the best
+                      format.
+                    </p>
+                  </div>
+                  <div class="col-3">
+                    <img
+                      src="assets/images/icon_online.png"
+                      class="icon-online"
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-12">
+              <div class="row">
+                <div class="col-6">
+                  <div
+                    class="rec-yellow-tooltip"
+                    *ngIf="true"
+                    style="height: 150px; margin-top: 42%"
+                  >
+                    <p class="text-p-tooltip">
+                      <b>ADVANTAGES OF IN-PERSON EVENTS:</b> <br />
+                      Access to printed materials and promotional
+                      gifts/networking/interaction between lecturer and
+                      audience.
+                    </p>
+                  </div>
+                </div>
+
+                <div class="col-6">
+                  <div
+                    class="rec-yellow-tooltip"
+                    *ngIf="true"
+                    style="height: 150px; margin-top: 42%"
+                  >
+                    <p class="text-p-tooltip">
+                      <b>ADVANTAGES OF ONLINE EVENTS:</b><br />
+                      Convenience/content available online/being able to adjust
+                      the congress program to daily routine -> The ideal time for
+                      a digital event is on weekends (Saturday), in the morning
+                      or evening, with average duration of 2 hours.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="center-circle">
+              <h3 class="title-circle-percent3">58%</h3>
+              <p class="text-circle-percent3">
+                prefer in-person events, but...
+              </p>
+            </div>
+            <div class="center-circle-border"></div>
+            <div
+              class="center-circle-percent center-circle-percent--section4-58"
+            ></div>
+          </div>
+        </div>
+      </div>
+
+      <div
+        class="item-list-anim"
+        style="margin-top: 2%"
+        [ngClass]="{ 'item-list': isCollapsed4 }"
+        (click)="toggleCollapsed4()"
+      >
+        <div class="row">
+          <div class="col-1">
+            <img src="assets/images/icon4.png" class="icon-item" />
+          </div>
+
+          <div class="col-7">
+            <h4 class="text-item">E-Learning</h4>
+            <p class="sub-text-item">
+              A relevant form of learning for nutritionists?
+            </p>
+          </div>
+          <div class="col-2"></div>
+
+          <div class="col-2">
+            <img
+              src="assets/images/icon_expand.png"
+              class="icon-expand"
+              *ngIf="isCollapsed4"
+            />
+            <img
+              src="assets/images/icon_retract.png"
+              class="icon-expand"
+              *ngIf="!isCollapsed4"
+            />
+          </div>
+        </div>
+      </div>
+
+      <div id="collapseBasic4" [collapse]="isCollapsed4" [isAnimated]="false">
+        <div class="well well-lg card card-block card-header item-collapsed">
+          <div class="row">
+            <div class="col-6">
+              <div class="add-icon" style="display: inline-block; left: 80px">
+                <div
+                  class="rec-yellow-tooltip rec-yellow-tooltip--section4"
+                  *ngIf="section2TooltipElearn"
+                  (click)="openSection2TooltipElearn()"
+                  style="top: -40px; left: -100px;"
+                >
+                  <p class="text-p-tooltip text-p-tooltip--section4">
+                    E-learning is a well-accepted format and can be better
+                    explored. Again, scientific basis is required to give
+                    credibility to the content presented. Practical cases
+                    focusing on patients are also of interest.
+                  </p>
+                </div>
+
+                <a (click)="openSection2TooltipElearn()"
+                  ><img src="assets/images/add.png"
+                /></a>
+              </div>
+
+              <div class="row">
+                <div class="col-4">
+                  <h3 class="title-circle-percent2">70%</h3>
+                  <p class="text-circle-percent2">
+                    are greatly interested in participating in online e-learning
+                  </p>
+                </div>
+                <div class="col-4">
+                  <div
+                    class="doughnut-graphic-wrapper"
+                    style="margin-left: -30px; margin-top: -40px"
+                  >
+                    <div class="center-circle--section4">
+                      <img
+                        src="assets/images/public_icon.png"
+                        class="public-icon"
+                      />
+                    </div>
+                    <div class="center-circle-border--section4"></div>
+                    <div
+                      class="
+                        center-circle-percent--section4
+                        center-circle-percent--section4-50
+                      "
+                    ></div>
+                  </div>
+                </div>
+                <div class="col-4">
+                  <h3 class="title-circle-percent">80%</h3>
+                  <p class="text-circle-percent">
+                    in the Southeast the interest is even greater
+                  </p>
+                </div>
+              </div>
+              <div
+                [chart]="section2ELearningChart"
+                class="section4-content-chart-wrapper"
+                style="width: auto"
+              ></div>
+            </div>
+            <div class="col-5">
+              <div class="rec-blue">
+                <p class="text-rec-blue">
+                  In general, they are open to all kinds of content via
+                  e-learning, which shows us that this is a touch point that can
+                  be further explored with this public.
+                  <br /><br />
+                  But notice nutritionists' interest in understanding patients
+                  and diseases - this is not the type of professional who wants
+                  to focus only on diets and can help us a lot by giving an
+                  approach that complements traditional doctors'.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div
+        class="item-list-anim"
+        [ngClass]="{ 'item-list': isCollapsed5 }"
+        style="margin-top: 2%"
+        (click)="toggleCollapsed5()"
+      >
+        <div class="row">
+          <div class="col-1">
+            <img src="assets/images/icon5.png" class="icon-item" />
+          </div>
+
+          <div class="col-7">
+            <h4 class="text-item-sample">
+              Relationship with pharmaceutical companies
+            </h4>
+          </div>
+          <div class="col-2"></div>
+
+          <div class="col-2">
+            <img
+              src="assets/images/icon_expand.png"
+              class="icon-expand"
+              *ngIf="isCollapsed5"
+            />
+            <img
+              src="assets/images/icon_retract.png"
+              class="icon-expand"
+              *ngIf="!isCollapsed5"
+            />
+          </div>
+        </div>
+      </div>
+
+      <div id="collapseBasic5" [collapse]="isCollapsed5" [isAnimated]="false">
+        <div class="well well-lg card card-block card-header item-collapsed">
+          <div class="row">
+            <div class="col-6">
+              <div class="row">
+                <div class="col-3">
+                  <p class="text-panel-1" style="margin-top: 30px">
+                    <b>60%</b><br />are in contact with the pharmaceutical
+                    industry
+                  </p>
+                </div>
+                <div class="col-1">
+                  <br />
+                  <!-- <img src="assets/images/add.png" height="15%" /> -->
+                  <div
+                    class="add-icon"
+                    style="display: inline-block; width: 28px"
+                  >
+                    <div
+                      class="rec-yellow-tooltip rec-yellow-tooltip--section4"
+                      *ngIf="section4Tooltip1"
+                      (click)="openSection4Tooltip1()"
+                      style="top: -40px; left: -115px; z-index: 2"
+                    >
+                      <p class="text-p-tooltip text-p-tooltip--section4">
+                        showing again that our path to develop the new MCE online tools may be through nutritionists, platform tests, new tools tests; this public can help in this sense
+                      </p>
+                    </div>
+
+                    <a (click)="openSection4Tooltip1()"
+                      ><img src="assets/images/add.png"
+                    /></a>
+                  </div>
+                </div>
+                <div class="col-5">
+                  <br />
+                  <!-- <div class="half-circle"></div> -->
+                  <div
+                    [chart]="chartSearchChannel2"
+                    class="section2-content-chart-wrapper"
+                  ></div>
+                  <div class="">
+                    <img
+                      src="assets/images/icon6_recs_phy.png"
+                      class="book-search"
+                      style="margin-left: 65px"
+                    />
+                  </div>
+                </div>
+                <div class="col-1">
+                  <br />
+                </div>
+              </div>
+              <br /><br />
+            </div>
+            <div class="col-6">
+              <p class="text-chart-down">
+                Among the nutritionists who are not contacted by the
+                pharmaceutical industry, 90% are interested in that kind of
+                contact. The main reasons for their interest in being contacted
+                by the industry are:
+              </p>
+              <canvas
+                style="margin-left: 20px"
+                baseChart
+                [data]="doughnutChartData32"
+                [labels]="doughnutChartLabels32"
+                [chartType]="doughnutChartType32"
+                [colors]="doughnutChartTypeColors32"
+                [options]="doughnutChartOpts32"
+              >
+              </canvas>
+              <div class="">
+                <img
+                  src="assets/images/carta_icon.png"
+                  class="world"
+                />
+              </div>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-6">
+              <p class="title-chart-nut">
+                The main means of contact preferred by these professionals were:
+              </p>
+
+              <div
+                [chart]="section2RelationshipChart"
+                class="section4-content-chart-wrapper"
+                style="width: auto"
+              ></div>
+            </div>
+            <div class="col-6">
+              <p class="title-chart-nut">
+                The main forms of contact mentioned by nutritionists
+              </p>
+
+              <div
+                [chart]="section2RelationshipChart2"
+                class="section4-content-chart-wrapper"
+                style="width: auto"
+              ></div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-2"></div>
+            <div class="col-6">
+              <div class="row">
+                <div class="col-4">
+                  <p class="text-panel-1" style="margin-top: 30px">
+                    <b>72%</b><br />do not identify one pharmaceutical company
+                    that stands out
+                  </p>
+                </div>
+                <div class="col-1">
+                  <br />
+                  <!-- <img src="assets/images/add.png" height="15%" /> -->
+                  <div
+                    class="add-icon"
+                    style="display: inline-block; width: 28px"
+                  >
+                    <div
+                      class="rec-yellow-tooltip rec-yellow-tooltip--section4"
+                      *ngIf="section4Tooltip2"
+                      (click)="openSection4Tooltip2()"
+                      style="top: -40px; left: -115px;"
+                    >
+                      <p class="text-p-tooltip text-p-tooltip--section4">
+                        giving us room to become pioneers with this public and bring it to our side
+                      </p>
+                    </div>
+
+                    <a (click)="openSection4Tooltip2()"
+                      ><img src="assets/images/add.png"
+                    /></a>
+                  </div>
+                </div>
+                <div class="col-5">
+                  <br />
+                  <!-- <div class="half-circle"></div> -->
+                  <div
+                    [chart]="chartSearchChannel3"
+                    class="section2-content-chart-wrapper"
+                  ></div>
+                  <div class="">
+                    <img
+                      src="assets/images/remedio_icon.png"
+                      class="book-search"
+                    />
+                  </div>
+                </div>
+                <div class="col-1">
+                  <br />
+                </div>
+              </div>
+              <br /><br />
+            </div>
+            <div class="col-3"></div>
+          </div>
+          <div class="rec-blue-2">
+            <p class="text-blue-2">
+              <b>- FREQUENCY OF VISITS</b> from the representative is the most
+              important factor to make a company stand out from the others
+              <br />
+              <br />
+              <b
+                >- WHAT THEY WOULD LIKE TO GET FROM PHARMACEUTICAL COMPANIES:
+                Educational materials and application for patients
+              </b>
+              <br />
+              <br />
+              <b>- WHAT THEY WOULD LIKE TO SEE ON A DIGITAL PLATFORM:</b>
+              Scientific content and information on products.
+              <br />
+              <br />
+              <b style="text-decoration: underline"
+                >Unlike doctors, nutritionists prefer WhatsApp for online
+                contact.</b
+              >
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div
+        class="item-list-anim"
+        style="margin-top: 2%"
+        [ngClass]="{ 'item-list': isCollapsed6 }"
+        (click)="isCollapsed6 = !isCollapsed6"
+      >
+        <div class="row">
+          <div class="col-1">
+            <img src="assets/images/icon6.png" class="icon-item" />
+          </div>
+
+          <div class="col-7">
+            <h4 class="text-item-sample">
+              Conferences & information for patients
+            </h4>
+          </div>
+          <div class="col-2"></div>
+
+          <div class="col-2">
+            <img
+              src="assets/images/icon_expand.png"
+              class="icon-expand"
+              *ngIf="isCollapsed6"
+            />
+            <img
+              src="assets/images/icon_retract.png"
+              class="icon-expand"
+              *ngIf="!isCollapsed6"
+            />
+          </div>
+        </div>
+      </div>
+
+      <div id="collapseBasic6" [collapse]="isCollapsed6" [isAnimated]="false">
+        <div class="well well-lg card card-block card-header item-collapsed">
+          <h4 class="title-panel-conferences">
+            MOST IMPORTANT CONFERENCES FOR NUTRITIONISTS:
+          </h4>
+          <div class="square-conference">
+            <div class="row" style="margin-top: 15px">
+              <div class="col-3">
+                <div class="step-panel-img">
+                  <img src="assets/images/conference_nut_01.png" />
+                  <p>33%</p>
+                </div>
+
+                <p class="step-panel-text">
+                  Nutrition and Health Congress<br />(Congresso de Nutrição e
+                  Saúde - GANEPÃO)
+                </p>
+              </div>
+
+              <div class="col-3">
+                <div class="step-panel-img">
+                  <img src="assets/images/conference_nut_02.png" />
+                  <p>25%</p>
+                </div>
+
+                <p class="step-panel-text">
+                  Brazilian Nutrition Congress (Congresso Brasileiro de
+                  Nutrição- CONBRAN)
+                </p>
+              </div>
+
+              <div class="col-3">
+                <div class="step-panel-img">
+                  <img src="assets/images/conference_nut_03.png" />
+                  <p>15%</p>
+                </div>
+
+                <p class="step-panel-text">
+                  International Functional Nutrition Congress (Congresso
+                  Internacional de Nutrição Funcional - VP)
+                </p>
+              </div>
+
+              <div class="col-3">
+                <div class="step-panel-img">
+                  <img src="assets/images/conference_nu_04.png" />
+                  <p>12%</p>
+                </div>
+
+                <p class="step-panel-text-end">
+                  Brazilian Parenteral and Enteral Nutritio Congress<br />(Congresso
+                  Brasileiro de Nutrição Parenteral e Enteral - BRASPEN)
+                </p>
+              </div>
+            </div>
+          </div>
+          <h4 class="title-panel-conferences">
+            HOW TO HELP NUTRITIONISTS EDUCATE PATIENTS?
+          </h4>
+          <p class="text-panel-5-nut">
+            Can we be a reference in helping
+            nutritionists<br />educate and engage their patients?
+          </p>
+          <br />
+          <div class="row">
+            <div class="col-6">
+              <div class="row">
+                <!-- <div class="col-6"> -->
+                <div class="row">
+                  <div class="col-5">
+                    <p class="text-panel-1" style="margin-top: 30px">
+                      <b>32%</b><br />
+                      of the nutritionists refer their patients to
+                      websites/sources of information, of which:
+                    </p>
+                  </div>
+                  <div class="col-1">
+                    <br />
+                    <!-- <img src="assets/images/add.png" height="15%" /> -->
+
+                  </div>
+                  <div class="col-5">
+                    <br />
+                    <!-- <div class="half-circle"></div> -->
+                    <div
+                      [chart]="chartSearchChannel4"
+                      class="section2-content-chart-wrapper"
+                    ></div>
+                    <div class="">
+                      <img
+                        src="assets/images/mundo_icon.png"
+                        class="book-search"
+                        style="margin-left: 32% !important; margin-top: -220px;"
+                      />
+                    </div>
+                    <br />
+                    <p class="text-chart-down" style="margin-top: -90px">
+                      16% suggest articles and scientific studies / applications
+                      / social media / internet and websites / pharmaceutical
+                      companies' websites
+                    </p>
+                  </div>
+                </div>
+                <br /><br />
+                <!-- </div> -->
+              </div>
+            </div>
+
+            <div class="col-4" style="margin-left: 80px">
+              <h4 class="title-section5-nut">
+                IN ORDER TO SUGGEST CONTENT,<br />THE MOST IMPORTANT FACTOR IS
+              </h4>
+              <br /><br />
+              <div class="row">
+                <div class="col-6">
+                  <img
+                    src="assets/images/lupa_icon.png"
+                    class="icon-nut-center"
+                  />
+                  <p class="section5-nut-title">37%</p>
+                  <p class="section5-nut-sub">
+                    That it is based on<br />scientific evidence
+                  </p>
+                </div>
+                <div class="col-6">
+                  <img
+                    src="assets/images/estrelas_icon.png"
+                    class="icon-nut-center"
+                  />
+                  <p class="section5-nut-title">26%</p>
+                  <p class="section5-nut-sub">
+                    Having had a personal<br />experience (I have<br />accessed/evaluated)
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="section3">
+  <div class="container">
+    <h3 class="title-section3">
+      Understanding their habits and attitudes<br />in relation to CHC
+      categories...
+    </h3>
+
+    <div
+      class="item-list-anim"
+      style="margin-top: 2%"
+      [ngClass]="{ 'item-list': isCollapsed10 }"
+      (click)="toggleCollapsed10()"
+    >
+      <div class="row">
+        <div class="col-1">
+          <img
+            src="assets/images/suplemento.png"
+            class="icon-item"
+          />
+        </div>
+
+        <div class="col-7">
+          <h4 class="text-item-section3">SUPPLEMENTS</h4>
+        </div>
+        <div class="col-2"></div>
+
+        <div class="col-2">
+          <img
+            src="assets/images/icon_expand.png"
+            class="icon-expand"
+            *ngIf="isCollapsed10"
+          />
+          <img
+            src="assets/images/icon_retract.png"
+            class="icon-expand"
+            *ngIf="!isCollapsed10"
+          />
+        </div>
+      </div>
+    </div>
+
+    <div id="collapseBasic10" [collapse]="isCollapsed10" [isAnimated]="false">
+      <div
+        class="well well-lg card card-block card-header item-collapsed-section3"
+      >
+        <br />
+        <div class="row">
+          <div class="col-5">
+            <h3 class="barr-title">BARRIERS TO CONSUMPTION</h3>
+            <br /><br />
+            <div class="row">
+              <div class="col-4">
+                <p class="percent-col">62%</p>
+                <p class="t-col">
+                  of patients use some form of supplementation. For those who
+                  don't, the main barriers are:
+                </p>
+              </div>
+              <div class="col-4">
+                <img
+                  src="assets/images/grupo_icon.png"
+                  style="width: 130%"
+                />
+              </div>
+              <div class="col-4">
+                <div style="margin-top: -20px; margin-left: -30px">
+                  <img
+                    src="assets/images/cifrao.png"
+                    class="i-t"
+                  />
+                  <p class="text-i">price (73%)</p>
+                </div>
+
+                <div style="margin-top: 30px; margin-left: -30px">
+                  <img
+                    src="assets/images/lupa_icon.png"
+                    class="i-t"
+                  />
+                  <p class="text-i">
+                    actual perception of<br />product benefits (50%)
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-5" style="margin-left: 5%">
+            <h3 class="barr-title">MOST CONSUMED SUPPLEMENTS</h3>
+            <br /><br />
+            <canvas
+              baseChart
+              [data]="doughnutChartData5"
+              [labels]="doughnutChartLabels5"
+              [chartType]="doughnutChartType5"
+              [colors]="doughnutChartTypeColors5"
+              [options]="doughnutChartOpts5"
+            >
+            </canvas>
+          </div>
+        </div>
+
+        <h3 class="barr-title">HOW IT IS PRESCRIBED</h3>
+        <br />
+        <div class="row">
+          <div class="col-4">
+            <p class="p-txt">Nutritional prescription is made based on</p>
+
+            <div class="row" style="margin-top: 40px">
+              <div class="col-4">
+                <h3 class="title-circle-percent2">47%</h3>
+                <p class="text-circle-percent2">laboratory tests</p>
+              </div>
+
+              <div class="col-4">
+                <div
+                  class="doughnut-graphic-wrapper"
+                  style="margin-left: -40px; margin-top: -40px"
+                >
+                  <div class="center-circle--section4">
+                    <img
+                      src="assets/images/book_search_icon.png"
+                      class="public-icon"
+                    />
+                  </div>
+                  <div class="center-circle-border--section4"></div>
+                  <div
+                    class="
+                      center-circle-percent--section4
+                      center-circle-percent--immunity-57-67
+                    "
+                  ></div>
+                </div>
+              </div>
+              <div class="col-4" style="margin-left: 0px">
+                <h3 class="title-circle-percent2">37%</h3>
+                <p class="text-circle-percent2">patient complaints</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-8">
+            <p class="p-txt">
+              Supplementation is recommended in the following cases:
+            </p>
+            <div
+              [chart]="section2RelationshipChart3"
+              class="section4-content-chart-wrapper"
+              style="width: auto"
+            ></div>
+          </div>
+        </div>
+        <p class="p-txt">
+          Supplementation is recommended in the following cases:
+        </p>
+        <div class="row" style="margin-top: 50px; margin-left: 5%">
+          <div class="col-4">
+            <div
+              [chart]="chartSearchChannel10"
+              class="section2-content-chart-wrapper"
+            ></div>
+            <div class="">
+              <img
+                src="assets/images/mundo_icon.png"
+                class="book-search"
+                style="margin-left: 50px; margin-top: -180px"
+              />
+            </div>
+          </div>
+          <div class="col-4">
+            <div
+              [chart]="section2ChartVertical2"
+              class="section4-content-chart-wrapper"
+              style="width: 100%; margin-top: -50px"
+            ></div>
+          </div>
+          <div class="col-4">
+            <div class="rec-blue-90">
+              <p class="txt-rec-90">
+                A little over half the nutritionists (53%) said they prefer to
+                prescribe an off-the-shelf multivitamin.
+                <br /><br />
+                <b>Nutritionists use the guides more than doctors</b>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<div class="section4">
+  <div class="container">
+    <div class="section4-tabs">
+      <ul
+        ngbNav
+        [animation]="false"
+        #nav="ngbNav"
+        [(activeId)]="activeTab"
+        class="nav-tabs"
+      >
+        <!-- SUPPLEMENTS TAB -->
+
+        <li [ngbNavItem]="1">
+          <a ngbNavLink class="main-tab">ENERGY</a>
+
+          <ng-template ngbNavContent>
+            <ul
+              ngbNav
+              [animation]="false"
+              #subnav2="ngbNav"
+              [(activeId)]="activeSubTab2"
+              class="nav-tabs nav-tabs--transparent"
+            >
+              <li [ngbNavItem]="1">
+                <ng-template ngbNavContent>
+                  <h3 class="barr-title">
+            THE MAIN SUPPLEMENTS PRESCRIBED TO INCREASE ENERGY ARE:
+          </h3>
+          <div class="row">
+            <div class="col-3"></div>
+            <div class="col-6">
+              <div
+                [chart]="section2ChartVertical20"
+                class="section4-content-chart-wrapper"
+                style="width: 100%; margin-top: -50px"
+              ></div>
+            </div>
+          </div>
+          <br />
+          <div class="row" style="margin-left:9%;">
+            <div class="col-5" style="margin-top: 50px;">
+              <div class="row">
+                <div class="col-3">
+                  <h3 class="percent3">60%</h3>
+                  <p class="percent3txt">of the nutritionists do not prescribe arginine</p>
+                </div>
+                <div class="col-6">
+                  <div
+                    [chart]="chartSearchChannel11"
+                    class="section2-content-chart-wrapper"
+                  ></div>
+                  <div class="">
+                    <img
+                      src="assets/images/papeis.png"
+                      class="book-search"
+                      style="margin-left: 70px; margin-top: -180px; width: 30%"
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-5">
+              <h3 class="barr-title">Reasons to prescribe arginine</h3>
+              <div class="row" style="margin-top: 40px">
+                <div class="col-4">
+                  <h3 class="title-circle-percent2">42%</h3>
+                  <p class="text-circle-percent2">To improve physical activity performance</p>
+                </div>
+                <div class="col-4">
+                  <div
+                    class="doughnut-graphic-wrapper"
+                    style="margin-left: -40px; margin-top: -40px"
+                  >
+                    <div class="center-circle--section4">
+                      <img
+                        src="assets/images/papeis.png"
+                        class="public-icon"
+                        style="width: 40%; margin-left: 50px;"
+                      />
+                    </div>
+                    <div class="center-circle-border--section4"></div>
+                    <div
+                      class="
+                        center-circle-percent--section4
+                        center-circle-percent--immunity-57-67
+                      "
+                    ></div>
+                  </div>
+                </div>
+                <div class="col-4" >
+                  <h3 class="title-circle-percent2" style="text-align: left">17%</h3>
+                  <p class="text-circle-percent2" style="text-align: left">In case of deficiency/preoperative/regeneration, healing</p>
+                </div>
+              </div>
+            </div>
+          </div>
+                </ng-template>
+              </li>
+            </ul>
+            <div [ngbNavOutlet]="subnav2" class=""></div>
+          </ng-template>
+        </li>
+
+        <li [ngbNavItem]="2">
+          <a ngbNavLink class="main-tab">IMMUNITY</a>
+
+          <ng-template ngbNavContent>
+            <ul
+              ngbNav
+              [animation]="false"
+              #subnav2="ngbNav"
+              [(activeId)]="activeSubTab2"
+              class="nav-tabs nav-tabs--transparent"
+            >
+              <li [ngbNavItem]="1">
+                <ng-template ngbNavContent>
+                  <div class="row" style="margin-top: 80px; margin-left: 150px">
+                    <div class="col-4">
+                      <p class="title-end-section-nut">VITAMIN C</p>
+                    </div>
+                    <div class="col-2"></div>
+                    <div class="col-4">
+                      <p class="title-end-section-nut2">VITAMIN D</p>
+                    </div>
+                  </div>
+                  <div class="row" style="margin-left: 140px; margin-top: 40px">
+                    <div class="col-4">
+                      <h3 class="title-circle-percent2">43%</h3>
+                      <p class="text-circle-percent2">
+                        For immunity, the main nutrients recommended were
+                        vitamin C (43%)
+                      </p>
+                    </div>
+                    <div class="col-4">
+                      <div
+                        class="doughnut-graphic-wrapper"
+                        style="margin-left: -30px; margin-top: -40px"
+                      >
+                        <div class="center-circle--section4">
+                          <img
+                            src="assets/images/multivitamin.png"
+                            class="public-icon"
+                          />
+                        </div>
+                        <div class="center-circle-border--section4"></div>
+                        <div
+                          class="
+                            center-circle-percent--section4
+                            center-circle-percent--immunity-43-33
+                          "
+                        ></div>
+                      </div>
+                    </div>
+                    <div class="col-4">
+                      <h3
+                        class="title-circle-percent"
+                        style="margin-left: -160px"
+                      >
+                        33%
+                      </h3>
+                      <p
+                        class="text-circle-percent"
+                        style="margin-left: -160px"
+                      >
+                        vitamin D was less recommended (33%)
+                      </p>
+                    </div>
+                  </div>
+                  <div class="row" style="margin-left: 140px; margin-top: 40px">
+                    <div class="col-4">
+                      <h3 class="title-circle-percent2">57%</h3>
+                      <p class="text-circle-percent2">
+                        The main situation in which vitamin C supplementation is
+                        indicated is low immunity (57%)
+                      </p>
+                    </div>
+                    <div class="col-4">
+                      <div
+                        class="doughnut-graphic-wrapper"
+                        style="margin-left: -30px; margin-top: -40px"
+                      >
+                        <div class="center-circle--section4">
+                          <img
+                            src="assets/images/book_search_icon.png"
+                            class="public-icon"
+                          />
+                        </div>
+                        <div class="center-circle-border--section4"></div>
+                        <div
+                          class="
+                            center-circle-percent--section4
+                            center-circle-percent--immunity-57-67
+                          "
+                        ></div>
+                      </div>
+                    </div>
+                    <div class="col-4">
+                      <h3
+                        class="title-circle-percent"
+                        style="margin-left: -160px"
+                      >
+                        67%
+                      </h3>
+                      <p
+                        class="text-circle-percent"
+                        style="margin-left: -160px; margin-right: 180px"
+                      >
+                        The main situation in which vitamin D supplementation is
+                        indicated is in case of deficiency (67%).
+                      </p>
+                    </div>
+                  </div>
+                </ng-template>
+              </li>
+            </ul>
+            <div [ngbNavOutlet]="subnav2" class=""></div>
+          </ng-template>
+        </li>
+
+        <!-- ALLERGY TAB -->
+        <li [ngbNavItem]="3">
+          <a ngbNavLink class="main-tab">GENERAL HEALTH</a>
+
+          <ng-template ngbNavContent>
+            <ul
+              ngbNav
+              [animation]="false"
+              #subnav1="ngbNav"
+              [(activeId)]="activeSubTab1"
+              class="nav-tabs nav-tabs--transparent"
+            >
+              <!-- 1 ST AND 2 ND GENERATION SUBTAB (ALLERGY TAB) -->
+              <li [ngbNavItem]="1">
+                <ng-template ngbNavContent>
+                  <p class="title-general-health">
+                    FOR GENERAL HEALTH, NUTRITIONISTS USUALLY PRESCRIBE
+                  </p>
+                  <br />
+                  <div
+                    [chart]="section2GeneralChart"
+                    class="section4-content-chart-wrapper"
+                    style="width: auto; margin-left: 10%"
+                  ></div>
+                  <br />
+                  <div class="rec-blue-4">
+                    <p class="title-rec-4">
+                      For the professionals who do not prescribe collagen, the
+                      main reasons are lack of scientific proof (with an
+                      important methodological bias) (46%), inefficacy
+                      (according to scientific studies, references from doctors
+                      of the field) (23%), and the fact that patients do not
+                      need it (15%).
+                    </p>
+                  </div>
+                  <br />
+                </ng-template>
+              </li>
+            </ul>
+
+            <div [ngbNavOutlet]="subnav1"></div>
+          </ng-template>
+        </li>
+
+        <!-- SUPPLEMENTS TAB -->
+        <li [ngbNavItem]="4">
+
+          <a ngbNavLink class="main-tab">PROBIOTICS</a>
+
+          <ng-template ngbNavContent>
+            <ul
+              ngbNav
+              [animation]="false"
+              #subnav2="ngbNav"
+              [(activeId)]="activeSubTab3"
+              class="nav-tabs nav-tabs--transparent nav"
+            >
+              <br />
+
+              <li [ngbNavItem]="1">
+                <a ngbNavLink class="secondary-tab mt-5">PREFERENCES</a>
+
+                <ng-template ngbNavContent>
+                  <div class="custom-tab-content" style="height: 400px;">
+                    <div class="row">
+
+                      <div class="col-12">
+                        <h4 class="text-chart-panel">PREFERENCES FOR PRESCRIPTION</h4>
+                      </div>
+
+                      <div class="col-3">
+
+                      </div>
+
+                      <div class="col-6" style="margin-left: 30px;">
+                        <div class="row">
+                          <div class="col-4" style="margin-left: -40px; margin-top: 20px;">
+                            <h4 class="title1-panel-5" style="float: right;">50%</h4>
+                            <p class="text-panel-5"
+                            style="width: 70%; float: right;">
+                              prefer custom probiotics and 50% prefer off-the-shelf probiotics
+                            </p>
+                          </div>
+                          <div class="col-6">
+                            <img
+                              src="assets/images/icon_panel_5.png"
+                              width="90%"
+                              style="margin-left: -25px"
+                            />
+                          </div>
+
+                          <div style="width: 90px;
+                          margin-left: -225px;
+                          margin-top: 30px;">
+                            <h4 class="title1-panel-5" style="margin-bottom: 0; margin-left: 25px;">87%</h4>
+                            <p class="text-panel-6" style="margin-top: 0; text-align: center;">
+                              prescribe probiotics, of which:
+                            </p>
+                          </div>
+                        </div>
+
+                        <div style="width: 25%; position: relative; top: 20px; left: 20px;">
+                          <h4 class="title1-panel-5" style="margin-bottom: 0;">85%</h4>
+                          <p class="text-panel-6" style="margin-top: 0; text-align: right;">
+                            prescribe multi-strain probiotics due to increased efficacy
+                          </p>
+                        </div>
+
+                        <div style="width: 30%; position: relative; top: -80px; left: 200px;">
+                          <h4 class="title1-panel-5" style="margin-bottom: 0; text-align: left;">58%</h4>
+                          <p class="text-panel-6" style="margin-top: 0; text-align: left;">
+                            prescribe it preventively
+                          </p>
+                        </div>
+
+                        <div style="width: 25%; position: relative; top: -270px; left: 290px;">
+                          <h4 class="title1-panel-5" >73%</h4>
+                          <p class="text-panel-7">
+                            say there is no age restriction
+                          </p>
+                        </div>
+                      </div>
+
+                    </div>
+                  </div>
+                </ng-template>
+              </li>
+
+              <li [ngbNavItem]="2">
+                <a ngbNavLink class="secondary-tab mt-5">MAIN SITUATIONS</a>
+
+                <ng-template ngbNavContent>
+                  <div class="custom-tab-content clerks-tab-content">
+
+                    <div class="row">
+
+                      <div class="col-12">
+
+                        <h4 class="text-chart-panel">THE MAIN SITUATIONS IN WHICH PROBIOTICS ARE PRESCRIBED ARE:</h4>
+
+                      </div>
+
+                      <div class="col-3">
+
+                      </div>
+
+                      <div class="col-6">
+                          <canvas
+                            style="margin-left: 10px;"
+                            baseChart
+                            [data]="doughnutChartData4"
+                            [labels]="doughnutChartLabels4"
+                            [chartType]="doughnutChartType4"
+                            [colors]="doughnutChartTypeColors4"
+                            [options]="doughnutChartOpts4"
+                          >
+                          </canvas>
+                      </div>
+
+                      <div class="col-3">
+
+                      </div>
+
+                    </div>
+
+                    <div class="row">
+
+                      <div class="col-12">
+
+                        <h4 class="text-chart-panel">THE MAIN REASONS FOR NOT PRESCRIBING PROBIOTICS ARE:</h4>
+
+                      </div>
+
+                      <div class="col-3">
+
+                      </div>
+
+                      <div class="col-2">
+                        <div class="topic">
+                          <img src="assets/images/nutritionist/icon_nutritionist_probiotics.svg" />
+                          <p class="text-topic">Try to start <br/>with food
+                        </div>
+                      </div>
+
+                      <div class="col-2">
+                        <div class="topic">
+                          <img src="assets/images/nutritionist/icon_nutritionist_probiotics2.svg" />
+                          <p class="text-topic">Not having a <br/>trusted brand</p>
+                        </div>
+                      </div>
+
+                      <div class="col-2">
+                        <div class="topic">
+                          <img src="assets/images/nutritionist/icon_nutritionist_probiotics3.svg" />
+                          <p class="text-topic">Depends on <br/>the case
+                        </div>
+                      </div>
+
+                      <div class="col-3">
+
+                      </div>
+
+                    </div>
+
+                  </div>
+                </ng-template>
+              </li>
+            </ul>
+
+            <div [ngbNavOutlet]="subnav2" class=""></div>
+          </ng-template>
+        </li>
+
+        <!-- PROBIOTICS TAB -->
+        <li [ngbNavItem]="5">
+          <a ngbNavLink class="main-tab">LAXATIVES</a>
+          <ng-template ngbNavContent>
+            <p
+              class="title-end-section-nut"
+              style="text-align: center !important; padding-top: 3%"
+            >
+              97% OF NUTRITIONISTS DO NOT PRESCRIBE LAXATIVES
+            </p>
+            <br />
+            <div class="row" style="margin-left: 15%">
+              <div class="col-5">
+                <p
+                  class="title-end-section-nut"
+                  style="text-align: center !important; padding-top: 2%"
+                >
+                  RANKING OF SUPPLEMENTS
+                </p>
+
+                <p class="most-important">MOST IMPORTANT ATRIBUTES</p>
+                <div
+                  [chart]="mostImportantChart"
+                  class="section4-content-chart-wrapper"
+                  style="width: auto"
+                ></div>
+                <br />
+                <p class="most-important">LEAST IMPORTANT ATRIBUTES</p>
+                <div
+                  [chart]="leastImportantChart"
+                  class="section4-content-chart-wrapper"
+                  style="width: auto; margin-left: -38%"
+                ></div>
+              </div>
+              <div class="col-5">
+                <div class="rec-gray-4">
+                  <p
+                    class="title-end-section-nut"
+                    style="text-align: center !important; padding-top: 2%"
+                  >
+                    RANKING OF SUPPLEMENTS
+                  </p>
+
+                  <p class="most-important">MOST IMPORTANT ATRIBUTES</p>
+                  <div
+                    [chart]="mostImportantChart2"
+                    class="section4-content-chart-wrapper"
+                    style="width: auto; margin-left: 8%"
+                  ></div>
+                  <br />
+                  <p class="most-important">LEAST IMPORTANT ATRIBUTES</p>
+                  <div
+                    [chart]="leastImportantChart2"
+                    class="section4-content-chart-wrapper"
+                    style="width: auto"
+                  ></div>
+                </div>
+              </div>
+            </div>
+            <br /><br />
+          </ng-template>
+        </li>
+      </ul>
+
+      <div [ngbNavOutlet]="nav" class=""></div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,2838 @@
+<div class="container">
+  <h3 class="title">
+    <img src="assets/images/overview/arrow-right.svg" />
+    Pharmacists
+  </h3>
+  <div class="row">
+    <div class="col-6">
+      <img src="assets/images/map.png" width="90%" class="map-h" />
+    </div>
+    <div class="col-6">
+      <h4 class="text-chart-2">PROFILE</h4>
+      <div
+        [chart]="chartSpecialty"
+        class="section4-content-chart-wrapper"
+      ></div>
+    </div>
+  </div>
+  <div class="row space-top">
+    <div class="col-3"></div>
+    <div class="col-6">
+      <div class="yellow-bar"></div>
+    </div>
+    <div class="col-3"></div>
+  </div>
+
+  <h3 class="title-footer">How to activate this audience effectively?</h3>
+</div>
+
+<div class="section2">
+  <div class="container">
+    <div class="panel">
+      <div
+        class="item-list-anim"
+        [ngClass]="{ 'item-list': isCollapsed }"
+        (click)="toggleCollapsed1()"
+      >
+        <div class="row">
+          <div class="col-1">
+            <img src="assets/images/icon1.png" class="icon-item" />
+          </div>
+
+          <div class="col-7">
+            <h4 class="text-item">
+              What do pharmacists want to know and where do they search for
+              that information?
+            </h4>
+          </div>
+          <div class="col-2"></div>
+
+          <div class="col-2">
+            <img
+              src="assets/images/icon_expand.png"
+              class="icon-expand"
+              *ngIf="isCollapsed"
+            />
+            <img
+              src="assets/images/icon_retract.png"
+              class="icon-expand"
+              *ngIf="!isCollapsed"
+            />
+          </div>
+        </div>
+      </div>
+
+      <div id="collapseBasic" [collapse]="isCollapsed" [isAnimated]="false">
+        <div class="well well-lg card card-block card-header item-collapsed">
+          <div class="row">
+            <div class="col-6">
+              <div class="row">
+                <div class="col-3">
+                  <p class="text-panel-1" style="text-align: center">
+                    <b>54%</b><br />ACTIVELY<br />seek updates
+                  </p>
+                </div>
+                <div class="col-5">
+                  <h4 class="text-chart-panel" style="margin-left: 15px">SEARCH<br />CHANNEL</h4>
+                  <br />
+                  <!-- <div class="half-circle"></div> -->
+                  <div
+                    [chart]="chartSearchChannel"
+                    class="section2-content-chart-wrapper"
+                  ></div>
+                  <div class="">
+                    <img
+                      src="assets/images/book_search_icon.png"
+                      class="book-search"
+                    />
+                  </div>
+                </div>
+                <div class="col-4">
+                  <h3 class="title-text-panel-1" style="margin-left: 10px">42%</h3>
+                  <p class="text-panel-12" style="text-align: center;margin-left: 5px">
+                    Also obtain updates<br />from content provided<br />by the
+                    pharmaceutical<br />industry
+                  </p>
+                </div>
+              </div>
+              <br /><br />
+              <div class="row">
+                <div class="col-6">
+                  <div class="row">
+                    <div class="col-4">
+                      <img
+                        src="assets/images/remedios_painel1.png"
+                        alt=""
+                        class="img-icons-size"
+                      />
+                    </div>
+                    <div class="col-8">
+                      <h4 class="percent">43%</h4>
+                      <p class="text-percent">
+                        seek information<br />on medications<br />or launches
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-6">
+                  <div class="row">
+                    <div class="col-4">
+                      <img
+                        src="assets/images/remedios2_painel1.png"
+                        alt=""
+                        class="img-icons-size"
+                      />
+                    </div>
+                    <div class="col-8">
+                      <h4 class="percent">21%</h4>
+                      <p class="text-percent">
+                        seek updates<br />in pharmacology
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-6" style="margin-top: 10px">
+                  <div class="row">
+                    <div class="col-4">
+                      <img
+                        src="assets/images/remedios3_painel1.png"
+                        alt=""
+                        class="img-icons-size"
+                      />
+                    </div>
+                    <div class="col-8">
+                      <h4 class="percent">16%</h4>
+                      <p class="text-percent">
+                        seek information<br />on drug interaction
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-6">
+              <canvas
+                style="margin-left: 20px; margin-top: 30px"
+                baseChart
+                [data]="doughnutChartData3"
+                [labels]="doughnutChartLabels3"
+                [chartType]="doughnutChartType3"
+                [colors]="doughnutChartTypeColors3"
+                [options]="doughnutChartOpts3"
+              >
+              </canvas>
+              <div class="">
+                <img
+                  src="assets/images/world_icon.png"
+                  class="world"
+                />
+              </div>
+
+              <h4 class="text2-chart-panel">FORMAT</h4>
+              <p class="text2-panel-1">
+                Despite the new technologies available, the traditional<br />method,
+                that is, text, is still the most accepted by doctors.
+              </p>
+              <div
+                class="add-icon"
+                style="
+                  display: inline-block;
+                  width: 28px;
+                  left: 250px;
+                  top: -370px;
+                  z-index: 999;
+                "
+              >
+                <div
+                  class="rec-yellow-tooltip rec-yellow-tooltip--section4"
+                  *ngIf="section1TooltipFormat"
+                  (click)="openSection1TooltipFormat()"
+                  style="top: -20px; left: -15px; z-index: 2"
+                >
+                  <p class="text-p-tooltip text-p-tooltip--section4">
+                    Unlike clerks, this is a more technical profile and
+                    scientific studies are present. The content would be closer
+                    to what we do for doctors, however clerks are a lay audience
+                    with differentiated content.
+                  </p>
+                </div>
+
+                <a (click)="openSection1TooltipFormat()"
+                  ><img src="assets/images/add.png"
+                /></a>
+              </div>
+              <div
+                [chart]="section2ChartVertical"
+                class="section4-content-chart-wrapper"
+                style="width: 470px"
+              ></div>
+
+              <div
+                class="add-icon"
+                style="
+                  display: inline-block;
+                  width: 18px;
+                  left: -200px;
+                  top: -120px;
+                  z-index: 999;
+                "
+              >
+                <div
+                  class="rec-yellow-tooltip rec-yellow-tooltip--section4"
+                  *ngIf="true"
+                  style="top: -110px; left: 355px; z-index: 2"
+                >
+                  <p class="text-p-tooltip text-p-tooltip--section4">
+                    Unlike doctors, who seek updates in their specialty,
+                    pharmacists look for updates on the options of products
+                    available in the market
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div
+        class="item-list-anim"
+        [ngClass]="{ 'item-list': isCollapsed2 }"
+        style="margin-top: 2%"
+        (click)="isCollapsed2 = !isCollapsed2"
+      >
+        <div class="row">
+          <div class="col-1">
+            <img src="assets/images/icon2.png" class="icon-item" />
+          </div>
+
+          <div class="col-7">
+            <h4 class="text-item">Means of access</h4>
+            <p class="sub-text-item">
+              How to share information with pharmacists?
+            </p>
+          </div>
+          <div class="col-2"></div>
+
+          <div class="col-2">
+            <img
+              src="assets/images/icon_expand.png"
+              class="icon-expand"
+              *ngIf="isCollapsed2"
+            />
+            <img
+              src="assets/images/icon_retract.png"
+              class="icon-expand"
+              *ngIf="!isCollapsed2"
+            />
+          </div>
+        </div>
+      </div>
+
+      <div id="collapseBasic2" [collapse]="isCollapsed2" [isAnimated]="false">
+        <div class="well well-lg card card-block card-header item-collapsed">
+          <!-- <p class="panel2-title">
+            In-person is the most preferred format, both for content related to
+            brands and products and for specialty-related general matters
+          </p> -->
+
+          <div
+            class="add-icon"
+            style="display: inline-block; width: 28px; left: 340px"
+          >
+            <div
+              class="rec-yellow-tooltip rec-yellow-tooltip--section4"
+              *ngIf="section2TooltipTopic"
+              (click)="openSection2TooltipTopic()"
+              style="top: -40px; left: -15px; z-index: 2"
+            >
+              <p class="text-p-tooltip text-p-tooltip--section4">
+                Could WhatsApp become a kind of Q&A for pharmacists directly
+                with the pharmaceutical company? Through what channel could they
+                make contact to ask their main questions? It could be an
+                opportunity to be closer to them in a cheaper manner.
+              </p>
+            </div>
+
+            <a (click)="openSection2TooltipTopic()"
+              ><img src="assets/images/add.png"
+            /></a>
+          </div>
+
+          <div class="row">
+            <div class="col-7">
+              <div class="row">
+                <div class="col-3">
+                  <div class="rec-btn">
+                    <img
+                      src="assets/images/like.png"
+                      class="btn-like"
+                    />
+                    <p class="text-btn">PREFERRED<br />MEDIA</p>
+                  </div>
+                  <br />
+                  <div class="rec-btn">
+                    <img
+                      src="assets/images/deslike.png"
+                      class="btn-like"
+                    />
+                    <p class="text-btn">LEAST<br />PREFERRED</p>
+                  </div>
+                </div>
+
+                <div class="col-9">
+                  <div class="rec-panel">
+                    <div class="row">
+                      <div class="col-4">
+                        <div class="topic">
+                          <img src="assets/images/topic1.png" />
+                          <h3 class="title-topic">12%</h3>
+                          <p class="text-topic">Scientific<br />studies</p>
+                        </div>
+                      </div>
+
+                      <div class="col-4">
+                        <div class="topic">
+                          <img src="assets/images/topic2_pha.png" />
+                          <h3 class="title-topic">10%</h3>
+                          <p class="text-topic">Online<br />search</p>
+                        </div>
+                      </div>
+
+                      <div class="col-4">
+                        <div class="topic">
+                          <img src="assets/images/topic3_pha.png" />
+                          <h3 class="title-topic">8%</h3>
+                          <p class="text-topic-3">
+                            Online conversation<br />on WhatsApp
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <br />
+                  <div class="rec-panel">
+                    <div class="row">
+                      <div class="col-4">
+                        <div class="topic">
+                          <img
+                            src="assets/images/tv_icon.png"
+                            style="height: 40px"
+                          />
+                          <h3 class="title-topic">3%</h3>
+                          <p class="text-topic-3">TV</p>
+                        </div>
+                      </div>
+
+                      <div class="col-4">
+                        <div class="topic">
+                          <img
+                            src="assets/images/sms_icon.png"
+                            style="height: 40px"
+                          />
+                          <h3 class="title-topic">3%</h3>
+                          <p class="text-topic">SMS</p>
+                        </div>
+                      </div>
+
+                      <div class="col-4">
+                        <div class="topic">
+                          <img
+                            src="assets/images/videoCall_icon.png"
+                            style="height: 40px"
+                          />
+                          <h3 class="title-topic">3%</h3>
+                          <p class="text-topic-3">Video<br />call</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-4" style="margin-left: 5%">
+              <h3 class="text-main-form">MAIN FORMS OF ROUTINE CONTACT</h3>
+              <p class="text-main-form-p">
+                In-person is the most preferred format, both for content related
+                to brands and products and for specialty-related general matters
+              </p>
+              <hr />
+              <div class="row">
+                <div class="col-4">
+                  <div class="topic">
+                    <img src="assets/images/topic2_pha.png" />
+                    <h3 class="title-topic">65%</h3>
+                    <p class="text-topic">Online<br />search</p>
+                  </div>
+                </div>
+
+                <div class="col-4">
+                  <div class="topic">
+                    <img src="assets/images/topic2_pha.png" />
+                    <h3 class="title-topic">50%</h3>
+                    <p class="text-topic">Social<br />media</p>
+                  </div>
+                </div>
+
+                <div class="col-4">
+                  <div class="topic">
+                    <img src="assets/images/topic3_pha.png" />
+                    <h3 class="title-topic">48%</h3>
+                    <p class="text-topic-3">Online<br />conversation</p>
+                  </div>
+                </div>
+              </div>
+              <hr />
+              <div class="row">
+                <div class="col-4">
+                  <div class="topic">
+                    <img src="assets/images/topic3_pha.png" />
+                    <h3 class="title-topic">39%</h3>
+                    <p class="text-topic">
+                      Personal<br />conversation<br />with other<br />professionals
+                    </p>
+                  </div>
+                </div>
+                <div class="col-5">
+                  <div
+                    class="add-icon"
+                    style="
+                      display: inline-block;
+                      width: 28px;
+                      left: 20px;
+                      top: 60px;
+                    "
+                  >
+                    <div
+                      class="rec-yellow-tooltip rec-yellow-tooltip--section4"
+                      *ngIf="section2TooltipTopic2"
+                      (click)="openSection2TooltipTopic2()"
+                      style="top: -40px; left: -15px; z-index: 2"
+                    >
+                      <p class="text-p-tooltip text-p-tooltip--section4">
+                        Unlike doctors, this audience prefers digital contact,
+                        although e-mails (which are part of the daily routine of
+                        at least half of the interviewed doctors) are not part
+                        of most pharmacists' daily practice in obtaining
+                        content/updates
+                      </p>
+                    </div>
+
+                    <a (click)="openSection2TooltipTopic2()"
+                      ><img src="assets/images/add.png"
+                    /></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div
+        class="item-list-anim"
+        style="margin-top: 2%"
+        [ngClass]="{ 'item-list': isCollapsed3 }"
+        (click)="isCollapsed3 = !isCollapsed3"
+      >
+        <div class="row">
+          <div class="col-1">
+            <img src="assets/images/icon3.png" class="icon-item" />
+          </div>
+
+          <div class="col-7">
+            <h4 class="text-item">In which event format should we invest?</h4>
+            <p class="sub-text-item">In-person events vs. Online events</p>
+          </div>
+          <div class="col-2"></div>
+
+          <div class="col-2">
+            <img
+              src="assets/images/icon_expand.png"
+              class="icon-expand"
+              *ngIf="isCollapsed3"
+            />
+            <img
+              src="assets/images/icon_retract.png"
+              class="icon-expand"
+              *ngIf="!isCollapsed3"
+            />
+          </div>
+        </div>
+      </div>
+
+      <div id="collapseBasic3" [collapse]="isCollapsed3" [isAnimated]="false">
+        <div
+          class="well well-lg card card-block card-header item-collapsed"
+          style="height: 390px !important"
+        >
+          <div class="row" style="padding-top: 30px">
+            <div class="col-6">
+              <div class="left-frame">
+                <h3 class="text-inperson">IN-PERSON EVENTS</h3>
+                <div class="row">
+                  <div class="col-3">
+                    <img
+                      src="assets/images/icon_people.png"
+                      class="icon-people"
+                    />
+                  </div>
+                  <div class="col-5">
+                    <p class="text-inperson-p">
+                      <br><br>For events such as debates, discussion groups and immersion courses, the in-person format is the best option.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-6">
+              <div class="right-frame">
+                <h3 class="text-onlineevents">ONLINE EVENTS</h3>
+                <div class="row">
+                  <div class="col-5" style="margin-left: 80px">
+                    <p class="text-inperson-p">
+                      <br><br>Only for receiving content from recorded or live classes/lectures, the online format is the most preferred.
+                    </p>
+                  </div>
+                  <div class="col-3">
+                    <img
+                      src="assets/images/icon_online.png"
+                      class="icon-online"
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-12">
+              <div class="row">
+                <div class="col-6">
+                  <div
+                    class="rec-yellow-tooltip"
+                    *ngIf="true"
+                    style="height: 120px; margin-top: 42%"
+                  >
+                    <p class="text-p-tooltip">
+                      <b>ADVANTAGES OF IN-PERSON EVENTS:</b> <br />
+                      Closer contact, interaction, convenience, and available content.
+                    </p>
+                  </div>
+                </div>
+
+                <div class="col-6">
+                  <div
+                    class="rec-yellow-tooltip"
+                    *ngIf="true"
+                    style="height: 120px; margin-top: 42%"
+                  >
+                    <p class="text-p-tooltip">
+                      <b>ADVANTAGES OF ONLINE EVENTS:</b><br />
+                      Convenience, content available online and schedule adjustments.
+                      The ideal time for a digital event is on Saturday evenings, with
+                      average duration of 2 hours.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="center-circle">
+              <h3 class="title-circle-percent3">53%</h3>
+              <p class="text-circle-percent3">
+                prefer in-person events
+              </p>
+            </div>
+            <div class="center-circle-border"></div>
+            <div
+              class="center-circle-percent center-circle-percent--section4-58"
+            ></div>
+          </div>
+        </div>
+      </div>
+
+      <div
+        class="item-list-anim"
+        style="margin-top: 2%"
+        [ngClass]="{ 'item-list': isCollapsed4 }"
+        (click)="toggleCollapsed4()"
+      >
+        <div class="row">
+          <div class="col-1">
+            <img src="assets/images/icon4.png" class="icon-item" />
+          </div>
+
+          <div class="col-7">
+            <h4 class="text-item">E-Learning</h4>
+            <p class="sub-text-item">
+              A relevant form of learning for pharmacists?
+            </p>
+          </div>
+          <div class="col-2"></div>
+
+          <div class="col-2">
+            <img
+              src="assets/images/icon_expand.png"
+              class="icon-expand"
+              *ngIf="isCollapsed4"
+            />
+            <img
+              src="assets/images/icon_retract.png"
+              class="icon-expand"
+              *ngIf="!isCollapsed4"
+            />
+          </div>
+        </div>
+      </div>
+
+      <div id="collapseBasic4" [collapse]="isCollapsed4" [isAnimated]="false">
+        <div class="well well-lg card card-block card-header item-collapsed">
+          <div class="row">
+            <div class="col-4"></div>
+            <div class="col-6">
+              <div class="row">
+                <div
+                  class="doughnut-graphic-wrapper"
+                  style="margin-left: 15px; margin-top: 40px"
+                >
+                  <div class="center-circle--section4">
+                    <h3 class="title-circle-percent2">52%</h3>
+                    <p class="text-circle-percent2">
+                      are highly interested in participating in online-learning
+                      on scientific topics, clinical cases, and focused on
+                      patients/diseases and product benefits.
+                    </p>
+                  </div>
+                  <div class="center-circle-border--section4"></div>
+                  <div
+                    class="
+                      center-circle-percent--section4
+                      center-circle-percent--section4-50
+                    "
+                  ></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div
+        class="item-list-anim"
+        [ngClass]="{ 'item-list': isCollapsed5 }"
+        style="margin-top: 2%"
+        (click)="toggleCollapsed5()"
+      >
+        <div class="row">
+          <div class="col-1">
+            <img src="assets/images/icon5.png" class="icon-item" />
+          </div>
+
+          <div class="col-7">
+            <h4 class="text-item-sample">
+              Relationship with pharmaceutical companies
+            </h4>
+          </div>
+          <div class="col-2"></div>
+
+          <div class="col-2">
+            <img
+              src="assets/images/icon_expand.png"
+              class="icon-expand"
+              *ngIf="isCollapsed5"
+            />
+            <img
+              src="assets/images/icon_retract.png"
+              class="icon-expand"
+              *ngIf="!isCollapsed5"
+            />
+          </div>
+        </div>
+      </div>
+
+      <div id="collapseBasic5" [collapse]="isCollapsed5" [isAnimated]="false">
+        <div class="well well-lg card card-block card-header item-collapsed">
+          <div class="row">
+            <div class="col-6">
+              <div class="row">
+                <div class="col-3">
+                  <p class="text-panel-1" style="margin-top: 30px">
+                    <b>49%</b><br />are contacted by the pharmaceutical industry
+                  </p>
+                </div>
+                <div class="col-1">
+                  <br />
+                  <!-- <img src="assets/images/add.png" height="15%" /> -->
+                  <div
+                    class="add-icon"
+                    style="display: inline-block; width: 28px; z-index: 9999"
+                  >
+                    <div
+                      class="rec-yellow-tooltip rec-yellow-tooltip--section4"
+                      *ngIf="section4Tooltip1"
+                      (click)="openSection4Tooltip1()"
+                      style="top: -140px; left: -115px; z-index: 9999"
+                    >
+                      <p class="text-p-tooltip text-p-tooltip--section4">
+                        online
+                        search is important, but on the other hand they want
+                        information from scientific articles/reliable
+                        information - can we act as a bridge between the
+                        convenience of online searching and the credibility of
+                        studies?
+                      </p>
+                    </div>
+
+                    <a (click)="openSection4Tooltip1()"
+                      ><img src="assets/images/add.png"
+                    /></a>
+                  </div>
+                </div>
+                <div class="col-5">
+                  <br />
+                  <!-- <div class="half-circle"></div> -->
+                  <div
+                    [chart]="chartSearchChannel2"
+                    class="section2-content-chart-wrapper"
+                  ></div>
+                  <div class="">
+                    <img
+                      src="assets/images/icon6_recs_phy.png"
+                      class="book-search"
+                    />
+                  </div>
+                </div>
+                <div class="col-1">
+                  <br />
+                </div>
+              </div>
+              <br /><br />
+            </div>
+            <div class="col-6">
+              <p class="text-chart-down">
+                among those who are not, 63% are interested in being contacted.
+              </p>
+              <canvas
+                style="margin-left: 20px"
+                baseChart
+                [data]="doughnutChartData32"
+                [labels]="doughnutChartLabels32"
+                [chartType]="doughnutChartType32"
+                [colors]="doughnutChartTypeColors32"
+                [options]="doughnutChartOpts32"
+              >
+              </canvas>
+              <div class="">
+                <img
+                  src="assets/images/carta_icon.png"
+                  class="world"
+                />
+              </div>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-6">
+              <p class="title-chart-nut">
+                The main means of contact preferred by these professionals were:
+              </p>
+
+              <div
+                [chart]="section2RelationshipChart"
+                class="section4-content-chart-wrapper"
+                style="width: auto"
+              ></div>
+            </div>
+            <div class="col-6">
+              <p class="title-chart-nut">
+                The main forms of contact mentioned by pharmacists
+              </p>
+
+              <div
+                [chart]="section2RelationshipChart2"
+                class="section4-content-chart-wrapper"
+                style="width: auto"
+              ></div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-2"></div>
+            <div class="col-6">
+              <div class="row">
+                <div class="col-4">
+                  <p class="text-panel-1" style="margin-top: 30px">
+                    <b>72%</b><br />do not identify one pharmaceutical company
+                    that stands out
+                  </p>
+                </div>
+                <div class="col-2">
+                  <br />
+                  <!-- <img src="assets/images/add.png" height="15%" /> -->
+                  <div
+                    class="add-icon"
+                    style="display: inline-block; width: 28px; z-index: 999"
+                  >
+                    <div
+                      class="rec-yellow-tooltip rec-yellow-tooltip--section4"
+                      *ngIf="section1TooltipSearch"
+                      (click)="openSection4Tooltip2()"
+                      style="top: -40px; left: -115px; z-index: 999"
+                    >
+                      <p class="text-p-tooltip text-p-tooltip--section4">
+                        online
+                        search is important, but on the other hand they want
+                        information from scientific articles/reliable
+                        information - can we act as a bridge between the
+                        convenience of online searching and the credibility of
+                        studies?
+                      </p>
+                    </div>
+
+                    <a (click)="openSection4Tooltip2()"
+                      ><img src="assets/images/add.png"
+                    /></a>
+                  </div>
+                </div>
+                <div class="col-5">
+                  <br />
+                  <!-- <div class="half-circle"></div> -->
+                  <div
+                    [chart]="chartSearchChannel3"
+                    class="section2-content-chart-wrapper"
+                  ></div>
+                  <div class="">
+                    <img
+                      src="assets/images/remedio_icon.png"
+                      class="book-search"
+                    />
+                  </div>
+                </div>
+                <div class="col-1">
+                  <br />
+                </div>
+              </div>
+              <br /><br />
+            </div>
+            <div class="col-3"></div>
+          </div>
+          <p class="text-chart-down" style="margin-top: -90px">
+            giving us room to become pioneers<br />with this public and bring it
+            to our side.
+          </p>
+          <div class="rec-blue-2">
+            <p class="text-blue-2">
+              <b>- FREQUENCY OF VISITS</b> from the representative is the most
+              important factor to make a company stand out from the others
+              <br />
+              <br />
+              <b
+                >- WHAT THEY WOULD LIKE TO GET FROM PHARMACEUTICAL COMPANIES:
+                Educational materials and application for patients
+              </b>
+              <br />
+              <br />
+              <b>- WHAT THEY WOULD LIKE TO SEE ON A DIGITAL PLATFORM:</b>
+              Scientific content and information on products.
+              <br />
+              <br />
+              <b style="text-decoration: underline"
+                >Unlike doctors, pharmacists prefer WhatsApp for online
+                contact.</b
+              >
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!--<div
+        class="item-list-anim"
+        style="margin-top: 2%"
+        [ngClass]="{ 'item-list': isCollapsed6 }"
+        (click)="isCollapsed6 = !isCollapsed6"
+      >
+        <div class="row">
+          <div class="col-1">
+            <img src="assets/images/icon6.png" class="icon-item" />
+          </div>
+
+          <div class="col-7">
+            <h4 class="text-item-sample">
+              Conferences & information for patients
+            </h4>
+          </div>
+          <div class="col-2"></div>
+
+          <div class="col-2">
+            <img
+              src="assets/images/icon_expand.png"
+              class="icon-expand"
+              *ngIf="isCollapsed6"
+            />
+            <img
+              src="assets/images/icon_retract.png"
+              class="icon-expand"
+              *ngIf="!isCollapsed6"
+            />
+          </div>
+        </div>
+      </div>
+
+      <div id="collapseBasic6" [collapse]="isCollapsed6" [isAnimated]="false">
+        <div class="well well-lg card card-block card-header item-collapsed">
+          <h4 class="title-panel-conferences">
+            MOST IMPORTANT CONFERENCES FOR NUTRITIONISTS:
+          </h4>
+          <div class="square-conference">
+            <div class="row" style="margin-top: 15px">
+              <div class="col-3">
+                <div class="step-panel-img">
+                  <img src="assets/images/conference_nut_01.png" />
+                  <p>33%</p>
+                </div>
+
+                <p class="step-panel-text">
+                  Nutrition and Health Congress<br />(Congresso de Nutrição e
+                  Saúde - GANEPÃO)
+                </p>
+              </div>
+
+              <div class="col-3">
+                <div class="step-panel-img">
+                  <img src="assets/images/conference_nut_02.png" />
+                  <p>25%</p>
+                </div>
+
+                <p class="step-panel-text">
+                  Brazilian Nutrition Congress (Congresso Brasileiro de
+                  Nutrição- CONBRAN)
+                </p>
+              </div>
+
+              <div class="col-3">
+                <div class="step-panel-img">
+                  <img src="assets/images/conference_nut_03.png" />
+                  <p>15%</p>
+                </div>
+
+                <p class="step-panel-text">
+                  International Functional Nutrition Congress (Congresso
+                  Internacional de Nutrição Funcional - VP)
+                </p>
+              </div>
+
+              <div class="col-3">
+                <div class="step-panel-img">
+                  <img src="assets/images/conference_nu_04.png" />
+                  <p>12%</p>
+                </div>
+
+                <p class="step-panel-text-end">
+                  Brazilian Parenteral and Enteral Nutritio Congress<br />(Congresso
+                  Brasileiro de Nutrição Parenteral e Enteral - BRASPEN)
+                </p>
+              </div>
+            </div>
+          </div>
+          <h4 class="title-panel-conferences">
+            HOW TO HELP NUTRITIONISTS EDUCATE PATIENTS?
+          </h4>
+          <p class="text-panel-5-nut">
+            Same as with doctors: Can we be a reference in helping
+            nutritionists<br />educate and engage their patients?
+          </p>
+          <br />
+          <div class="row">
+            <div class="col-6">
+              <div class="row">
+                <div class="row">
+                  <div class="col-5">
+                    <p class="text-panel-1" style="margin-top: 30px">
+                      <b>32%</b><br />
+                      of the nutritionists refer their patients to
+                      websites/sources of information, of which:
+                    </p>
+                  </div>
+                  <div class="col-1">
+                    <br />
+                    <div
+                      class="add-icon"
+                      style="display: inline-block; width: 28px"
+                    >
+                      <div
+                        class="rec-yellow-tooltip rec-yellow-tooltip--section4"
+                        *ngIf="section1TooltipSearch"
+                        (click)="openSection1TooltipSearch()"
+                        style="top: -40px; left: -115px; z-index: 2"
+                      >
+                        <p class="text-p-tooltip text-p-tooltip--section4">
+                          same insight as for doctors and nutritionists - online
+                          search is important, but on the other hand they want
+                          information from scientific articles/reliable
+                          information - can we act as a bridge between the
+                          convenience of online searching and the credibility of
+                          studies?
+                        </p>
+                      </div>
+
+                      <a (click)="openSection1TooltipSearch()"
+                        ><img src="assets/images/add.png"
+                      /></a>
+                    </div>
+                  </div>
+                  <div class="col-5">
+                    <br />
+                    <div
+                      [chart]="chartSearchChannel4"
+                      class="section2-content-chart-wrapper"
+                    ></div>
+                    <div class="">
+                      <img
+                        src="assets/images/mundo_icon.png"
+                        class="book-search"
+                        style="margin-left: 32% !important"
+                      />
+                    </div>
+                    <br />
+                    <p class="text-chart-down" style="margin-top: -90px">
+                      16% suggest articles and scientific studies / applications
+                      / social media / internet and websites / pharmaceutical
+                      companies' websites
+                    </p>
+                  </div>
+                </div>
+                <br /><br />
+              </div>
+            </div>
+
+            <div class="col-4" style="margin-left: 80px">
+              <h4 class="title-section5-nut">
+                IN ORDER TO SUGGEST CONTENT,<br />THE MOST IMPORTANT FACTOR IS
+              </h4>
+              <br /><br />
+              <div class="row">
+                <div class="col-6">
+                  <img
+                    src="assets/images/lupa_icon.png"
+                    class="icon-nut-center"
+                  />
+                  <p class="section5-nut-title">37%</p>
+                  <p class="section5-nut-sub">
+                    That it is based on<br />scientific evidence
+                  </p>
+                </div>
+                <div class="col-6">
+                  <img
+                    src="assets/images/estrelas_icon.png"
+                    class="icon-nut-center"
+                  />
+                  <p class="section5-nut-title">26%</p>
+                  <p class="section5-nut-sub">
+                    Having had a personal<br />experience (I have<br />accessed/evaluated)
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>-->
+    </div>
+  </div>
+</div>
+
+<div class="section3">
+  <div class="container">
+    <h3 class="title-section3">
+      Understanding their habits and attitudes<br />in relation to CHC
+      categories...
+    </h3>
+
+    <div
+      class="item-list-anim"
+      style="margin-top: 2%"
+      [ngClass]="{ 'item-list': isCollapsed10 }"
+      (click)="toggleCollapsed10()"
+    >
+      <div class="row">
+        <div class="col-1">
+          <!-- <img src="assets/images/like.png" class="icon-item" /> -->
+        </div>
+
+        <div class="col-7">
+          <h4 class="text-item-section3">Pharmacists' habits</h4>
+        </div>
+        <div class="col-2"></div>
+
+        <div class="col-2">
+          <img
+            src="assets/images/icon_expand.png"
+            class="icon-expand"
+            *ngIf="isCollapsed10"
+          />
+          <img
+            src="assets/images/icon_retract.png"
+            class="icon-expand"
+            *ngIf="!isCollapsed10"
+          />
+        </div>
+      </div>
+    </div>
+
+    <div id="collapseBasic10" [collapse]="isCollapsed10" [isAnimated]="false">
+      <div class="well well-lg card card-block card-header item-collapsed-section3">
+        <div>
+          <div class="row">
+            <div class="col-md-4">
+              <div class="doughnut-graphic-wrapper">
+                <div class="center-circle--section4">
+                  <h3 class="title-circle-percent"style="text-align: center">73%</h3>
+                  <p class="text-circle-percent"style="text-align: center">
+                  of pharmacists consider<br>themselves largely<br>empowered to <br>recommend products<br> to consumers.
+                  </p>
+                </div>
+                <div class="center-circle-border--section4"></div>
+                <div class="center-circle-percent--section4 center-circle-percent--section4-74"></div>
+              </div>
+            </div>
+
+            <div class="col-md-8">
+              <div class="row">
+                <div class="col-md-6">
+                  <div class="row">
+                    <div class="col-2">
+                      <img src="assets/images/prob_icon.png" style="height: 35%; margin-top: 20px;" />
+                    </div>
+                    <div class="col-8">
+                      <p class="title-percent">64%</p>
+                      <p class="text-col">
+                        suggest a similar or generic product when the prescription contains only the name of the molecule and not the product name
+                      </p>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col-md-6">
+                  <div class="row">
+                    <div class="col-2">
+                      <img src="assets/images/ico2.png" style="height: 40%; margin-top: 20px;" />
+                    </div>
+                    <div class="col-8">
+                      <p class="title-percent">83%</p>
+                      <p class="text-col">
+                        of pharmacists habitually serve clients along with clerks at the store. The minority of them provide pharmaceutical care.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="row" style="margin-top: 30px;">
+                <div class="col-md-6">
+                  <div class="row">
+                    <div class="col-2">
+                      <img src="assets/images/ico1.png" style="height: 40%; margin-top: 20px;" />
+                    </div>
+                    <div class="col-8">
+                      <p class="title-percent">66%</p>
+                      <p class="text-col">
+                        deliver exactly the product prescribed by the doctor when the prescription contains the product name
+                      </p>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col-md-6">
+                  <div class="add-icon" style="display: inline-block; width: 28px; margin-top: 50px;">
+                    <div
+                      class="rec-yellow-tooltip rec-yellow-tooltip--section4"
+                      *ngIf="tooltipOpen"
+                      (click)="toggleTooltip()"
+                      style="top: -40px; left: -115px; z-index: 2"
+                    >
+                      <p class="text-p-tooltip text-p-tooltip--section4">
+                        This reinforces the importance of offering knowledge
+                        on product categories and indications, so that they are
+                        empowered to recommend products and answer questions
+                        >> a key step in product acquisition
+                      </p>
+                    </div>
+
+                    <a (click)="toggleTooltip()">
+                      <img src="assets/images/add.png" />
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div
+      class="item-list-anim"
+      style="margin-top: 2%"
+      (click)="toggleCollapsed11()"
+    >
+      <div class="row">
+        <div class="col-1">
+          <!-- <img src="assets/images/deslike.png" class="icon-item" /> -->
+        </div>
+
+        <div class="col-7">
+          <h4 class="text-item-section3">Ranking of most important atributes</h4>
+        </div>
+        <div class="col-2"></div>
+
+        <div class="col-2">
+          <img
+            src="assets/images/icon_expand.png"
+            class="icon-expand"
+            *ngIf="isCollapsed11"
+          />
+          <img
+            src="assets/images/icon_retract.png"
+            class="icon-expand"
+            *ngIf="!isCollapsed11"
+          />
+        </div>
+      </div>
+    </div>
+
+    <div id="collapseBasic11" [collapse]="isCollapsed11" [isAnimated]="false">
+      <div
+        class="well well-lg card card-block card-header item-collapsed-section3"
+      >
+        <br />
+        <table style="width: 100%">
+          <tr>
+            <td class="title-table bg">CATEGORY</td>
+            <td class="title-table bg">PAIN</td>
+            <td class="title-table bg">FEVER</td>
+            <td class="title-table bg">CHILD FEVER</td>
+            <td class="title-table bg">ALLERGY</td>
+            <td class="title-table bg">SUPPLEMENTS</td>
+            <td class="title-table bg">PROBIOTICS</td>
+            <td class="title-table bg">PROBIOTICS</td>
+          </tr>
+          <tr>
+            <td class="text-table" style="text-align: center">
+              MOST IMPORTANT ATRIBUTES
+            </td>
+            <td class="text-table" style="text-align: left">
+              - Pain intensity: 16% <br />
+              - Efficacy: 16% <br />
+              - Pain location/product safety: 15%<br />
+              - Pharmaceutical form (pills, liquid solution etc.): 7% <br />
+              - Price: 7%
+              <br>- Brand: 6%
+            </td>
+            <td class="text-table" style="text-align: left">
+              - Active ingredient: 19% <br />
+              - Product safety: 17% <br />
+              - Scientific proof of benefits: 16%<br />
+              - Pharmaceutical form (pills, liquid solution etc.): 7% <br />
+              - Price/prior experience with the brand: 6% <br />
+              - Samples/frequency of contact with representative: 5%
+            </td>
+            <td class="text-table" style="text-align: left">
+              - Safety: 63% <br />
+              - Efficacy: 33%
+            </td>
+            <td class="text-table" style="text-align: left">
+              - Product safety: 17% <br />
+              - Scientific proof of benefits: 13% <br />
+              - Active ingredient: 13% <br />
+              - Trust in pharmaceutical company: 13%<br />
+              - Prior experience with the brand/price: 7% <br />
+              - Frequency of contact with representative: 6% <br />
+              - Samples: 6%
+            </td>
+            <td class="text-table" style="text-align: left">
+              - Active ingredient: 16% <br />
+              - Scientific proof of benefits: 16% <br />
+              - Dosage/product safety: 12%<br />
+              - Frequency of contact with representative: 7% <br />
+              - Prior experience with the brand: 6% <br />
+              - Samples/price: 5%<br />
+            </td>
+            <td class="text-table" style="text-align: left">
+              - Product safety: 16%<br />
+              - Scientific proof of benefits: 15% <br />
+              - Dosage: 14%<br />
+              - Pharmaceutical form (pills, liquid, solution etc.)/prior
+              experience with the brand: 9% <br />
+              - Price: 7% <br />
+              - Frequency of contact with representative/samples: 5%<br />
+            </td>
+            <td class="text-table" style="text-align: left">
+              - Active ingredient: 17% <br />
+              - Dosage: 14% - Product safety: 13%<br />
+              - Pharmaceutical form (pills, liquid solution etc.): 9% <br />
+              - Trust in pharmaceutical company/prior experience with the
+              brand/price: 8% <br />
+              - Frequency of contact with representative/samples: 5%<br />
+            </td>
+          </tr>
+        </table>
+      </div>
+    </div>
+
+    <div
+      class="item-list-anim"
+      style="margin-top: 2%"
+      (click)="toggleCollapsed12()"
+    >
+      <div class="row">
+        <div class="col-1">
+          <!-- <img src="assets/images/deslike.png" class="icon-item" /> -->
+        </div>
+
+        <div class="col-7">
+          <h4 class="text-item-section3">Insights</h4>
+        </div>
+        <div class="col-2"></div>
+
+        <div class="col-2">
+          <img
+            src="assets/images/icon_expand.png"
+            class="icon-expand"
+            *ngIf="isCollapsed11"
+          />
+          <img
+            src="assets/images/icon_retract.png"
+            class="icon-expand"
+            *ngIf="!isCollapsed11"
+          />
+        </div>
+      </div>
+    </div>
+
+    <div id="collapseBasic12" [collapse]="isCollapsed12" [isAnimated]="false">
+      <div
+        class="well well-lg card card-block card-header item-collapsed-section3"
+      >
+        <br />
+        <div class="row">
+          <div class="col-4">
+            <div class="row">
+              <div class="col-2">
+                <img
+                  src="assets/images/pessoa_coluna.png"
+                  height="40%"
+                />
+              </div>
+              <div class="col-8">
+                <p class="title-col">FOR PAIN</p>
+                <p class="title-col2">In case of body aches,</p>
+                <p class="title-percent">80%</p>
+                <p class="text-col">
+                  of pharmacists usually recommend a product for the type of
+                  pain, not a muscle relaxant or anti-inflammatory.
+                </p>
+              </div>
+            </div>
+            <br />
+            <div class="row" style="margin-top: 20px">
+              <div class="col-2">
+                <img
+                  src="assets/images/nariz_icon.png"
+                  height="22%"
+                />
+              </div>
+              <div class="col-8">
+                <p class="title-col">FOR ALLERGIES</p>
+                <p class="title-percent">61%</p>
+                <p class="text-col">
+                  prescribe isolated use of antihistamine, and 51% prescribe
+                  associated use of antihistamine with a decongestant
+                </p>
+                <p class="title-percent">48%</p>
+                <p class="text-col">
+                  of pharmacists said that patients spontaneously request a
+                  combination of antihistamine and decongestant
+                </p>
+              </div>
+            </div>
+            <br />
+            <div class="row" style="margin-top: 20px">
+              <div class="col-2">
+                <img
+                  src="assets/images/nariz_icon.png"
+                  height="22%"
+                />
+              </div>
+              <div class="col-8">
+                <p class="title-col">FOR ALLERGIES</p>
+                <p class="title-percent">52%</p>
+                <p class="text-col">
+                  of pharmacists are not aware of the benefits of using nasal
+                  corticosteroids to treat rhinitis, howeve 52% of pharmacists
+                  report that patients prefer intranasal jet devices, due to ease
+                  of use, although 10% report having heard complaints from
+                  patients regarding discomfort during application or some effect
+                  after the use of the antihistamine
+                </p>
+              </div>
+            </div>
+            <br />
+            <div class="row" style="margin-top: 20px">
+              <div class="col-2">
+                <img
+                  src="assets/images/prob_icon.png"
+                  height="22%"
+                />
+              </div>
+              <div class="col-8">
+                <p class="title-col">PROBIOTICS</p>
+                <p class="title-percent">97%</p>
+                <p class="text-col">
+                  are aware of the probiotics properties and 68% suggest probiotics to consumers
+                </p>
+                <p class="text-col">
+                  55% of pharmacists are interested in knowing more about the
+                  role of microbiota in health and the benefits of probiotics
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-4">
+            <div class="row">
+              <div class="col-2">
+                <img
+                  src="assets/images/nariz_icon.png"
+                  height="25%"
+                />
+              </div>
+              <div class="col-8">
+                <p class="title-col">FOR ALLERGIES</p>
+                <p class="title-percent">90%</p>
+                <p class="text-col">
+                  of pharmacists know the difference between antihistamines'
+                  generations
+                </p>
+                <p class="text-col">
+                  2nd generation is the most preferred (43%), for the following
+                  reasons:
+                </p>
+                <p class="text-col">
+                  Fewer side effects, greater efficacy, generic medicinal
+product, affordability.
+                </p>
+              </div>
+            </div>
+            <br />
+            <div class="row" style="margin-top: 20px">
+              <div class="col-2">
+                <img
+                  src="assets/images/nariz_icon.png"
+                  height="35%"
+                />
+              </div>
+              <div class="col-8">
+                <p class="title-col">FOR ALLERGIES</p>
+                <p class="title-percent">74%</p>
+                <p class="text-col">
+                  believe patients cannot distinguish between influenza and
+                  allergic rhinitis,because the symptoms are very similar.
+                </p>
+              </div>
+            </div>
+            <br />
+            <div class="row" style="margin-top: 20px">
+              <div class="col-2">
+                <img
+                  src="assets/images/nariz_icon.png"
+                  height="35%"
+                />
+              </div>
+              <div class="col-8">
+                <p class="title-col">FOR ALLERGIES</p>
+                <p class="title-percent">74%</p>
+                <p class="text-col">
+                  only suggest a product if the person is not eating well and
+                  17% of pharmacists suggest supplements in all cases
+                </p>
+              </div>
+            </div>
+            <br />
+            <div class="row" style="margin-top: 20px">
+              <div class="col-2">
+                <img
+                  src="assets/images/nariz_icon.png"
+                  height="35%"
+                />
+              </div>
+              <div class="col-8">
+                <p class="title-col">FOR ALLERGIES</p>
+                <p class="title-percent">27%</p>
+                <p class="text-col">
+                  only suggest a product if the person is not eating well and
+                  17% of pharmacists suggest supplements in all cases
+                </p>
+              </div>
+            </div>
+            <br />
+            <div class="row" style="margin-top: 20px">
+              <div class="col-2">
+                <img
+                  src="assets/images/icon_suplemento.png"
+                  height="25%"
+                />
+              </div>
+              <div class="col-8">
+                <p class="title-col">SUPPLEMENTS</p>
+                <p class="title-percent">42%</p>
+                <p class="text-col">
+                  are aware of the causes and symptoms of constipation
+                </p>
+                <p class="text-col">
+                  42% said that they lack more information on laxatives and
+                  their indications.
+                </p>
+                <p class="text-col">
+                  19% feel promotional activities at the drugstore would be
+                  beneficial
+                </p>
+              </div>
+            </div>
+            <br />
+            <div class="row" style="margin-top: 20px">
+              <div class="col-2">
+                <img
+                  src="assets/images/laxitivos.png"
+                  height="25%"
+                />
+              </div>
+              <div class="col-8">
+                <p class="title-col">LAXATIVES</p>
+                <p class="title-percent">45%</p>
+                <p class="text-col">
+                  of pharmacists suggest the use of laxatives to consumers
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-4">
+            <div class="row">
+              <div class="col-2">
+                <img src="assets/images/infinito.png" height="8%" />
+              </div>
+              <div class="col-8">
+                <p class="title-col">FOR FEVER</p>
+                <p class="title-col2">Most pharmacists</p>
+                <p class="title-percent">80%</p>
+                <p class="text-col">
+                  perceive the difference in efficient drugs for fever and the
+                  occurrence of side effects, and they acknowledge that dipyrone
+                  monohydrate is more efficient.
+                </p>
+                <p class="text-col">
+                  <b>42%</b> mention paracetamol as a product for fever with
+                  greater risks of adverse effects.
+                </p>
+                <p class="text-col">
+                  <b>For child fever, 3%</b> of pharmacists usually suggest
+                  seeing a pediatrician and do not suggest a product.
+                </p>
+              </div>
+            </div>
+            <br />
+            <div class="row" style="margin-top: 20px">
+              <div class="col-2">
+                <img
+                  src="assets/images/nariz_icon.png"
+                  height="35%"
+                />
+              </div>
+              <div class="col-8">
+                <p class="title-col">FOR ALLERGIES</p>
+                <p class="title-percent">74%</p>
+                <p class="text-col">
+                  usually recommend an antihistamine to consumers with allergic
+                  rhinitis or hives, the others only by medical prescription.
+                </p>
+              </div>
+            </div>
+            <br />
+            <div class="row" style="margin-top: 20px">
+              <div class="col-2">
+                <img
+                  src="assets/images/icon_suplemento.png"
+                  height="15%"
+                />
+              </div>
+              <div class="col-8">
+                <p class="title-col">SUPPLEMENTS</p>
+                <p class="title-percent">57%</p>
+                <p class="text-col">
+                  of pharmacists prefer not to suggest supplements without
+                  prescription from a doctor or nutritionist
+                </p>
+                <p class="text-col">
+                  "How to supplement in specific situations" (50%) is the
+                  content pharmacists desire the most.
+                </p>
+                <p class="text-col">
+                  23% want to know "What are the main nutrients and quantities per age group"
+                </p>
+                <p class="text-col">
+                  13% are interested in learning "Details on who needs
+                  supplements"
+                </p>
+                <p class="text-col">
+                  and 7% are interested in "How to read products' labels" and
+                  "When to recommend seeing a nutritionist/doctor"
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="section4">
+  <div class="container">
+    <div class="section4-tabs">
+      <ul
+        ngbNav
+        [animation]="false"
+        #nav="ngbNav"
+        [(activeId)]="activeTab"
+        class="nav-tabs"
+      >
+        <!-- SUPPLEMENTS TAB -->
+        <li [ngbNavItem]="1">
+          <a ngbNavLink class="main-tab">PAIN & FEVER</a>
+
+          <ng-template ngbNavContent>
+            <ul
+              ngbNav
+              [animation]="false"
+              #subnav2="ngbNav"
+              [(activeId)]="activeSubTab2"
+              class="nav-tabs nav-tabs--transparent"
+            >
+              <li [ngbNavItem]="1">
+                <ng-template ngbNavContent>
+                  <br />
+                  <div class="row">
+                    <div class="col-3" style="margin-top: 5%">
+                      <h3 class="title-pain">IN CASE OF BODY ACHES</h3>
+                      <div
+                        class="doughnut-graphic-wrapper"
+                        style="margin-left: -15px"
+                      >
+                        <div class="center-circle--section4">
+                          <h3 class="title-circle-percent2">80%</h3>
+                          <p
+                            class="text-circle-percent2"
+                            style="padding-left: 10px; padding-right: 10px"
+                          >
+                            of pharmacists usually recommend a product for the
+                            type of pain, not a muscle relaxant or anti-inflammatory.
+                          </p>
+                        </div>
+                        <div class="center-circle-border--section4"></div>
+                        <div
+                          class="
+                            center-circle-percent--section4
+                            center-circle-percent--section4-80
+                          "
+                        ></div>
+                      </div>
+                    </div>
+                    <div class="col-3">
+                      <h3
+                        class="title-pain"
+                        style="font-size: 17px; text-align: left"
+                      >
+                        RANKING OF IMPORTANT ATTRIBUTES OF DRUGS FOR FEVER:
+                      </h3>
+                      <br />
+                      <div>
+                        <img
+                          src="assets/images/remedios3_painel1.png"
+                          style="width: 20%"
+                        />
+                        <p
+                          class="title-percent"
+                          style="margin-top: 10px !important"
+                        >
+                          80%
+                        </p>
+                        <p class="text-col">
+                          Most pharmacists perceive the difference in efficient
+                          drugs for fever and the occurrence of side effects,
+                          and they acknowledge that dipyrone monohydrate is more
+                          efficient.
+                        </p>
+                      </div>
+
+                      <div>
+                        <img
+                          src="assets/images/remedio_icon.png"
+                          style="width: 20%"
+                        />
+                        <p
+                          class="title-percent"
+                          style="margin-top: 10px !important"
+                        >
+                          42%
+                        </p>
+                        <p class="text-col">
+                          mention paracetamol as a product for fever with
+                          greater risks of adverse effects.
+                        </p>
+                      </div>
+                    </div>
+                    <div class="col-1">
+                      <div class="divider"></div>
+                    </div>
+                    <div class="col-3">
+                      <h3
+                        class="title-pain"
+                        style="font-size: 17px; text-align: left"
+                      >
+                      RANKING OF IMPORTANT ATTRIBUTES OF DRUGS FOR FEVER IN CHILDREN:
+                      </h3>
+                      <br />
+                      <div>
+                        <img
+                          src="assets/images/icon_3_panel_1.png"
+                          style="width: 20%"
+                        />
+                        <p
+                          class="title-percent"
+                          style="margin-top: 10px !important"
+                        >
+                          3%
+                        </p>
+                        <p class="text-col">
+                          of pharmacists usually suggest seeing a pediatrician and do not suggest a product
+                        </p>
+                      </div>
+
+                    </div>
+                  </div>
+                  <br>
+                </ng-template>
+              </li>
+            </ul>
+            <div [ngbNavOutlet]="subnav2" class=""></div>
+          </ng-template>
+        </li>
+
+        <!-- ALLERGY TAB -->
+        <li [ngbNavItem]="2">
+          <a ngbNavLink class="main-tab">ALLERGY</a>
+
+          <ng-template ngbNavContent>
+            <ul
+              ngbNav
+              [animation]="false"
+              #subnav2="ngbNav"
+              [(activeId)]="activeSubTab2"
+              class="nav-tabs nav-tabs--transparent"
+            >
+              <!-- 1 ST AND 2 ND GENERATION SUBTAB (ALLERGY TAB) -->
+              <li [ngbNavItem]="1">
+                <ng-template ngbNavContent>
+                  <div class="row">
+                    <div class="col-4">
+                      <p class="title-general-health">
+                        RANKING OF IMPORTANT<br />ATTRIBUTES OF DRUGS FOR
+                        ALLERGY:
+                      </p>
+                    </div>
+                  </div>
+                  <br />
+                  <div class="row" style="margin-left: 2%">
+                    <div class="col-4">
+                      <img
+                        src="assets/images/frasco_icon.png"
+                        height="20%"
+                      />
+                      <p
+                        class="title-percent"
+                        style="margin-top: 10px !important"
+                      >
+                        90%
+                      </p>
+                      <p class="text-col">
+                        of pharmacists know the differencebetween
+                        antihistamines' generations
+                      </p>
+                      <p class="text-col">
+                        2nd generation is the most preferred (43%), for the
+                        following reasons
+                      </p>
+                      <p class="text-col">
+                        fewer side effects, greater efficacy, generic medicinal
+                        product, affordability
+                      </p>
+                    </div>
+                    <div class="col-4">
+                      <img
+                        src="assets/images/remedios3_painel1.png"
+                        height="20%"
+                      />
+                      <p
+                        class="title-percent"
+                        style="margin-top: 10px !important"
+                      >
+                        52%
+                      </p>
+                      <p class="text-col">
+                        of pharmacists are not aware of the benefits of using
+                        nasal corticosteroids to treat rhinitis, however 52% of pharmacists report that patients prefer intranasal jet
+                        devices, due to ease of use, although 10% report having heard complaints from patients regarding discomfort
+                        during application or some effect after the use of the antihistamine.
+                      </p>
+                    </div>
+                    <div class="col-4">
+                      <img
+                        src="assets/images/prob_icon.png"
+                        height="20%"
+                      />
+                      <p
+                        class="title-percent"
+                        style="margin-top: 10px !important"
+                      >
+                        74%
+                      </p>
+                      <p class="text-col">
+                        believe patients cannot distinguish between influenza
+                        and allergic rhinitis, because the symptoms are very
+                        similar
+                      </p>
+                    </div>
+                  </div>
+
+                  <div class="row" style="margin-left: 2%">
+                    <div class="col-4">
+                      <img
+                        src="assets/images/frasco_icon.png"
+                        height="20%"
+                      />
+                      <p
+                        class="title-percent"
+                        style="margin-top: 10px !important"
+                      >
+                        61%
+                      </p>
+                      <p class="text-col">
+                        prescribe isolated use of antihistamine, and 51%
+                        prescribe associated use of antihistamine with a
+                        decongestant
+                      </p>
+                    </div>
+                    <div class="col-4">
+                      <img
+                        src="assets/images/frasco_icon.png"
+                        height="20%"
+                      />
+                      <p
+                        class="title-percent"
+                        style="margin-top: 10px !important"
+                      >
+                        48%
+                      </p>
+                      <p class="text-col">
+                        of pharmacists said that patients spontaneously request
+                        a combination of antihistamine and decongestant
+                      </p>
+                    </div>
+                    <div class="col-4">
+                      <img
+                        src="assets/images/frasco_icon.png"
+                        height="20%"
+                      />
+                      <p
+                        class="title-percent"
+                        style="margin-top: 10px !important"
+                      >
+                        74%
+                      </p>
+                      <p class="text-col">
+                        usually recommend an antihistamine to consumers with<br />allergic
+                        rhinitis or hives, the others only<br />by medical prescription
+                      </p>
+                    </div>
+                  </div>
+                </ng-template>
+              </li>
+            </ul>
+
+            <div [ngbNavOutlet]="subnav2"></div>
+          </ng-template>
+        </li>
+
+        <!-- SUPPLEMENTS TAB -->
+        <li [ngbNavItem]="3">
+          <a ngbNavLink class="main-tab">SUPPLEMENTS</a>
+          <ng-template ngbNavContent>
+            <ul
+              ngbNav
+              [animation]="false"
+              #subnav1="ngbNav"
+              [(activeId)]="activeSubTab1"
+              class="nav-tabs nav-tabs--transparent"
+            >
+              <!-- 1 ST AND 2 ND GENERATION SUBTAB (ALLERGY TAB) -->
+              <li [ngbNavItem]="1">
+                <a ngbNavLink class="secondary-tab mt-5"
+                  >HOW THEY ARE RECOMMENDED</a
+                >
+
+                <ng-template ngbNavContent>
+                  <div class="custom-tab-content">
+                    <h4
+                      class="section4-title mb-40"
+                      style="text-decoration: underline; margin-left: 5%"
+                    >
+                      HOW THEY ARE RECOMMENDED
+                    </h4>
+                    <div class="row">
+                      <div class="col-3" style="margin-top: 5%">
+
+                        <div
+                          class="doughnut-graphic-wrapper"
+                          style="margin-left: -15px"
+                        >
+                          <div class="center-circle--section4">
+                            <h3 class="title-circle-percent2">57%</h3>
+                            <p
+                              class="text-circle-percent2"
+                              style="padding-left: 10px; padding-right: 10px"
+                            >
+                              of pharmacists prefer not to suggest supplements without prescription from a doctor or nutritionist
+                            </p>
+                          </div>
+                          <div class="center-circle-border--section4"></div>
+                          <div
+                            class="
+                              center-circle-percent--section4
+                              center-circle-percent--section4-58
+                            "
+                          ></div>
+                        </div>
+                      </div>
+                      <!--<div class="col-5">-->
+                        <br />
+                        <div class="col-2" style="margin-top: 5%">
+                        <div>
+                          <p class="text-col">
+                            "How to supplement in specific situations"
+                          </p>
+                          <p
+                            class="title-percent"
+                            style="margin-top: 10px !important"
+                          >
+                            50%
+                          </p>
+                          <p class="text-col">
+                            is the content pharmacists desire the most.
+                          </p>
+                        </div>
+                        <br>
+                        <div>
+                          <p
+                            class="title-percent"
+                            style="margin-top: 10px !important"
+                          >
+                            23%
+                          </p>
+                          <p class="text-col">
+                            want to know "What are the main nutrients and quantities per age group"
+                          </p>
+                        </div>
+                      </div>
+                      <div class="col-2" style="margin-top: 5%">
+                      <div>
+                        <p
+                          class="title-percent"
+                          style="margin-top: 10px !important"
+                        >
+                          13%
+                        </p>
+                        <p class="text-col">
+                          are interested in learning "Details on who needs supplements"
+                        </p>
+                      </div>
+                      <br>
+                      <div>
+                        <p
+                          class="title-percent"
+                          style="margin-top: 10px !important"
+                        >
+                          7%
+                        </p>
+                        <p class="text-col">
+                          are interested in "How to read products' labels" and "When to recommend seeing a nutritionist/doctor"
+                        </p>
+                      </div>
+                    </div>
+                      <!--</div>-->
+                      <div class="col-1">
+                        <div class="divider"></div>
+                      </div>
+                      <div class="col-4">
+
+                        <div
+                          class="doughnut-graphic-wrapper"
+                          style="margin-left: -15px"
+                        >
+                          <div class="center-circle--section4">
+                            <h3 class="title-circle-percent2">27%</h3>
+                            <p
+                              class="text-circle-percent2"
+                              style="padding-left: 10px; padding-right: 10px"
+                            >
+                              only suggest a product if the person is not eating well and 17% of pharmacists suggest supplements in all cases.
+                            </p>
+                          </div>
+                          <div class="center-circle-border--section4"></div>
+                          <div
+                            class="
+                              center-circle-percent--section4
+                              center-circle-percent--section4-28
+                            "
+                          ></div>
+                        </div>
+
+                        <p class="text-col"style="margin-top: -100px; margin-left: -50px; text-align: center">
+                          Pharmacists that suggest a supplement usually suggest an off-the-shelf multivitamin, and
+                        </p>
+
+                        <p
+                          class="title-percent"
+                          style="margin-top: 10px; margin-left: -50px; text-align: center !important"
+                        >
+                          Lavitan (33%) and Centrum (23%)
+                        </p>
+
+                        <p class="text-col"style="text-align: center; margin-left: -50px;">
+                          are the most recommended brands.
+                        </p>
+
+                      </div>
+                    </div>
+                  </div>
+                </ng-template>
+              </li>
+
+              <!-- NASAL SUBTAB (ALLERGY TAB) -->
+              <li [ngbNavItem]="2">
+                <a ngbNavLink class="secondary-tab mt-5">IMMUNITY</a>
+
+                <ng-template ngbNavContent>
+                  <div class="custom-tab-content">
+                    <h4
+                      class="section4-title mb-40"
+                      style="text-decoration: underline"
+                    >
+                      IMMUNITY
+                    </h4>
+                    <div class="row">
+                      <div class="col-5">
+                        <h3 class="title-nav-content">
+                          FOR IMMUNITY, PHARMACISTS USUALLY SUGGEST:
+                        </h3>
+                        <div class="row" style="margin-top: 30px">
+                          <div class="col-4">
+                            <img
+                              src="assets/images/c_icon.png"
+                              class="img-percent"
+                            />
+                            <h3 class="percent-h3">57%</h3>
+                            <p class="percent-p">suggest<br />vitamin C</p>
+                          </div>
+                          <div class="col-4">
+                            <img
+                              src="assets/images/zn_icon.png"
+                              class="img-percent"
+                            />
+                            <h3 class="percent-h3">33%</h3>
+                            <p class="percent-p">suggest<br />zinc</p>
+                          </div>
+                          <div class="col-4">
+                            <img
+                              src="assets/images/d_icon.png"
+                              class="img-percent"
+                            />
+                            <h3 class="percent-h3">23%</h3>
+                            <p class="percent-p">suggest<br />vitamin D</p>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="col-2">
+                        <div class="divider"></div>
+                      </div>
+
+                      <div class="col-5">
+                        <h3 class="title-nav-content">
+                          THE MAIN BRANDS INDICATED WERE:
+                        </h3>
+                        <div class="row" style="margin-top: 30px">
+                          <div class="col-6">
+                            <img
+                              src="assets/images/frasco_icon.png"
+                              class="img-percent"
+                              style="width: 18% !important"
+                            />
+                            <h3 class="percent-h3">13%</h3>
+                            <p class="percent-p">Redoxon<br />(Bayer)</p>
+                          </div>
+                          <div class="col-6">
+                            <img
+                              src="assets/images/pilula.png"
+                              class="img-percent"
+                              style="width: 30% !important"
+                            />
+                            <h3 class="percent-h3">10%</h3>
+                            <p class="percent-p">Centrum<br />(Pfizer)</p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </ng-template>
+              </li>
+
+              <li [ngbNavItem]="3">
+                <a ngbNavLink class="secondary-tab mt-5">FATIGUE</a>
+
+                <ng-template ngbNavContent>
+                  <div class="custom-tab-content">
+                    <h4
+                      class="section4-title mb-40"
+                      style="text-decoration: underline"
+                    >
+                      FATIGUE
+                    </h4>
+                    <div class="row">
+                      <div class="col-5">
+                        <h3 class="title-nav-content">
+                          FOR FATIGUE, PHARMACISTS USUALLY SUGGEST:
+                        </h3>
+                        <div class="row" style="margin-top: 30px">
+                          <div class="col-4">
+                            <img
+                              src="assets/images/c_icon.png"
+                              class="img-percent"
+                            />
+                            <h3 class="percent-h3">17%</h3>
+                            <p class="percent-p">suggest<br />vitamin C</p>
+                          </div>
+                          <div class="col-4">
+                            <img
+                              src="assets/images/zn_icon.png"
+                              class="img-percent"
+                            />
+                            <h3 class="percent-h3">13%</h3>
+                            <p class="percent-p">suggest<br />ginseng</p>
+                          </div>
+                          <div class="col-4">
+                            <img
+                              src="assets/images/d_icon.png"
+                              class="img-percent"
+                            />
+                            <h3 class="percent-h3">13%</h3>
+                            <p class="percent-p">suggest<br />vitamin D</p>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="col-2">
+                        <div class="divider"></div>
+                      </div>
+
+                      <div class="col-5">
+                        <h3 class="title-nav-content">
+                          THE MAIN BRANDS INDICATED WERE:
+                        </h3>
+                        <div class="row" style="margin-top: 30px">
+                          <div class="col-4">
+                            <img
+                              src="assets/images/frasco_icon.png"
+                              class="img-percent"
+                              style="width: 30% !important"
+                            />
+                            <h3 class="percent-h3">13%</h3>
+                            <p class="percent-p">Gerovital<br />(EMS)</p>
+                          </div>
+                          <div class="col-4">
+                            <img
+                              src="assets/images/pilula.png"
+                              class="img-percent"
+                              style="width: 40% !important"
+                            />
+                            <h3 class="percent-h3">10%</h3>
+                            <p class="percent-p">
+                              Targifor<br />(Sanofi Medley)
+                            </p>
+                          </div>
+                          <div class="col-4">
+                            <img
+                              src="assets/images/remedios3_painel1.png"
+                              class="img-percent"
+                              style="width: 40% !important"
+                            />
+                            <h3 class="percent-h3">10%</h3>
+                            <p class="percent-p">
+                              EMS<br />(pharmaceutical<br />company)
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </ng-template>
+              </li>
+
+              <li [ngbNavItem]="4">
+                <a ngbNavLink class="secondary-tab mt-5">STRESS</a>
+
+                <ng-template ngbNavContent>
+                  <div class="custom-tab-content">
+                    <h4
+                      class="section4-title mb-40"
+                      style="text-decoration: underline"
+                    >
+                      STRESS
+                    </h4>
+                    <div class="row">
+                      <div class="col-5">
+                        <h3 class="title-nav-content">
+                          FOR STRESS, PHARMACISTS USUALLY SUGGEST:
+                        </h3>
+                        <div class="row" style="margin-top: 30px">
+                          <div class="col-2"></div>
+                          <div class="col-4">
+                            <img
+                              src="assets/images/b_icon.png"
+                              class="img-percent"
+                            />
+                            <h3 class="percent-h3">13%</h3>
+                            <p class="percent-p">suggest<br />vitamin B</p>
+                          </div>
+                          <div class="col-4">
+                            <img
+                              src="assets/images/d_icon.png"
+                              class="img-percent"
+                            />
+                            <h3 class="percent-h3">10%</h3>
+                            <p class="percent-p">suggest<br />vitamin D</p>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="col-2">
+                        <div class="divider"></div>
+                      </div>
+
+                      <div class="col-5">
+                        <h3 class="title-nav-content">
+                          THE MAIN BRANDS INDICATED WERE:
+                        </h3>
+                        <div class="row" style="margin-top: 30px">
+                          <div class="col-2"></div>
+                          <div class="col-4">
+                            <img
+                              src="assets/images/remedios3_painel1.png"
+                              class="img-percent"
+                            />
+                            <h3 class="percent-h3">13%</h3>
+                            <p class="percent-p">
+                              EMS<br />(pharmaceutical<br />company)
+                            </p>
+                          </div>
+                          <div class="col-4">
+                            <img
+                              src="assets/images/frasco_icon.png"
+                              class="img-percent"
+                              style="width: 30%"
+                            />
+                            <h3 class="percent-h3">10%</h3>
+                            <p class="percent-p">Lavitan<br />(Cimed)</p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </ng-template>
+              </li>
+
+              <li [ngbNavItem]="5">
+                <a ngbNavLink class="secondary-tab mt-5">SLEEP IMPROVEMENT</a>
+
+                <ng-template ngbNavContent>
+                  <div class="custom-tab-content">
+                    <h4
+                      class="section4-title mb-40"
+                      style="text-decoration: underline"
+                    >
+                      SLEEP IMPROVEMENT
+                    </h4>
+                    <div class="row">
+                      <div class="col-5">
+                        <h3 class="title-nav-content">
+                          FOR SLEEP IMPROVEMENT, PHARMACISTS USUALLY SUGGEST:
+                        </h3>
+                        <div class="row" style="margin-top: 30px">
+                          <div class="col-4">
+                            <img
+                              src="assets/images/frasco_icon.png"
+                              class="img-percent"
+                              style="width: 30% !important"
+                            />
+                            <h3 class="percent-h3">23%</h3>
+                            <p class="percent-p">suggest<br />vitamin B</p>
+                          </div>
+                          <div class="col-4">
+                            <img
+                              src="assets/images/b_icon.png"
+                              class="img-percent"
+                            />
+                            <h3 class="percent-h3">17%</h3>
+                            <p class="percent-p">
+                              suggest vitamin<br />B (vitamin<br />B complex)
+                            </p>
+                          </div>
+                          <div class="col-4">
+                            <img
+                              src="assets/images/d_icon.png"
+                              class="img-percent"
+                            />
+                            <h3 class="percent-h3">10%</h3>
+                            <p class="percent-p">
+                              suggest<br />Maracugina<br />(Cosmed)
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="col-2">
+                        <div class="divider"></div>
+                      </div>
+
+                      <div class="col-5">
+                        <h3 class="title-nav-content">
+                          THE MAIN BRAND INDICATED WAS:
+                        </h3>
+                        <div class="row" style="margin-top: 30px">
+                          <div class="col-4"></div>
+                          <div class="col-4">
+                            <img
+                              src="assets/images/pilula.png"
+                              class="img-percent"
+                            />
+                            <h3 class="percent-h3">10%</h3>
+                            <p class="percent-p">Centrum<br />(Pfizer)</p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </ng-template>
+              </li>
+
+              <li [ngbNavItem]="6">
+                <a ngbNavLink class="secondary-tab mt-5">ARTICULAR HEALTH</a>
+
+                <ng-template ngbNavContent>
+                  <div class="custom-tab-content">
+                    <h4
+                      class="section4-title mb-40"
+                      style="text-decoration: underline"
+                    >
+                      ARTICULAR HEALTH
+                    </h4>
+                    <div class="row">
+                      <div class="col-5">
+                        <h3 class="title-nav-content">
+                          FOR ARTICULAR HEALTH, PHARMACISTS USUALLY SUGGEST:
+                        </h3>
+                        <div class="row" style="margin-top: 30px">
+                          <div class="col-4">
+                            <img
+                              src="assets/images/c_icon.png"
+                              class="img-percent"
+                              style="width: 30% !important"
+                            />
+                            <h3 class="percent-h3">37%</h3>
+                            <p class="percent-p">
+                              suggest<br />collagen<br />(protein)
+                            </p>
+                          </div>
+                          <div class="col-4">
+                            <img
+                              src="assets/images/d_icon.png"
+                              class="img-percent"
+                            />
+                            <h3 class="percent-h3">13%</h3>
+                            <p class="percent-p">suggest<br />vitamin D</p>
+                          </div>
+                          <div class="col-4">
+                            <img
+                              src="assets/images/ca_icon.png"
+                              class="img-percent"
+                            />
+                            <h3 class="percent-h3">10%</h3>
+                            <p class="percent-p">suggest<br />calcium</p>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="col-2">
+                        <div class="divider"></div>
+                      </div>
+
+                      <div class="col-5">
+                        <h3 class="title-nav-content">
+                          THE MAIN BRAND INDICATED WAS:
+                        </h3>
+                        <div class="row" style="margin-top: 30px">
+                          <div class="col-4"></div>
+                          <div class="col-4">
+                            <img
+                              src="assets/images/gota_icon.png"
+                              class="img-percent"
+                            />
+                            <h3 class="percent-h3">10%</h3>
+                            <p class="percent-p">Ômega</p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </ng-template>
+              </li>
+
+              <li [ngbNavItem]="7">
+                <a ngbNavLink class="secondary-tab mt-5"
+                  >MUSCLE STRENGTHENING</a
+                >
+
+                <ng-template ngbNavContent>
+                  <div class="custom-tab-content">
+                    <h4
+                      class="section4-title mb-40"
+                      style="text-decoration: underline"
+                    >
+                      MUSCLE STRENGTHENING
+                    </h4>
+                    <div class="row">
+                      <div class="col-3">
+                        <h3 class="title-nav-content">
+                          FOR MUSCLE STRENGTHENING,<br />PHARMACISTS USUALLY
+                          SUGGEST:
+                        </h3>
+                        <div class="row" style="margin-top: 30px">
+                          <div class="col-4"></div>
+                          <div class="col-4">
+                            <img
+                              src="assets/images/c_icon.png"
+                              class="img-percent"
+                              style="width: 70%"
+                            />
+                            <h3 class="percent-h3">17%</h3>
+                            <p class="percent-p">suggest<br />calcium</p>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="col-1">
+                        <div class="divider"></div>
+                      </div>
+
+                      <div class="col-4">
+                        <h3 class="title-nav-content">
+                          IN RELATION TO THE<br />SUGGESTED BRANDS:
+                        </h3>
+                        <div class="row" style="margin-top: 30px">
+                          <div class="col-2"></div>
+                          <div class="col-4">
+                            <img
+                              src="assets/images/gota_icon.png"
+                              class="img-percent"
+                              style="width: 60%"
+                            />
+                            <h3 class="percent-h3">17%</h3>
+                            <p class="percent-p">do not<br />suggest any</p>
+                          </div>
+                          <div class="col-4">
+                            <img
+                              src="assets/images/gota_icon.png"
+                              class="img-percent"
+                              style="width: 60%"
+                            />
+                            <h3 class="percent-h3">10%</h3>
+                            <p class="percent-p">do not<br />know</p>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-1">
+                        <div class="divider"></div>
+                      </div>
+
+                      <div class="col-3" style="margin-top: 20px">
+                        <h3 class="percent-custom">7%</h3>
+                        <p class="custom-p-percent">
+                          OF PHARMACISTS USUALLY<br />SUGGEST: MERCK
+                          (PHARMACEUTICAL COMPANY); CALCITRAN MDK (DIVCOM
+                          PHARMA); COMPLEXO BMAXNUTRI (MAXNUTRI); AND CENTRUM
+                          (PFIZER).
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </ng-template>
+              </li>
+
+              <li [ngbNavItem]="8">
+                <a ngbNavLink class="secondary-tab mt-5">BONE HEALTH</a>
+
+                <ng-template ngbNavContent>
+                  <div class="custom-tab-content">
+                    <h4
+                      class="section4-title mb-40"
+                      style="text-decoration: underline"
+                    >
+                      BONE HEALTH
+                    </h4>
+                    <div class="row">
+                      <div class="col-5">
+                        <h3 class="title-nav-content">
+                          FOR BONE HEALTH, PHARMACISTS USUALLY SUGGEST:
+                        </h3>
+                        <div class="row" style="margin-top: 30px">
+                          <div class="col-4">
+                            <img
+                              src="assets/images/c_icon.png"
+                              class="img-percent"
+                            />
+                            <h3 class="percent-h3">67%</h3>
+                            <p class="percent-p">suggest<br />Calcium</p>
+                          </div>
+                          <div class="col-4">
+                            <img
+                              src="assets/images/d_icon.png"
+                              class="img-percent"
+                            />
+                            <h3 class="percent-h3">23%</h3>
+                            <p class="percent-p">suggest<br />Vitamin D</p>
+                          </div>
+                          <div class="col-4">
+                            <img
+                              src="assets/images/mg_icon.png"
+                              class="img-percent"
+                            />
+                            <h3 class="percent-h3">10%</h3>
+                            <p class="percent-p">suggest<br />magnesium (mineral)</p>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="col-2">
+                        <div class="divider"></div>
+                      </div>
+
+                      <div class="col-5">
+                        <h3 class="title-nav-content">
+                          THE MAIN BRANDS INDICATED WERE:
+                        </h3>
+                        <div class="row" style="margin-top: 30px">
+                          <div class="col-6">
+                            <img
+                              src="assets/images/frasco_icon.png"
+                              class="img-percent"
+                              style="width: 18% !important"
+                            />
+                            <h3 class="percent-h3">17%</h3>
+                            <p class="percent-p">Calcitran MDK<br />(Divcom Pharma)</p>
+                          </div>
+                          <div class="col-6">
+                            <img
+                              src="assets/images/pilula.png"
+                              class="img-percent"
+                              style="width: 30% !important"
+                            />
+                            <h3 class="percent-h3">14%</h3>
+                            <p class="percent-p">Kley Hertz Farmacêutica<br />(pharmaceutical company)</p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </ng-template>
+              </li>
+
+              <li [ngbNavItem]="9">
+                <a ngbNavLink class="secondary-tab mt-5">ENERGY</a>
+
+                <ng-template ngbNavContent>
+                  <div class="custom-tab-content">
+                    <h4
+                      class="section4-title mb-40"
+                      style="text-decoration: underline"
+                    >
+                      ENERGY
+                    </h4>
+                    <div class="row">
+                      <div class="col-5">
+                        <h3 class="title-nav-content">
+                          FOR BONE HEALTH, PHARMACISTS USUALLY SUGGEST:
+                        </h3>
+                        <div class="row" style="margin-top: 30px">
+                          <div class="col-4">
+                            <img
+                              src="assets/images/cafe_icon.png"
+                              class="img-percent"
+                            />
+                            <h3 class="percent-h3">17%</h3>
+                            <p class="percent-p">suggest<br />caffeine</p>
+                          </div>
+                          <div class="col-4">
+                            <img
+                              src="assets/images/c_icon.png"
+                              class="img-percent"
+                            />
+                            <h3 class="percent-h3">13%</h3>
+                            <p class="percent-p">suggest<br />vitamin C</p>
+                          </div>
+                          <div class="col-4">
+                            <img
+                              src="assets/images/injecao_icon.png"
+                              class="img-percent"
+                            />
+                            <h3 class="percent-h3">10%</h3>
+                            <p class="percent-p">
+                              suggest<br />ginseng<br />(Cimed)
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="col-2">
+                        <div class="divider"></div>
+                      </div>
+
+                      <div class="col-5">
+                        <h3 class="title-nav-content">
+                          THE MAIN BRANDS INDICATED WERE:
+                        </h3>
+                        <div class="row" style="margin-top: 30px">
+                          <div class="col-4">
+                            <img
+                              src="assets/images/frasco_icon.png"
+                              class="img-percent"
+                            />
+                            <h3 class="percent-h3">10%</h3>
+                            <p class="percent-p">Lavitan<br />(Cimed)</p>
+                          </div>
+                          <div class="col-4">
+                            <img
+                              src="assets/images/pilula.png"
+                              class="img-percent"
+                            />
+                            <h3 class="percent-h3">10%</h3>
+                            <p class="percent-p">Centrum<br />(Pfizer)</p>
+                          </div>
+                          <div class="col-4">
+                            <img
+                              src="assets/images/frasco_icon.png"
+                              class="img-percent"
+                            />
+                            <h3 class="percent-h3">10%</h3>
+                            <p class="percent-p">Gerovital<br />(EMS)</p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </ng-template>
+              </li>
+            </ul>
+
+            <div [ngbNavOutlet]="subnav1"></div>
+          </ng-template>
+        </li>
+
+        <!-- PROBIOTICS TAB -->
+        <li [ngbNavItem]="4">
+          <a ngbNavLink class="main-tab">PROBIOTICS</a>
+          <ng-template ngbNavContent>
+            <br />
+            <h4
+              class="section4-title mb-40"
+              style="text-decoration: underline; margin-left: 5%"
+            >
+              PROBIOTICS
+            </h4>
+            <div class="row" style="margin-left: 15%">
+              <div class="col-6">
+                <div
+                  class="doughnut-graphic-wrapper"
+                  style="margin-left: 15px; margin-top: 40px"
+                >
+                  <div class="center-circle--section4">
+                    <h3 class="title-circle-percent2">97%</h3>
+                    <p class="text-circle-percent2">
+                      are aware of the probiotics properties and 68%
+                      suggest probiotics to consumers
+                    </p>
+                  </div>
+                  <div class="center-circle-border--section4"></div>
+                  <div
+                    class="
+                      center-circle-percent--section4
+                      center-circle-percent--section4-50
+                    "
+                  ></div>
+                </div>
+              </div>
+
+              <div class="col-6">
+                <div
+                  class="doughnut-graphic-wrapper"
+                  style="margin-left: 15px; margin-top: 40px"
+                >
+                  <div class="center-circle--section4">
+                    <h3 class="title-circle-percent2">55%</h3>
+                    <p class="text-circle-percent2">
+                      of pharmacists are interested in knowing more about the
+                      role of microbiota in health and the benefits of probiotics
+                    </p>
+                  </div>
+                  <div class="center-circle-border--section4"></div>
+                  <div
+                    class="
+                      center-circle-percent--section4
+                      center-circle-percent--section4-50
+                    "
+                  ></div>
+                </div>
+              </div>
+            </div>
+            <br /><br />
+          </ng-template>
+        </li>
+
+        <li [ngbNavItem]="5">
+          <a ngbNavLink class="main-tab">LAXATIVES</a>
+          <ng-template ngbNavContent>
+            <br />
+            <h4
+              class="section4-title mb-40"
+              style="text-decoration: underline; margin-left: 5%"
+            >
+              LAXATIVES
+            </h4>
+            <div class="row" style="margin-left: 10%">
+              <div class="col-3">
+                <div
+                  class="doughnut-graphic-wrapper"
+                  style="margin-left: 15px; margin-top: 40px"
+                >
+                  <div class="center-circle--section4">
+                    <h3 class="title-circle-percent2">45%</h3>
+                    <p class="text-circle-percent2">
+                      of pharmacists suggest the use of laxatives to consumers
+                    </p>
+                  </div>
+                  <div class="center-circle-border--section4"></div>
+                  <div
+                    class="
+                      center-circle-percent--section4
+                      center-circle-percent--section4-50
+                    "
+                  ></div>
+                </div>
+              </div>
+
+              <div class="col-3">
+                <div
+                  class="doughnut-graphic-wrapper"
+                  style="margin-left: -15px; margin-top: 40px"
+                >
+                  <div class="center-circle--section4">
+                    <h3 class="title-circle-percent2">42%</h3>
+                    <p class="text-circle-percent2">
+                      are aware of the causes and symptoms of constipation
+                    </p>
+                  </div>
+                  <div class="center-circle-border--section4"></div>
+                  <div
+                    class="
+                      center-circle-percent--section4
+                      center-circle-percent--section4-50
+                    "
+                  ></div>
+                </div>
+              </div>
+
+              <div class="col-3">
+                <div class="rec-blue-lax">
+                  <p class="text-col">
+                    42% said that they lack more information on laxatives and
+                    their indications.
+                  </p>
+                  <p class="text-col">
+                    19% feel promotional activities at the drugstore would be
+                    beneficial
+                  </p>
+                </div>
+              </div>
+            </div>
+            <br /><br />
+          </ng-template>
+        </li>
+      </ul>
+
+      <div [ngbNavOutlet]="nav" class=""></div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,37 @@
+.footer {
+  padding: 30px 0;
+  background: linear-gradient(122deg, #003866 0%, #006EB7 60%);
+}
+
+.footer-logo {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.footer-logo img {
+  width: 200px;
+}
+
+.footer-links {
+  text-align: center;
+}
+
+.footer-links a {
+  color: #fff;
+  font-weight: bold;
+}
+
+.footer-links a:not(:last-child) {
+  margin-right: 30px;
+}
+
+@media (min-width: 768px) {
+  .footer-logo {
+    text-align: left;
+    margin-bottom: 0;
+  }
+
+  .footer-links {
+    text-align: right;
+  }
+}

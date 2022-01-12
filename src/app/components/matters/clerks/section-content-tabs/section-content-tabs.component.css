@@ -1,0 +1,55 @@
+.item-collapsed-section3 {
+  background: #ffffff !important;
+}
+
+.text-item-section3 {
+  margin-top: 45px !important;
+}
+
+.clerks-recommendation-image {
+  width: 40%;
+  margin-top: -220px;
+  margin-left: 70px;
+}
+
+.clerks-recommendation-text {
+  color: #003866;
+  font-family: "Lato";
+  font-weight: 400;
+  text-align: right;
+  margin: 0;
+  width: 70%;
+}
+
+.align-left {
+  text-align: left;
+}
+
+.clerks-recommendation-add-icon {
+  display: inline-block;
+  width: 28px;
+  left: -20px;
+  top: -40px;
+  z-index: 9;
+}
+
+.clerks-recommendation-tooltip {
+  top: 160px;
+  left: -380px;
+  z-index: 2;
+  width: 400px !important;
+}
+
+.clerks-tab-content {
+  padding-top: 80px !important;
+}
+
+.clerks-recommendation-tooltip-tab-1 {
+  top: 50px;
+  left: 50px;
+}
+
+.clerks-recommendation-tooltip-tab-fever-1 {
+  top: 50px;
+  left: 100px;
+}

@@ -1,0 +1,56 @@
+<app-card-item
+relativePathIcon="assets/images/icon1.png"
+title="IDEAL DIGITAL EVENT"
+(toggle)="reloadGraphic($event)"
+>
+<div class="row" style="height: 300px; margin: 0 auto; margin-top: 50px;">
+	<div class="col-6">
+		<div class="row">
+			<div class="col-6" style="position: relative;">
+				<img
+				src="assets/images/circle-three-arrow.svg"
+				width="184px"
+				style="margin-left: -25px"
+				/>
+				<img
+				src="assets/images/screen-notebook.svg"
+				style="position: absolute; top: 37px; left: 50px;"
+				/>
+				<div class="col-4 digital-event__item" style="position: absolute; top: 26px; right: 286px;">
+					<div class="digital-event__content">
+						<h4 class="digital-event__content-title text-right">DURATION</h4>
+						<p class="digital-event__content-description text-right">
+							Doctors prefer a shorter event (1 hour). For the other categories, the ideal duration is 2 hours.
+						</p>
+					</div>
+					<div>
+						<img src="assets/images/clock.svg">
+					</div>
+				</div>
+				<div class="col-4 digital-event__item" style="position: absolute; top: 0; left: 165px;">
+					<div>
+						<img src="assets/images/calendar.svg">
+					</div>
+					<div class="digital-event__content">
+						<h4 class="digital-event__content-title">WEEK DAY</h4>
+						<p class="digital-event__content-description">
+							Except for clerks, all categories prefer Saturdays. For clerks, the ideal day would be Monday.
+						</p>
+					</div>
+				</div>
+				<div class="col-4 digital-event__item" style="position: absolute; top: 144px; left: 99px;">
+					<div>
+						<img src="assets/images/weather.svg">
+					</div>
+					<div class="digital-event__content">
+						<h4 class="digital-event__content-title">TIME</h4>
+						<p class="digital-event__content-description">
+							Doctors, nutritionists and pharmacists prefer events in the evening. Physical therapists and clerks prefer mornings.
+						</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+</app-card-item>

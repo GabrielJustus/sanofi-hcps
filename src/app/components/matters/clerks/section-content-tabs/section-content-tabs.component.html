@@ -1,0 +1,2011 @@
+<div class="container">
+  <h3 class="title-section3">
+    Understanding their habits and attitudes<br />in relation to CHC
+    categories...
+  </h3>
+
+  <!-- PAINEL 6 -->
+  <div
+    class="item-list-anim"
+    style="margin-top: 2%"
+    [ngClass]="{ 'item-list': isCollapsed6 }"
+    (click)="isCollapsed6 = !isCollapsed6"
+  >
+    <div class="row">
+      <div class="col-1">
+        <img src="../../../../assets/images/icon_pills.svg" class="icon-item" />
+      </div>
+
+      <div class="col-7">
+        <h4 class="text-item-section3">
+          PRODUCT RECOMMENDATION
+        </h4>
+      </div>
+      <div class="col-2"></div>
+
+      <div class="col-2">
+        <img
+          src="../../../../assets/images/icon_expand.png"
+          class="icon-expand"
+          *ngIf="isCollapsed6"
+        />
+        <img
+          src="../../../../assets/images/icon_retract.png"
+          class="icon-expand"
+          *ngIf="!isCollapsed6"
+        />
+      </div>
+    </div>
+  </div>
+
+  <div id="collapseBasic6" [collapse]="isCollapsed6" [isAnimated]="false">
+    <div
+      class="well well-lg card card-block card-header item-collapsed-section3"
+      style="height: 360px"
+    >
+      <br />
+
+      <div class="row">
+        <div class="col-6">
+
+          <div class="row">
+            <div class="col-5">
+              <p class="clerks-recommendation-text">
+                <b style="font-size: 18px;">30%</b> <br/>of drugstore clerks consider themselves empowered to recommend products to consumers
+              </p>
+            </div>
+
+            <div class="col-5">
+              <div
+                [chart]="chartClarksRecommendation"
+                class="section2-content-chart-wrapper"
+              ></div>
+              <div class="">
+                <img
+                  src="../../../../assets/images/clerks-recommendation/icon_clerks_recommendation.svg"
+                  class="clerks-recommendation-image"
+                />
+              </div>
+            </div>
+
+            <div class="col-1">
+              <br />
+              <div
+                class="add-icon clerks-recommendation-add-icon"
+              >
+                <div
+                  class="rec-yellow-tooltip rec-yellow-tooltip--section4 clerks-recommendation-tooltip"
+                  *ngIf="section1TooltipClerks"
+                  (click)="openSection1TooltipClerks()"
+                >
+                  <p class="text-p-tooltip text-p-tooltip--section4">
+                    here we should question whether we see this public as an opportunity to make consumers switch from another product to ours: would this reduce the doctor's autonomy? Would this be good for us or does this public tend to recommend the cheapest products? This question will make us decide whether we want them to have more autonomy to make recommendations or not. From consumer surveys, we have learned that this public influences consumers from lower classes, who go to the doctor less frequently and go to independent drugstores more often.
+                  </p>
+                </div>
+
+                <a (click)="openSection1TooltipClerks()"
+                  ><img src="../../../../assets/images/add.png"
+                /></a>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+
+        <div class="col-6">
+
+          <div class="row">
+            <div class="col-4">
+              <p class="clerks-recommendation-text" style="width: 100%">
+                <b style="font-size: 18px;">56%</b> <br/>suggest a similar or generic product when the prescription contains only the name of the molecule and not the product name.
+              </p>
+            </div>
+
+            <div class="col-4" style="text-align: center;">
+
+              <img style="width: 100px;" src="../../../../assets/images/clerks-recommendation/icon_clerks_recommendation-2.svg" />
+
+            </div>
+
+            <div class="col-4">
+              <p class="clerks-recommendation-text align-left" style="width: 100%">
+                <b style="font-size: 18px;">78%</b> <br/>deliver exactly the product prescribed by the doctor when the prescription contains the product name.
+              </p>
+            </div>
+
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+  </div>
+  <!-- FINAL PAINEL 6 -->
+
+
+  <!-- PAINEL 7 -->
+  <div
+    class="item-list-anim"
+    style="margin-top: 2%"
+    [ngClass]="{ 'item-list': isCollapsed7 }"
+    (click)="toggleCollapsed7()"
+  >
+    <div class="row">
+      <div class="col-1">
+        <img src="../../../../assets/images/like.png" class="icon-item" />
+      </div>
+
+      <div class="col-9">
+        <h4 class="text-item-section3">
+          RANKING OF MOST IMPORTANT ATTRIBUTES OF DRUGS FOR
+        </h4>
+      </div>
+
+      <div class="col-2">
+        <img
+          src="../../../../assets/images/icon_expand.png"
+          class="icon-expand"
+          *ngIf="isCollapsed7"
+        />
+        <img
+          src="../../../../assets/images/icon_retract.png"
+          class="icon-expand"
+          *ngIf="!isCollapsed7"
+        />
+      </div>
+    </div>
+  </div>
+
+  <div id="collapseBasic7" [collapse]="isCollapsed7" [isAnimated]="false">
+    <div
+      class="well well-lg card card-block card-header item-collapsed-section3"
+    >
+      <br />
+      <div class="row">
+        <div class="col-4">
+          <div class="rec-yellow-section-3">
+            <h4 class="title-rec-section3">Pain</h4>
+            <div
+              [chart]="section3PainChart"
+              class="section4-content-chart-wrapper"
+            ></div>
+          </div>
+        </div>
+        <div class="col-4">
+          <div class="rec-yellow-section-3">
+            <h4 class="title-rec-section3">Fever</h4>
+            <div
+              [chart]="section3FeverChart"
+              class="section4-content-chart-wrapper"
+            ></div>
+          </div>
+        </div>
+        <div class="col-4">
+          <div class="rec-yellow-section-3">
+            <h4 class="title-rec-section3">Fever in children</h4>
+            <div
+              [chart]="section3FeverChildrenChart"
+              class="section4-content-chart-wrapper"
+            ></div>
+          </div>
+        </div>
+      </div>
+      <br />
+      <div class="row">
+        <div class="col-4">
+          <div class="rec-yellow-section-3">
+            <h4 class="title-rec-section3">Allergy</h4>
+            <div
+              [chart]="section3AllergyChart"
+              class="section4-content-chart-wrapper"
+            ></div>
+          </div>
+        </div>
+        <div class="col-4">
+          <div class="rec-yellow-section-3">
+            <h4 class="title-rec-section3">Suplements</h4>
+            <div
+              [chart]="section3SupplementsChart"
+              class="section4-content-chart-wrapper"
+            ></div>
+          </div>
+        </div>
+        <div class="col-4">
+          <div class="rec-yellow-section-3">
+            <h4 class="title-rec-section3">Probiotics</h4>
+            <div
+              [chart]="section3ProbioticsChart"
+              class="section4-content-chart-wrapper"
+            ></div>
+          </div>
+        </div>
+      </div>
+      <br />
+      <div class="row">
+        <div class="col-4"></div>
+        <div class="col-4">
+          <div class="rec-yellow-section-3">
+            <h4 class="title-rec-section3">Laxatives</h4>
+            <div
+              [chart]="section3LaxativesChart"
+              class="section4-content-chart-wrapper"
+            ></div>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </div>
+  <!-- FINAL PAINEL 7 -->
+
+
+  <!-- PAINEL 8 -->
+  <div
+    class="item-list-anim"
+    style="margin-top: 2%"
+    [ngClass]="{ 'item-list': isCollapsed8 }"
+    (click)="toggleCollapsed8()"
+  >
+    <div class="row">
+      <div class="col-1">
+        <img src="../../../../assets/images/deslike.png" class="icon-item" />
+      </div>
+
+      <div class="col-9">
+        <h4 class="text-item-section3">
+          RANKING OF LEAST IMPORTANT ATTRIBUTES OF DRUGS FOR
+        </h4>
+      </div>
+
+      <div class="col-2">
+        <img
+          src="../../../../assets/images/icon_expand.png"
+          class="icon-expand"
+          *ngIf="isCollapsed8"
+        />
+        <img
+          src="../../../../assets/images/icon_retract.png"
+          class="icon-expand"
+          *ngIf="!isCollapsed8"
+        />
+      </div>
+    </div>
+  </div>
+
+  <div id="collapseBasic8" [collapse]="isCollapsed8" [isAnimated]="false">
+    <div
+      class="well well-lg card card-block card-header item-collapsed-section3"
+    >
+      <br />
+      <div class="row">
+        <div class="col-4">
+          <div class="rec-gray-section-3">
+            <h4 class="title-rec-section3">Pain</h4>
+
+            <div
+              [chart]="section3PainChart2"
+              class="section4-content-chart-wrapper"
+            ></div>
+          </div>
+        </div>
+        <div class="col-4">
+          <div class="rec-gray-section-3">
+            <h4 class="title-rec-section3">Fever</h4>
+
+            <div
+              [chart]="section3FeverChart2"
+              class="section4-content-chart-wrapper"
+            ></div>
+          </div>
+        </div>
+        <div class="col-4">
+          <div class="rec-gray-section-3">
+            <h4 class="title-rec-section3">Fever in children</h4>
+
+            <div
+              [chart]="section3FeverChildrenChart2"
+              class="
+                section4-content-chart-wrapper
+                section4-content-chart-wrapper--smaller
+              "
+            ></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-4">
+          <div class="rec-gray-section-3">
+            <h4 class="title-rec-section3">Allergy</h4>
+            <div
+              [chart]="section3AllergyChart2"
+              class="section4-content-chart-wrapper"
+            ></div>
+          </div>
+        </div>
+        <div class="col-4">
+          <div class="rec-gray-section-3">
+            <h4 class="title-rec-section3">Suplements</h4>
+
+            <div
+              [chart]="section3SupplementsChart2"
+              class="section4-content-chart-wrapper"
+            ></div>
+          </div>
+        </div>
+        <div class="col-4">
+          <div class="rec-gray-section-3">
+            <h4 class="title-rec-section3">Probiotics</h4>
+
+            <div
+              [chart]="section3ProbioticsChart2"
+              class="section4-content-chart-wrapper"
+            ></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-4"></div>
+        <div class="col-4">
+          <div class="rec-gray-section-3">
+            <h4 class="title-rec-section3">Laxatives</h4>
+            <div
+              [chart]="section3LaxativesChart2"
+              class="section4-content-chart-wrapper"
+            ></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- FINAL PAINEL 8 -->
+
+
+  <!-- PAINEL 9 -->
+  <div
+    class="item-list-anim"
+    style="margin-top: 2%"
+    [ngClass]="{ 'item-list': isCollapsed9 }"
+    (click)="isCollapsed9 = !isCollapsed9"
+  >
+    <div class="row">
+      <div class="col-1">
+        <img src="../../../../assets/images/clerks-recommendation/icon_clerks_insight.svg" class="icon-item" />
+      </div>
+
+      <div class="col-7">
+        <h4 class="text-item-section3">
+          INSIGHTS
+        </h4>
+      </div>
+      <div class="col-2"></div>
+
+      <div class="col-2">
+        <img
+          src="../../../../assets/images/icon_expand.png"
+          class="icon-expand"
+          *ngIf="isCollapsed9"
+        />
+        <img
+          src="../../../../assets/images/icon_retract.png"
+          class="icon-expand"
+          *ngIf="!isCollapsed9"
+        />
+      </div>
+    </div>
+  </div>
+
+  <div id="collapseBasic9" [collapse]="isCollapsed9" [isAnimated]="false">
+    <div
+      class="well well-lg card card-block card-header item-collapsed-section3"
+    >
+      <br />
+      <div class="row">
+
+
+        <div class="col-12">
+          <ul
+            ngbNav
+            [animation]="false"
+            #nav="ngbNav"
+            [(activeId)]="activeTab"
+            class="nav-tabs nav-tabs--transparent nav"
+          >
+
+            <li [ngbNavItem]="1">
+              <a ngbNavLink class="secondary-tab">FOR PAIN</a>
+
+              <ng-template ngbNavContent>
+                <div class="custom-tab-content clerks-tab-content">
+
+                  <div class="row">
+                    <div class="col-3">
+
+                    </div>
+
+                    <div class="col-6">
+                      <div class="row">
+                        <div class="col-4">
+                          <p class="clerks-recommendation-text" style="width: 100%">
+                            <b style="font-size: 18px;">61%</b> <br/>of drugstore clerks usually recommend in case of body aches
+                          </p>
+                        </div>
+
+                        <div class="col-5">
+                          <div
+                            [chart]="chartClarksRecommendationTab1"
+                            class="section2-content-chart-wrapper"
+                          ></div>
+                          <div class="">
+                            <img
+                              src="../../../../assets/images/clerks-recommendation/icon_clerks_tab_1.svg"
+                              class="clerks-recommendation-image"
+                            />
+                          </div>
+                        </div>
+
+                        <div class="col-1">
+                          <br />
+                          <div
+                            class="add-icon clerks-recommendation-add-icon"
+                          >
+                            <div
+                              class="rec-yellow-tooltip rec-yellow-tooltip--section4 clerks-recommendation-tooltip-tab-1"
+                              *ngIf="tab1TooltipClerks"
+                              (click)="openTab1TooltipClerks()"
+                            >
+                              <p class="text-p-tooltip text-p-tooltip--section4 clerks-recommendation-tooltip-tab-1">
+                                a product for the type of pain not a muscle relaxant or anti-inflammatory.
+                              </p>
+                            </div>
+
+                            <a (click)="openTab1TooltipClerks()"
+                              ><img src="../../../../assets/images/add.png"
+                            /></a>
+                          </div>
+                        </div>
+
+                      </div>
+                    </div>
+
+                    <div class="col-3">
+
+                    </div>
+
+                  </div>
+
+
+                </div>
+              </ng-template>
+            </li>
+
+            <li [ngbNavItem]="2">
+              <a ngbNavLink class="secondary-tab">FOR FEVER</a>
+
+              <ng-template ngbNavContent>
+
+                <div class="custom-tab-content clerks-tab-content">
+
+                  <h4 class="text-chart-panel" style="text-align: center;">
+                    THE MAJORITY OF DRUGSTORE CLERKS
+                  </h4>
+
+                  <div class="row">
+                    <div class="col-2">
+
+                    </div>
+
+                    <div class="col-8">
+                      <div class="row">
+                        <div class="col-2">
+
+                        </div>
+
+                        <div class="col-4">
+                          <div
+                            [chart]="chartClarksRecommendationTab2"
+                            class="section2-content-chart-wrapper"
+                            style="margin-top: 20px;"
+                          ></div>
+                          <div class="">
+                            <img
+                              src="../../../../assets/images/clerks-recommendation/icon_clerks_tab_2.svg"
+                              class="clerks-recommendation-image"
+                            />
+                          </div>
+                        </div>
+
+                        <div class="col-4">
+                          <p class="clerks-recommendation-text align-left" style="width: 100%; margin-left: 10px;">
+                            <b style="font-size: 18px;">71%</b> <br/>perceives the difference in efficient drugs for fever and the occurrence of side effects, and they acknowledge that dipyrone monohydrate is more efficient and presents higher risks of adverse effects.
+                          </p>
+                        </div>
+
+                      </div>
+                    </div>
+
+                    <div class="col-2">
+                    </div>
+
+                  </div>
+
+                </div>
+
+              </ng-template>
+            </li>
+
+            <li [ngbNavItem]="3">
+              <a ngbNavLink class="secondary-tab">FOR ALLERGIES</a>
+
+              <ng-template ngbNavContent>
+
+                <div class="custom-tab-content">
+                  <div class="row">
+
+                    <div class="col-5">
+
+                      <div class="row">
+                        <div class="col-6">
+                          <p class="clerks-recommendation-text align-left" style="width: 100%;">
+                            <b style="font-size: 18px;">70%</b> <br/>believe that patients cannot distinguish between influenza and allergic rhinitis, because the symptoms are very similar
+                          </p>
+
+                          <div
+                            class="add-icon clerks-recommendation-add-icon"
+                          >
+                            <div
+                              class="rec-yellow-tooltip rec-yellow-tooltip--section4 clerks-recommendation-tooltip-tab-fever-1"
+                              *ngIf="tabFever1TooltipClerks"
+                              (click)="openTabFever1TooltipClerks()"
+                            >
+                              <p class="text-p-tooltip text-p-tooltip--section4 clerks-recommendation-tooltip-tab-1">
+                                they can help with this. Can't we use them as partners to help allergy sufferers identify their allergy?
+                              </p>
+                            </div>
+
+                            <a (click)="openTabFever1TooltipClerks()"
+                              style="margin: 50px 0 20px 0;"
+                              ><img
+                              style="margin: 50px 0 0 20px;"
+                              src="../../../../assets/images/add.png"
+                            /></a>
+                          </div>
+
+                        </div>
+
+                        <div class="col-6">
+                          <div
+                            [chart]="chartClarksRecommendationTab3"
+                            class="section2-content-chart-wrapper"
+                            style="margin-top: 0px;"
+                          ></div>
+                          <div class="">
+                            <img
+                              src="../../../../assets/images/clerks-recommendation/icon_clerks_tab_allergy_1.svg"
+                              class="clerks-recommendation-image"
+                              style="margin-left: 55px;"
+                            />
+                          </div>
+                        </div>
+
+                      </div>
+
+                    </div>
+
+                    <div class="col-7">
+
+                      <div class="row">
+                        <div class="col-4" style="margin-left: -40px; margin-top: 20px;">
+                          <h4 class="title1-panel-5" style="float: right;">47%</h4>
+                          <p class="text-panel-5"
+                          style="width: 70%; float: right;">
+                            of drugstore clerks know the difference between antihistamines' generations
+                          </p>
+                        </div>
+                        <div class="col-6">
+                          <img
+                            src="../../../../assets/images/icon_panel_5.png"
+                            width="90%"
+                            style="margin-left: -25px"
+                          />
+                        </div>
+                        <img
+                          src="../../../../assets/images/clerks-recommendation/icon_clerks_tab_allergy_2.svg"
+                          style="width: 80px;
+                          margin-left: -220px;
+                          margin-top: -20px;"
+                        />
+                      </div>
+                      <div class="step2">
+                        <p class="text-panel-6" style="margin-top: -20px">
+                          2nd generation is the<br/> most preferred, for the<br/> following reasons
+                        </p>
+                      </div>
+                      <div class="step3">
+                        <p class="text-panel-6" style="margin-left: -10px; margin-top: 50px;">
+                          affordability, quick<br/> action and absorption.
+                        </p>
+                      </div>
+                      <div class="step4">
+                        <p class="text-panel-7"
+                        style="width: 50%; float: right; margin-top: 80px;">
+                          they did not mention that 2nd generation does not cause pain, do they know that? It seems they don't...
+                        </p>
+                      </div>
+
+                    </div>
+
+                  </div>
+
+                  <br/>
+
+                  <div class="row">
+
+                    <div class="col-6">
+
+                      <div class="row">
+
+                        <div class="col-5">
+
+                          <div class="doughnut-graphic-wrapper">
+                            <div class="center-circle--section4">
+                              <h3 class="title-circle-percent">53%</h3>
+                              <p class="text-circle-percent">
+                                usually recommend an antihistamine to a consumer with allergic rhinitis or hives, the others only by medical prescription.
+                              </p>
+                            </div>
+                            <div class="center-circle-border--section4"></div>
+                            <div
+                              class="
+                                center-circle-percent--section4
+                                center-circle-percent--section4-53
+                              "
+                            ></div>
+                          </div>
+                        </div>
+
+                        <div class="col-3">
+                          <div class="topic">
+                            <img src="../../../../assets/images/frasco_icon.png" />
+                            <h3 class="title-topic">50%</h3>
+                            <p class="text-topic">prescribe combined use of na antihistamine with a decongestant</p>
+                          </div>
+                        </div>
+
+                        <div class="col-4">
+                          <div class="topic">
+                            <img src="../../../../assets/images/clerks-recommendation/icon_clerks_tab_allergy_3.svg" />
+                            <h3 class="title-topic">57%</h3>
+                            <p class="text-topic">of drugstore clerks said patients spontaneously request a combination of antihistamine and decongestant.</p>
+                          </div>
+                        </div>
+
+                      </div>
+
+                    </div>
+
+                    <div class="col-6">
+
+                      <div class="row" style="margin-top: 20px;">
+                        <div class="col-4">
+                          <p class="clerks-recommendation-text" style="width: 100%; font-size: 12px; margin-top: 20px;">
+                            <b style="font-size: 18px;">53%</b> <br/>of drugstore clerks are not aware of the benefits of using nasal corticosteroids in the treatment of rhinitis, however
+                          </p>
+
+                          <div
+                            class="add-icon clerks-recommendation-add-icon"
+                          >
+                            <div
+                              class="rec-yellow-tooltip rec-yellow-tooltip--section4 clerks-recommendation-tooltip-tab-fever-1"
+                              *ngIf="tabFever2TooltipClerks"
+                              (click)="openTabFever2TooltipClerks()"
+                              style="top: 80px; left: 90px;"
+                            >
+                              <p class="text-p-tooltip text-p-tooltip--section4 clerks-recommendation-tooltip-tab-1">
+                                opportunity for Allenasal to use these guys as influencers in tie-in sales..
+                              </p>
+                            </div>
+
+                            <a (click)="openTabFever2TooltipClerks()"
+                              ><img
+                              style="margin: 80px 0 0 300px;"
+                              src="../../../../assets/images/add.png"
+                            /></a>
+                          </div>
+                        </div>
+
+                        <div class="col-4" style="text-align: center;">
+
+                          <img style="width: 100px; margin-top: 60px;" src="../../../../assets/images/clerks-recommendation/icon_clerks_tab_allergy_4.svg" />
+
+                        </div>
+
+                        <div class="col-4">
+                          <p class="clerks-recommendation-text align-left" style="width: 100%; font-size: 12px;">
+                            60% of drugstore clerks report that patients prefer intranasal jet devices, due to ease of use, although
+                          </p>
+
+                          <br/><br/>
+
+                          <p class="clerks-recommendation-text align-left" style="width: 100%; font-size: 12px;">
+                            27% report having heard complaints from patients regarding discomfort during application or some effect after the use of the antihistamine
+                          </p>
+                        </div>
+
+                      </div>
+                    </div>
+                  </div>
+
+                </div>
+
+              </ng-template>
+            </li>
+
+            <li [ngbNavItem]="4">
+              <a ngbNavLink class="secondary-tab">SUPPLEMENTS</a>
+
+              <ng-template ngbNavContent>
+                <div class="custom-tab-content">
+
+                  <div class="row">
+                    <div class="col-6">
+
+                      <div class="row">
+                        <div class="col-5">
+                          <p class="clerks-recommendation-text" style="width: 100%;">
+                            <b style="font-size: 18px;">61%</b> <br/>of drugstore clerks usually do not sell supplements without prescription from a doctor or nutritionist
+                          </p>
+                        </div>
+
+                        <div class="col-7">
+                          <div
+                            [chart]="chartClarksRecommendationSupplementsTab"
+                            class="section2-content-chart-wrapper"
+                          ></div>
+                          <div class="">
+                            <img
+                              src="../../../../assets/images/clerks-recommendation/icon_clerks_tab_supplements_1.svg"
+                              class="clerks-recommendation-image"
+                              style="margin-left: 40px;"
+                            />
+                          </div>
+                        </div>
+
+                        <div class="col-2">
+                          <img
+                            src="../../../../assets/images/clerks-recommendation/icon_clerks_tab_supplements_3.svg"
+                          />
+                        </div>
+
+                        <div class="col-10">
+                          <p class="clerks-recommendation-text" style="text-align: left; width: 100%;">
+                            Information on nutrients (29%) and indicated patient profile (26%) are contents drugstore clerks lack and therefore they lack confidence in suggesting a product.
+                          </p>
+                        </div>
+                      </div>
+
+                    </div>
+
+                    <div class="col-6">
+
+                      <div class="row">
+                        <div class="col-4">
+                          <p class="clerks-recommendation-text" style="width: 100%">
+                            <b style="font-size: 18px;">19%</b> <br/>of drugstore clerks suggest supplements in all cases
+                          </p>
+                        </div>
+
+                        <div class="col-4" style="text-align: center;">
+
+                          <img style="width: 100px;" src="../../../../assets/images/clerks-recommendation/icon_clerks_tab_supplements_2.svg" />
+
+                        </div>
+
+                        <div class="col-4">
+                          <p class="clerks-recommendation-text align-left" style="width: 100%">
+                            <b style="font-size: 18px;">19%</b> <br/>only suggest a product if the person is not eating well.
+                          </p>
+                        </div>
+
+                      </div>
+
+                    </div>
+                  </div>
+
+                  <br/>
+
+                  <div class="row">
+                    <div class="col-12">
+                      <h4 class="text-chart-panel" style="text-align: center;">
+                        THE MOST RECOMMENDED BRANDS
+                      </h4>
+                    </div>
+
+                    <div class="col-3">
+                    </div>
+
+                    <div class="col-6">
+
+                      <div class="row">
+                        <div class="col-4">
+                          <p class="clerks-recommendation-text" style="width: 100%; margin-top: 20px;">
+                            <b style="font-size: 18px;">32%</b> <br/>Centrum
+                          </p>
+                        </div>
+
+                        <div class="col-4" style="text-align: center;">
+
+                          <img style="width: 60px;" src="../../../../assets/images/clerks-recommendation/icon_clerks_tab_supplements_4.svg" />
+
+                        </div>
+
+                        <div class="col-4">
+                          <p class="clerks-recommendation-text align-left" style="width: 100%; margin-top: 20px;">
+                            <b style="font-size: 18px;">26%</b> <br/>Lavitan
+                          </p>
+
+                          <div
+                            class="add-icon clerks-recommendation-add-icon"
+                          >
+                            <div
+                              class="rec-yellow-tooltip rec-yellow-tooltip--section4 clerks-recommendation-tooltip-tab-fever-1"
+                              *ngIf="tabSupplementsTooltipClerks"
+                              (click)="openTabSupplementsTooltipClerks()"
+                            >
+                              <p class="text-p-tooltip text-p-tooltip--section4 clerks-recommendation-tooltip-tab-1">
+                                The most prescribed in each case below these insight boxes
+                              </p>
+                            </div>
+
+                            <a (click)="openTabSupplementsTooltipClerks()"
+                              ><img
+                              style="margin-left: 100px;"
+                              src="../../../../assets/images/add.png"
+                            /></a>
+                          </div>
+
+                        </div>
+
+                        <div class="col-3"></div>
+                        <div class="col-6">
+                          <p class="clerks-recommendation-text" style="width: 100%; text-align: center;">
+                            Drugstore clerks that suggest a supplement usually suggest an off-the-shelf multivitamin
+                          </p>
+                        </div>
+                        <div class="col-3"></div>
+
+                      </div>
+
+                    </div>
+
+                  </div>
+
+                </div>
+              </ng-template>
+            </li>
+
+            <li [ngbNavItem]="5">
+              <a ngbNavLink class="secondary-tab">PROBIOTICS</a>
+
+              <ng-template ngbNavContent>
+                <div class="custom-tab-content">
+
+
+                  <div class="row">
+                    <div class="col-6">
+
+                      <div class="row">
+                        <div class="col-5">
+                          <p class="clerks-recommendation-text" style="width: 100%;">
+                            <b style="font-size: 18px;">52%</b> <br/>of drugstore clerks are interested in knowing more about the role of microbiota in health and the benefits of probiotics
+                          </p>
+                        </div>
+
+                        <div class="col-7">
+                          <div
+                            [chart]="chartClarksRecommendationProbioticsTab"
+                            class="section2-content-chart-wrapper"
+                          ></div>
+                          <div class="">
+                            <img
+                              src="../../../../assets/images/clerks-recommendation/icon_clerks_tab_allergy_2.svg"
+                              class="clerks-recommendation-image"
+                              style="margin-left: 50px;"
+                            />
+                          </div>
+                        </div>
+
+                      </div>
+
+                    </div>
+
+                    <div class="col-6">
+
+                      <div class="row">
+                        <div class="col-4">
+                          <p class="clerks-recommendation-text" style="width: 100%">
+                            <b style="font-size: 18px;">94%</b> <br/>are aware of the probiotics properties
+                          </p>
+                        </div>
+
+                        <div class="col-4" style="text-align: center;">
+
+                          <img style="width: 100px;" src="../../../../assets/images/clerks-recommendation/icon_clerks_tab_supplements_1.svg" />
+
+                        </div>
+
+                        <div class="col-4">
+                          <p class="clerks-recommendation-text align-left" style="width: 100%">
+                            <b style="font-size: 18px;">79%</b> <br/>suggest probiotics to consumers
+                          </p>
+                        </div>
+
+                      </div>
+
+                    </div>
+                  </div>
+
+
+                </div>
+              </ng-template>
+            </li>
+
+
+            <li [ngbNavItem]="6">
+              <a ngbNavLink class="secondary-tab">LAXATIVES</a>
+
+              <ng-template ngbNavContent>
+                <div class="custom-tab-content" style="height: 400px;">
+                  <div class="row">
+
+                    <div class="col-3">
+
+                    </div>
+
+                    <div class="col-6">
+                      <div class="row">
+                        <div class="col-4" style="margin-left: -40px; margin-top: 20px;">
+                          <h4 class="title1-panel-5" style="float: right;">45%</h4>
+                          <p class="text-panel-5"
+                          style="width: 70%; float: right;">
+                            of clerks suggest the use of laxatives to consumers.
+                          </p>
+                        </div>
+                        <div class="col-6">
+                          <img
+                            src="../../../../assets/images/icon_panel_5.png"
+                            width="90%"
+                            style="margin-left: -25px"
+                          />
+                        </div>
+                        <img
+                          src="../../../../assets/images/icon-handshake.svg"
+                          style="width: 90px;
+                          margin-left: -200px;
+                          margin-top: -10px;"
+                        />
+                      </div>
+
+                      <div style="width: 25%; position: relative; top: 20px; left: 20px;">
+                        <h4 class="title1-panel-5" style="margin-bottom: 0;">42%</h4>
+                        <p class="text-panel-6" style="margin-top: 0; text-align: right;">
+                          are aware of the causes and symptoms of constipation
+                        </p>
+                      </div>
+
+                      <div style="width: 30%; position: relative; top: -80px; left: 200px;">
+                        <h4 class="title1-panel-5" style="margin-bottom: 0; text-align: left;">30%</h4>
+                        <p class="text-panel-6" style="margin-top: 0; text-align: left;">
+                          said that they lack more information on laxatives and their indications.
+                        </p>
+                      </div>
+
+                      <div style="width: 25%; position: relative; top: -310px; left: 270px;">
+                        <h4 class="title1-panel-5" >24%</h4>
+                        <p class="text-panel-7"
+                        >
+                          feel promotional activities at the drugstore would be beneficial
+                        </p>
+                      </div>
+                    </div>
+
+                  </div>
+                </div>
+              </ng-template>
+            </li>
+
+          </ul>
+
+          <div [ngbNavOutlet]="nav" class=""></div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+  <!-- FINAL PAINEL 9 -->
+
+
+  <!-- PAINEL 10 -->
+  <div
+    class="item-list-anim"
+    style="margin-top: 2%"
+    [ngClass]="{ 'item-list item-list-margin-bottom': isCollapsed10 }"
+    (click)="isCollapsed10 = !isCollapsed10"
+  >
+    <div class="row">
+      <div class="col-1">
+        <img src="../../../../assets/images/clerks-recommendation/icon_clerks_suggest.svg" class="icon-item" />
+      </div>
+
+      <div class="col-7">
+        <h4 class="text-item-section3">
+          FOR GENERAL HEALTH, DRUGSTORE CLERKS USUALLY SUGGEST
+        </h4>
+      </div>
+      <div class="col-2"></div>
+
+      <div class="col-2">
+        <img
+          src="../../../../assets/images/icon_expand.png"
+          class="icon-expand"
+          *ngIf="isCollapsed10"
+        />
+        <img
+          src="../../../../assets/images/icon_retract.png"
+          class="icon-expand"
+          *ngIf="!isCollapsed10"
+        />
+      </div>
+    </div>
+  </div>
+
+  <div id="collapseBasic10" [collapse]="isCollapsed10" [isAnimated]="false">
+    <div
+      class="well well-lg card card-block card-header item-collapsed-section3"
+    >
+      <br />
+      <div class="row">
+        <div class="col-12">
+          <ul
+            ngbNav
+            [animation]="false"
+            #nav2="ngbNav"
+            [(activeId)]="activeTab2"
+            class="nav-tabs nav-tabs--transparent nav"
+          >
+
+            <li [ngbNavItem]="1">
+              <a ngbNavLink class="secondary-tab">IMMUNITY</a>
+
+              <ng-template ngbNavContent>
+                <div class="custom-tab-content clerks-tab-content">
+
+                  <div class="row">
+
+                    <div class="col-5">
+
+                      <div class="row">
+                        <div class="col-6">
+                          <p class="clerks-recommendation-text" style="width: 100%; margin-top: 20px;">
+                            <b style="font-size: 18px;">48%</b> <br/>Vitamin C is the most recommended supplement for immunity
+                          </p>
+
+                        </div>
+
+                        <div class="col-6">
+                          <div
+                            [chart]="chartClarksRecommendationImmunityTab"
+                            class="section2-content-chart-wrapper"
+                            style="margin-top: 0px;"
+                          ></div>
+                          <div class="">
+                            <img
+                              src="../../../../assets/images/clerks-recommendation/icon_clerks_tab_allergy_4.svg"
+                              class="clerks-recommendation-image"
+                              style="margin-left: 65px;"
+                            />
+                          </div>
+                        </div>
+
+                      </div>
+
+                    </div>
+
+                    <div class="col-7" style="text-align: center;">
+
+                      <h4 class="text-chart-panel" style="text-align: center;">FOR IMMUNITY, DRUGSTORE CLERKS USUALLY SUGGEST</h4>
+
+                      <div
+                        [chart]="immunityChartVertical"
+                        class="section4-content-chart-wrapper--smaller"
+                        style="width: 300px; margin: auto;"
+                      ></div>
+                    </div>
+
+                  </div>
+
+                  <div class="row">
+                    <div class="col-3">
+
+                    </div>
+
+                    <div class="col-6">
+
+                      <div class="row">
+
+                        <div class="col-12">
+                          <h4 class="text-chart-panel" style="text-align: center;">THE MAIN BRANDS INDICATED WERE</h4>
+                        </div>
+
+                        <div class="col-2">
+                        </div>
+
+                        <div class="col-8">
+                          <div class="row">
+                            <div class="col-4">
+                              <p class="clerks-recommendation-text" style="width: 100%; margin-top: 20px;">
+                                <b style="font-size: 18px;">16%</b> <br/>Redoxon (Bayer)
+                              </p>
+                            </div>
+
+                            <div class="col-4" style="text-align: center;">
+                              <img style="width: 90px; margin-top: 10px;" src="../../../../assets/images/clerks-recommendation/icon_clerks_brand.svg" />
+                            </div>
+
+                            <div class="col-4">
+                              <p class="clerks-recommendation-text align-left" style="width: 110px; margin-top: 20px;">
+                                <b style="font-size: 18px;">10%</b> <br/>Bayer (pharmaceutical company)
+                              </p>
+                            </div>
+                          </div>
+                        </div>
+
+                      </div>
+                    </div>
+                  </div>
+
+                </div>
+              </ng-template>
+            </li>
+
+            <li [ngbNavItem]="2">
+              <a ngbNavLink class="secondary-tab">STRESS</a>
+
+              <ng-template ngbNavContent>
+                <div class="custom-tab-content clerks-tab-content">
+
+                  <div class="row">
+
+                    <div class="col-5">
+
+                      <div class="row">
+                        <div class="col-6">
+                          <p class="clerks-recommendation-text" style="width: 100%; margin-top: 20px;">
+                            <b style="font-size: 18px;">26%</b> <br/>Vitamin B is the most recommended supplement for stress
+                          </p>
+
+                        </div>
+
+                        <div class="col-6">
+                          <div
+                            [chart]="chartClarksRecommendationStressTab"
+                            class="section2-content-chart-wrapper"
+                            style="margin-top: 0px;"
+                          ></div>
+                          <div class="">
+                            <img
+                              src="../../../../assets/images/clerks-recommendation/icon_clerks_tab_allergy_4.svg"
+                              class="clerks-recommendation-image"
+                              style="margin-left: 65px;"
+                            />
+                          </div>
+                        </div>
+
+                      </div>
+
+                    </div>
+
+                    <div class="col-7" style="text-align: center;">
+
+                      <div class="row">
+
+                        <div class="col-12">
+                          <h4 class="text-chart-panel" style="text-align: center;">FOR STRESS, DRUGSTORE CLERKS USUALLY SUGGEST</h4>
+                        </div>
+
+                        <div class="col-2">
+                        </div>
+
+                        <div class="col-8">
+                          <div class="row">
+                            <div class="col-4">
+                              <p class="clerks-recommendation-text" style="width: 100%; margin-top: 20px;">
+                                <b style="font-size: 18px;">26%</b> <br/>Vitamin B
+                              </p>
+                            </div>
+
+                            <div class="col-4" style="text-align: center;">
+                              <img style="width: 90px; margin-top: 10px;" src="../../../../assets/images/clerks-recommendation/icon_clerks_prescription.svg" />
+                            </div>
+
+                            <div class="col-4">
+                              <p class="clerks-recommendation-text align-left" style="width: 110px; margin-top: 20px;">
+                                <b style="font-size: 18px;">16%</b> <br/>Passiflora incarnata (plant)
+                              </p>
+                            </div>
+                          </div>
+                        </div>
+
+                        <div class="col-2">
+                        </div>
+
+                      </div>
+
+                    </div>
+
+                  </div>
+
+                  <div class="row">
+                    <div class="col-3">
+
+                    </div>
+
+                    <div class="col-6">
+
+                      <div class="row">
+
+                        <div class="col-12">
+                          <h4 class="text-chart-panel" style="text-align: center;">THE MAIN BRAND INDICATED WAS</h4>
+                        </div>
+
+                        <div class="col-2">
+                        </div>
+
+                        <div class="col-8">
+                          <div class="row">
+                            <div class="col-4">
+
+                            </div>
+
+                            <div class="col-4" style="text-align: center;">
+                              <div class="topic">
+                                <img src="../../../../assets/images/clerks-recommendation/icon_clerks_brand2.svg" style="height: 70px;"/>
+                                <h3 class="title-topic">10%</h3>
+                                <p class="text-topic">Aspen Pharma (pharmaceutical company)
+                              </div>
+                            </div>
+
+                            <div class="col-4">
+
+                            </div>
+                          </div>
+                        </div>
+
+                      </div>
+                    </div>
+                  </div>
+
+                </div>
+              </ng-template>
+            </li>
+
+            <li [ngbNavItem]="3">
+              <a ngbNavLink class="secondary-tab">FATIGUE</a>
+
+              <ng-template ngbNavContent>
+                <div class="custom-tab-content clerks-tab-content">
+
+                  <div class="row">
+
+                    <div class="col-5">
+
+                      <div class="row">
+                        <div class="col-6">
+                          <p class="clerks-recommendation-text" style="width: 100%; margin-top: 20px;">
+                            <b style="font-size: 18px;">26%</b> <br/>Vitamin B is the most recommended supplement for fatigue
+                          </p>
+
+                        </div>
+
+                        <div class="col-6">
+                          <div
+                            [chart]="chartClarksRecommendationFatigueTab"
+                            class="section2-content-chart-wrapper"
+                            style="margin-top: 0px;"
+                          ></div>
+                          <div class="">
+                            <img
+                              src="../../../../assets/images/clerks-recommendation/icon_clerks_tab_allergy_4.svg"
+                              class="clerks-recommendation-image"
+                              style="margin-left: 65px;"
+                            />
+                          </div>
+                        </div>
+
+                      </div>
+
+                    </div>
+
+                    <div class="col-7" style="text-align: center;">
+
+                      <div class="row">
+
+                        <div class="col-12">
+                          <h4 class="text-chart-panel" style="text-align: center;">FOR FATIGUE, DRUGSTORE CLERKS USUALLY SUGGEST</h4>
+                        </div>
+
+                        <div class="col-2">
+                        </div>
+
+                        <div class="col-8">
+                          <div class="row">
+                            <div class="col-4">
+                              <p class="clerks-recommendation-text" style="width: 100%; margin-top: 20px;">
+                                <b style="font-size: 18px;">26%</b> <br/>Vitamin B
+                              </p>
+                            </div>
+
+                            <div class="col-4" style="text-align: center;">
+                              <img style="width: 90px; margin-top: 10px;" src="../../../../assets/images/clerks-recommendation/icon_clerks_prescription.svg" />
+                            </div>
+
+                            <div class="col-4">
+                              <p class="clerks-recommendation-text align-left" style="width: 110px; margin-top: 20px;">
+                                <b style="font-size: 18px;">10%</b> <br/>suggest arginine (amino acid), iron (mineral) and vitamin C (ascorbic acid)
+                              </p>
+                            </div>
+                          </div>
+                        </div>
+
+                        <div class="col-2">
+                        </div>
+
+                      </div>
+
+                    </div>
+
+                  </div>
+
+                  <div class="row">
+                    <div class="col-3">
+
+                    </div>
+                    <div class="col-6">
+
+                      <div class="row">
+                        <div class="col-12">
+                          <h4 class="text-chart-panel" style="text-align: center;">THE MAIN BRANDS INDICATED WERE</h4>
+                        </div>
+
+                        <div class="col-2">
+                        </div>
+
+                        <div class="col-8">
+                          <div class="row">
+                            <div class="col-4">
+                              <p class="clerks-recommendation-text" style="width: 100%; margin-top: 20px;">
+                                <b style="font-size: 18px;">10%</b> <br/>Centrum<br/>(Pfizer)
+                              </p>
+                            </div>
+
+                            <div class="col-4" style="text-align: center;">
+                              <img style="width: 90px; margin-top: 10px;" src="../../../../assets/images/clerks-recommendation/icon_clerks_brand.svg" />
+                            </div>
+
+
+                            <div class="col-4">
+                              <p class="clerks-recommendation-text align-left" style="width: 100%; margin-top: 20px;">
+                                <b style="font-size: 18px;">10%</b> <br/>Gerovital<br/>(EMS)
+                              </p>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+
+                    </div>
+                  </div>
+
+                </div>
+              </ng-template>
+            </li>
+
+            <li [ngbNavItem]="4">
+              <a ngbNavLink class="secondary-tab">SLEEP IMPROVEMENT</a>
+
+              <ng-template ngbNavContent>
+                <div class="custom-tab-content clerks-tab-content">
+
+                  <div class="row">
+
+                    <div class="col-5">
+
+                      <div class="row">
+                        <div class="col-6">
+                          <p class="clerks-recommendation-text" style="width: 100%; margin-top: 20px;">
+                            <b style="font-size: 18px;">19%</b> <br/>Passiflora is the most recommended supplement for sleep improvement
+                          </p>
+
+                        </div>
+
+                        <div class="col-6">
+                          <div
+                            [chart]="chartClarksRecommendationSleepTab"
+                            class="section2-content-chart-wrapper"
+                            style="margin-top: 0px;"
+                          ></div>
+                          <div class="">
+                            <img
+                              src="../../../../assets/images/clerks-recommendation/icon_clerks_tab_allergy_4.svg"
+                              class="clerks-recommendation-image"
+                              style="margin-left: 65px;"
+                            />
+                          </div>
+                        </div>
+
+                      </div>
+
+                    </div>
+
+                    <div class="col-7" style="text-align: center;">
+
+                      <h4 class="text-chart-panel" style="text-align: center;">FOR SLEEP IMPROVEMENT, DRUGSTORE CLERKS USUALLY SUGGEST</h4>
+
+                      <div
+                        [chart]="sleepChartVertical"
+                        class="section4-content-chart-wrapper--smaller"
+                        style="width: 300px; margin: auto;"
+                      ></div>
+                    </div>
+
+                  </div>
+
+                  <div class="row">
+                    <div class="col-3">
+
+                    </div>
+
+                    <div class="col-6">
+
+                      <div class="row">
+
+                        <div class="col-12">
+                          <h4 class="text-chart-panel" style="text-align: center;">THE MAIN BRANDS INDICATED WERE</h4>
+                        </div>
+
+                        <div class="col-2">
+                        </div>
+
+                        <div class="col-8">
+                          <div
+                            [chart]="sleepChartVertical2"
+                            class="section4-content-chart-wrapper--smaller"
+                            style="width: 300px; margin: auto;"
+                          ></div>
+                        </div>
+
+                      </div>
+                    </div>
+                  </div>
+
+                </div>
+              </ng-template>
+
+            </li>
+
+            <li [ngbNavItem]="5">
+              <a ngbNavLink class="secondary-tab">ARTICULAR HEALTH</a>
+
+              <ng-template ngbNavContent>
+                <div class="custom-tab-content clerks-tab-content">
+
+                  <div class="row">
+
+                    <div class="col-5">
+
+                      <div class="row">
+                        <div class="col-6">
+                          <p class="clerks-recommendation-text" style="width: 100%; margin-top: 20px;">
+                            <b style="font-size: 18px;">23%</b> <br/>Collagen is the most recommended nutrient for articular health
+                          </p>
+                        </div>
+
+                        <div class="col-6">
+                          <div
+                            [chart]="chartClarksRecommendationArticularTab"
+                            class="section2-content-chart-wrapper"
+                            style="margin-top: 0px;"
+                          ></div>
+                          <div class="">
+                            <img
+                              src="../../../../assets/images/clerks-recommendation/icon_clerks_tab_allergy_4.svg"
+                              class="clerks-recommendation-image"
+                              style="margin-left: 65px;"
+                            />
+                          </div>
+                        </div>
+
+                      </div>
+
+                    </div>
+
+                    <div class="col-7" style="text-align: center;">
+
+                      <h4 class="text-chart-panel" style="text-align: center;">FOR SLEEP IMPROVEMENT, DRUGSTORE CLERKS USUALLY SUGGEST</h4>
+
+                      <div
+                        [chart]="articularChartVertical"
+                        class="section4-content-chart-wrapper--smaller"
+                        style="width: 300px; margin: auto;"
+                      ></div>
+                    </div>
+
+                  </div>
+
+                  <div class="row">
+
+                    <div class="col-4">
+
+                      <h4 class="text-chart-panel" style="text-align: center;">THE BRANDS INDICATED WERE</h4>
+
+                      <div
+                        [chart]="articularChartHorizontal"
+                        class="section4-content-chart-wrapper"
+                      ></div>
+
+                    </div>
+
+                    <div class="col-4">
+
+                      <div class="row">
+
+                        <div class="col-12">
+                          <h4 class="text-chart-panel" style="text-align: center; margin-left: 50px;">HYDROLYZED COLLAGEN<br/>(TYPE I) FOR</h4>
+                        </div>
+
+                        <div class="col-3" style="padding-right: 0;">
+                          <p class="clerks-recommendation-text" style="width: 100%; margin-top: 80px;">
+                            <b style="font-size: 18px;">48%</b><br />hair and nails
+                          </p>
+                        </div>
+
+                        <div class="col-6">
+                          <div class="doughnut-graphic-wrapper">
+                            <div class="center-circle--section4">
+                              <img
+                                src="../../../../assets/images/clerks-recommendation/icon_clerks_articular.svg"
+                                style="margin: 30px 0 0px 25px;"
+                              />
+                            </div>
+                            <div class="center-circle-border--section4"></div>
+                            <div
+                              class="
+                                center-circle-percent--section4
+                                center-circle-percent--section4-48
+                              "
+                            ></div>
+                          </div>
+                        </div>
+
+                        <div class="col-3">
+                          <p class="clerks-recommendation-text align-left" style="width: 100%; margin-top: 80px; margin-left: 50px;">
+                            <b style="font-size: 18px;">52%</b><br />skin
+                          </p>
+                        </div>
+
+                      </div>
+
+                    </div>
+
+                    <div class="col-4">
+                      <h4 class="text-chart-panel" style="text-align: center; margin-left: 50px;">HYDROLYZED COLLAGEN<br/>(TYPE I) FOR</h4>
+
+                      <div style="width: 400px;">
+                        <canvas
+                          style="margin-left: 10px;"
+                          baseChart
+                          [data]="doughnutChartData4"
+                          [labels]="doughnutChartLabels4"
+                          [chartType]="doughnutChartType4"
+                          [colors]="doughnutChartTypeColors4"
+                          [options]="doughnutChartOpts4"
+                        >
+                        </canvas>
+                      </div>
+                      <div class="">
+                        <img
+                          src="../../../../assets/images/clerks-recommendation/icon_clerks_tab_1.svg"
+                          class="world"
+                          style="width: 30%; margin-top: -75%; margin-left: 55%;"
+                        />
+                      </div>
+
+                    </div>
+
+                  </div>
+
+                </div>
+              </ng-template>
+            </li>
+
+            <li [ngbNavItem]="6">
+              <a ngbNavLink class="secondary-tab">MUSCLE STRENGTHENING</a>
+
+              <ng-template ngbNavContent>
+                <div class="custom-tab-content clerks-tab-content">
+
+                  <div class="row">
+                    <div class="col-5">
+
+                      <div class="row">
+                        <div class="col-6">
+                          <p class="clerks-recommendation-text" style="width: 100%; margin-top: 20px;">
+                            <b style="font-size: 18px;">26%</b> <br/>Collagen is the most recommended nutrient for muscle strengthening
+                          </p>
+
+                        </div>
+
+                        <div class="col-6">
+                          <div
+                            [chart]="chartClarksRecommendationMuscleTab"
+                            class="section2-content-chart-wrapper"
+                            style="margin-top: 0px;"
+                          ></div>
+                          <div class="">
+                            <img
+                              src="../../../../assets/images/clerks-recommendation/icon_clerks_tab_allergy_4.svg"
+                              class="clerks-recommendation-image"
+                              style="margin-left: 65px;"
+                            />
+                          </div>
+                        </div>
+
+                      </div>
+
+                    </div>
+
+                    <div class="col-7" style="text-align: center;">
+
+                      <div class="row">
+
+                        <div class="col-12">
+                          <h4 class="text-chart-panel" style="text-align: center;">THE BRANDS INDICATED WERE</h4>
+                        </div>
+
+                        <div class="col-2">
+                        </div>
+
+                        <div class="col-8">
+                          <div class="row">
+                            <div class="col-4">
+                              <p class="clerks-recommendation-text" style="width: 100%; margin-top: 20px;">
+                                <b style="font-size: 18px;">7%</b> <br/>Calcitran MDK (Divcom Pharma)
+                              </p>
+                            </div>
+
+                            <div class="col-4" style="text-align: center;">
+                              <img style="width: 90px; margin-top: 10px;" src="../../../../assets/images/clerks-recommendation/icon_clerks_prescription.svg" />
+                            </div>
+
+                            <div class="col-4">
+                              <p class="clerks-recommendation-text align-left" style="width: 110px; margin-top: 20px;">
+                                <b style="font-size: 18px;">7%</b> <br/>Centrum (Pfizer)
+                              </p>
+                            </div>
+                          </div>
+                        </div>
+
+                        <div class="col-2">
+                        </div>
+
+                      </div>
+
+                    </div>
+
+                  </div>
+
+                  <div class="row">
+                    <div class="col-1">
+
+                    </div>
+                    <div class="col-5">
+
+                      <div class="row">
+                        <div class="col-12">
+                          <h4 class="text-chart-panel" style="text-align: center;">FOR MUSCLE STRENGTHENING, DRUGSTORE CLERKS USUALLY SUGGEST</h4>
+                        </div>
+
+                        <div class="col-4">
+                        </div>
+
+                        <div class="col-4" style="text-align: center;">
+                          <div class="topic">
+                            <img src="../../../../assets/images/frasco_icon.png" style="height: 70px;"/>
+                            <h3 class="title-topic">26%</h3>
+                            <p class="text-topic">Collagen (protein)
+                          </div>
+                        </div>
+
+                      </div>
+
+                    </div>
+
+                    <div class="col-5">
+
+                      <div class="row">
+                        <div class="col-12">
+                          <h4 class="text-chart-panel" style="text-align: center;">FOR MUSCLE STRENGTHENING, DRUGSTORE CLERKS USUALLY SUGGEST</h4>
+                        </div>
+
+                        <div class="col-4" style="text-align: center; margin-left: 50px;">
+                          <div class="circle">
+                            <p class="text-circle-p" style="padding-top: 70px; font-size: 16px;">
+                              It is clear that there is lack of
+                              <br/>knowledge on the action of
+                              <br/>collagen type I for muscles
+                              <br/>and joints, whereas this
+                              <br/>benefit is attributed only to
+                              <br/>type II, similar to the
+                              <br/>interviewed HCPs
+                            </p>
+                          </div>
+                        </div>
+
+                      </div>
+
+                    </div>
+                  </div>
+
+                </div>
+              </ng-template>
+
+            </li>
+
+            <li [ngbNavItem]="7" style="margin-top: 10px;">
+              <a ngbNavLink class="secondary-tab">BONE HEALTH</a>
+
+              <ng-template ngbNavContent>
+                <div class="custom-tab-content clerks-tab-content">
+
+                  <div class="row">
+                    <div class="col-5">
+                      <div class="row">
+                        <div class="col-6">
+                          <p class="clerks-recommendation-text" style="width: 100%; margin-top: 20px;">
+                            <b style="font-size: 18px;">55%</b> <br/>Calcium for bone health
+                          </p>
+
+                        </div>
+
+                        <div class="col-6">
+                          <div
+                            [chart]="chartClarksRecommendationBoneTab"
+                            class="section2-content-chart-wrapper"
+                            style="margin-top: 0px;"
+                          ></div>
+                          <div class="">
+                            <img
+                              src="../../../../assets/images/clerks-recommendation/icon_clerks_tab_allergy_4.svg"
+                              class="clerks-recommendation-image"
+                              style="margin-left: 65px;"
+                            />
+                          </div>
+                        </div>
+
+                      </div>
+
+                    </div>
+
+                    <div class="col-7" style="text-align: center;">
+
+                      <div class="row">
+
+                        <div class="col-12">
+                          <h4 class="text-chart-panel" style="text-align: center;">FOR BONE HEALTH, DRUGSTORE CLERKS USUALLY SUGGEST</h4>
+                        </div>
+
+                        <div class="col-2">
+                        </div>
+
+                        <div class="col-8">
+                          <div class="row">
+                            <div class="col-4">
+                              <p class="clerks-recommendation-text" style="width: 100%; margin-top: 20px;">
+                                <b style="font-size: 18px;">55%</b> <br/>Calcium
+                              </p>
+                            </div>
+
+                            <div class="col-4" style="text-align: center;">
+                              <img style="width: 90px; margin-top: 10px;" src="../../../../assets/images/clerks-recommendation/icon_clerks_prescription.svg" />
+                            </div>
+
+                            <div class="col-4">
+                              <p class="clerks-recommendation-text align-left" style="width: 110px; margin-top: 20px;">
+                                <b style="font-size: 18px;">19%</b> <br/>Vitamin D
+                              </p>
+                            </div>
+                          </div>
+                        </div>
+
+                        <div class="col-2">
+                        </div>
+
+                      </div>
+
+                    </div>
+
+                  </div>
+
+                  <div class="row">
+                    <div class="col-3">
+
+                    </div>
+                    <div class="col-6">
+
+                      <div class="row">
+                        <div class="col-12">
+                          <h4 class="text-chart-panel" style="text-align: center;">THE MAIN BRANDS INDICATED WERE</h4>
+                        </div>
+
+                        <div class="col-2">
+                        </div>
+
+                        <div class="col-8">
+                          <div class="row">
+                            <div class="col-4">
+                              <p class="clerks-recommendation-text" style="width: 100%; margin-top: 20px;">
+                                <b style="font-size: 18px;">32%</b> <br/>Calcitran MDK (Divcom Pharma)
+                              </p>
+                            </div>
+
+                            <div class="col-4" style="text-align: center;">
+                              <img style="width: 90px; margin-top: 10px;" src="../../../../assets/images/clerks-recommendation/icon_clerks_brand.svg" />
+                            </div>
+
+
+                            <div class="col-4">
+                              <p class="clerks-recommendation-text align-left" style="width: 100%; margin-top: 20px;">
+                                <b style="font-size: 18px;">7%</b> <br/>Prosso (Momenta)
+                              </p>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+
+                    </div>
+                  </div>
+
+                </div>
+              </ng-template>
+            </li>
+
+            <li [ngbNavItem]="8" style="margin-top: 10px;">
+              <a ngbNavLink class="secondary-tab">ENERGY</a>
+
+              <ng-template ngbNavContent>
+                <div class="custom-tab-content clerks-tab-content">
+
+                  <div class="row">
+                    <div class="col-5">
+                      <div class="row">
+                        <div class="col-6">
+                          <p class="clerks-recommendation-text" style="width: 100%; margin-top: 20px;">
+                            <b style="font-size: 18px;">13%</b> <br/>Vitamin complex and Vitamin B to increase energy
+                          </p>
+
+                        </div>
+
+                        <div class="col-6">
+                          <div
+                            [chart]="chartClarksRecommendationEnergyTab"
+                            class="section2-content-chart-wrapper"
+                            style="margin-top: 0px;"
+                          ></div>
+                          <div class="">
+                            <img
+                              src="../../../../assets/images/clerks-recommendation/icon_clerks_tab_allergy_4.svg"
+                              class="clerks-recommendation-image"
+                              style="margin-left: 65px;"
+                            />
+                          </div>
+                        </div>
+
+                      </div>
+
+                    </div>
+
+                    <div class="col-7" style="text-align: center;">
+
+                      <div class="row">
+
+                        <div class="col-12">
+                          <h4 class="text-chart-panel" style="text-align: center;">TO INCREASE ENERGY, DRUGSTORE CLERKS USUALLY SUGGEST</h4>
+                        </div>
+
+                        <div class="col-2">
+                        </div>
+
+                        <div class="col-8">
+                          <div class="row">
+                            <div class="col-4">
+                              <p class="clerks-recommendation-text" style="width: 100%; margin-top: 20px;">
+                                <b style="font-size: 18px;">13%</b> <br/>A-Z vitamin complex (se)
+                              </p>
+                            </div>
+
+                            <div class="col-4" style="text-align: center;">
+                              <img style="width: 90px; margin-top: 10px;" src="../../../../assets/images/clerks-recommendation/icon_clerks_prescription.svg" />
+                            </div>
+
+                            <div class="col-4">
+                              <p class="clerks-recommendation-text align-left" style="width: 110px; margin-top: 20px;">
+                                <b style="font-size: 18px;">13%</b> <br/>Vitamin B
+                              </p>
+                            </div>
+                          </div>
+                        </div>
+
+                        <div class="col-2">
+                        </div>
+
+                      </div>
+
+                    </div>
+
+                  </div>
+
+                  <div class="row">
+                    <div class="col-3">
+
+                    </div>
+                    <div class="col-6">
+
+                      <div class="row">
+                        <div class="col-12">
+                          <h4 class="text-chart-panel" style="text-align: center;">THE MAIN BRANDS INDICATED WERE</h4>
+                        </div>
+
+                        <div class="col-2">
+                        </div>
+
+                        <div class="col-8">
+                          <div class="row">
+                            <div class="col-4">
+                              <p class="clerks-recommendation-text" style="width: 100%; margin-top: 20px;">
+                                <b style="font-size: 18px;">13%</b> <br/>Centrum (Pfizer)
+                              </p>
+                            </div>
+
+                            <div class="col-4" style="text-align: center;">
+                              <img style="width: 90px; margin-top: 10px;" src="../../../../assets/images/clerks-recommendation/icon_clerks_brand.svg" />
+                            </div>
+
+                            <div class="col-4">
+                              <p class="clerks-recommendation-text align-left" style="width: 100%; margin-top: 20px;">
+                                <b style="font-size: 18px;">10%</b> <br/>Cimed (pharmaceutical company)
+                              </p>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+
+                    </div>
+                  </div>
+
+                </div>
+              </ng-template>
+            </li>
+
+          </ul>
+
+          <div [ngbNavOutlet]="nav2" class=""></div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+  <!-- FINAL PAINEL 10 -->
+
+</div>

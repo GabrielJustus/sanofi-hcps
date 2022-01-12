@@ -1,0 +1,62 @@
+.card__wrapper {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	gap: 8px;
+}
+.rec-panel {
+  width: 548px;
+  border: 1px solid #f8b133;
+  border-radius: 7px;
+  padding: 32px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.rec-btn {
+  width: 125px;
+  height: 145px;
+  background: #ecebeb 0% 0% no-repeat padding-box;
+  border-radius: 7px;
+}
+
+.rec-icon {
+	width: 13px;
+}
+
+.btn-like {
+  height: 50%;
+  margin-left: 31px;
+  margin-top: 10px;
+}
+
+.text-btn {
+  color: #023866;
+  font-family: "Lato";
+  font-size: 12px;
+  font-weight: bold;
+  text-align: center;
+  margin-top: 10px;
+}
+
+.item {
+	display: flex;
+	flex-direction: column;
+	width: 230px;
+	justify-content: center;
+	align-items: center;
+}
+.item img {
+	width: 127px;
+}
+.item p {
+	margin-top: 8px;
+	text-align: center;
+}
+
+.item p {
+  color: #023866;
+  font-family: "Lato";
+  font-size: 12px;
+}

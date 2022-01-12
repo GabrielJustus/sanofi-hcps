@@ -1,0 +1,95 @@
+<app-card-item
+	relativePathIcon="assets/images/icon1.png"
+	title="IN-PERSON EVENTS VS. ONLINE EVENTS"
+	description="All professional categories prefer in-person events, but..."
+	(toggle)="reloadGraphic($event)"
+>
+
+	<div class="row" style="padding-top: 30px; padding-bottom: 62px;">
+		<div class="col-6">
+			<div class="left-frame">
+			<h3 class="text-inperson">IN-PERSON EVENTS</h3>
+			<div class="row">
+				<div class="col-3">
+				<img
+					src="assets/images/icon_people.png"
+					class="icon-people"
+				/>
+				</div>
+				<div class="col-5">
+				<p class="text-inperson-p">Access to printed materials and promotional gifts/networking/interaction between lecturer and audience</p>
+				</div>
+			</div>
+			</div>
+			<div class="col-12">
+			<div class="add-icon" style="margin-top: 38%">
+				<a (click)="openTooltip1()"
+				><img src="assets/images/add.png"
+				/></a>
+			</div>
+			</div>
+		</div>
+		<div class="col-6">
+			<div class="right-frame">
+				<h3 class="text-onlineevents">ONLINE EVENTS</h3>
+				<div class="row">
+					<div class="col-5" style="margin-left: 80px">
+						<p class="text-inperson-p text-left">Convenience/content available online/being able to adjust the congress program to daily routine</p>
+					</div>
+					<div class="col-3">
+						<img
+							src="assets/images/icon_online.png"
+							class="icon-online"
+						/>
+					</div>
+				</div>
+			</div>
+			<div class="col-12">
+				<div class="add-icon" style="margin-top: 38%">
+					<a (click)="openTooltip2()">
+						<img src="assets/images/add.png"/>
+					</a>
+				</div>
+			</div>
+		</div>
+		<div class="col-12">
+			<div class="row">
+				<div class="col-6">
+					<div
+					class="rec-yellow-tooltip"
+					(click)="openTooltip1()"
+					*ngIf="recTooltip1"
+					style="height: 152px"
+					>
+						<p class="text-p-tooltip">
+							- For other types of events (live classes/discussion groups/debates and immersion courses), the in-person mode was chosen as the best option by doctors, nutritionists, and physical therapists.
+						</p>
+					</div>
+				</div>
+
+				<div class="col-6">
+					<div
+					class="rec-yellow-tooltip"
+					(click)="openTooltip2()"
+					*ngIf="recTooltip2"
+					style="height: 152px"
+					>
+						<p class="text-p-tooltip">
+							- Recorded classes/lectures with slides were preferred by all professionals in the online mode;
+							<br /><br />
+							- Drugstore workers (pharmacists and clerks) prefer the online mode the most in comparison with the other professionals.
+						</p>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="center-circle">
+			<p class="text-circle-percent">For live classes/ lectures with slides, nutritionists are divided between in- person (50%) and online (50%) modes.</p>
+		</div>
+		<div class="center-circle-border"></div>
+		<div
+			class="center-circle-percent center-circle-percent--section4-50"
+		></div>
+	</div>
+</app-card-item>

@@ -1,0 +1,34 @@
+<div
+	class="item-list-anim"
+	[ngClass]="{ 'item-list': isCollapsed }"
+	(click)="toggleCollapsed()"
+>
+	<div class="card-item__header">
+		<div class="card-item__wrapper-icon">
+			<img src="../../../../assets/{{relativePathIcon}}" class="card-item__icon" />
+		</div>
+
+		<div class="card-item__wrapper-title">
+			<h4 class="card-item__title">{{title}}</h4>
+			<p *ngIf="description != ''" class="card-item__description">{{description}}</p>
+		</div>
+
+		<div class="card-item__wrapper-toggle">
+			<img
+			src="../../../../assets/images/icon_expand.png"
+			class="icon-expand"
+			*ngIf="isCollapsed"
+			/>
+			<img
+			src="../../../../assets/images/icon_retract.png"
+			class="icon-expand"
+			*ngIf="!isCollapsed"
+			/>
+		</div>
+	</div>
+</div>
+<div id="collapseBasic" [collapse]="isCollapsed" [isAnimated]="false">
+	<div class="well well-lg card card-block card-header item-collapsed">
+		<ng-content></ng-content>
+	</div>
+</div>

@@ -1,0 +1,79 @@
+<app-card-item
+  relativePathIcon="assets/images/icon1.png"
+  title="E-LEARNING – A RELEVANT FORM OF LEARNING?"
+  (toggle)="reloadGraphic($event)"
+>
+  <div class="row">
+    <div class="col-6" style="padding-top: 70px;">
+      <h3 class="title">
+        A LARGE NUMBER OF PROFESSIONALS ARE INTERESTED IN PARTICIPATING IN
+        E-LEARNING PROGRAMS
+      </h3>
+      <br />
+      <div class="row">
+        <div class="col-4">
+          <h3 class="title-circle-percent">70%</h3>
+          <p class="text-circle-percent">
+            nutritionists are the category who is most interested
+          </p>
+        </div>
+        <div class="col-4" style="margin-left: -20px">
+          <div
+            [chart]="chartSearchChannel"
+            class="section2-content-chart-wrapper"
+          ></div>
+          <div class="">
+            <img
+              src="assets/images/tv_play.png"
+              class="book-search"
+            />
+          </div>
+        </div>
+        <div class="col-4">
+          <p
+            class="text-circle-percent2"
+            style="margin-top: 20px; margin-left: 40px"
+          >
+            On the other hand, clerks are the least interested (36% of the
+            sample).
+          </p>
+        </div>
+      </div>
+    </div>
+    <div class="col-6">
+      <h3 class="title" style="text-align: center">
+        THE CONTENTS CONSIDERED MOST<br />RELEVANT TO BE TRANSMITTED VIA<br />E-LEARNING
+        WERE:
+      </h3>
+      <br />
+      <div class="row">
+        <div class="col-6">
+          <h3 class="title-row-el">Scientific<br />content</h3>
+          <img
+            src="assets/images/pessoas_medicos.png"
+            class="icones-row"
+          />
+          <p class="sub-row-el">doctors and physical therapists</p>
+        </div>
+
+        <div class="col-6">
+          <h3 class="title-row-el">Focus on patients<br>and diseases</h3>
+          <img
+            src="assets/images/nutricionistas.png"
+            class="icones-row"
+          />
+          <p class="sub-row-el">nutritionists, pharmacists</p>
+        </div>
+		<div class="col-12">
+			<h3 class="title-row-el">Focus on product benefits/<br>mode of action/dosage</h3>
+			<img
+			  src="assets/images/pharmacists.png"
+			  class="icones-row"
+			  style="width: 25%;"
+			/>
+			<p class="sub-row-el">pharmacists</p>
+		  </div>
+      </div>
+    </div>
+  </div>
+</app-card-item>

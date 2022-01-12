@@ -1,0 +1,30 @@
+.navbar {
+  padding: 20px 40px;
+  background: linear-gradient(122deg, #003866 0%, #006eb7 60%) 0% 0% no-repeat;
+  border: none;
+  border-radius: 0;
+}
+
+.navbar-brand {
+  padding: 0;
+}
+
+.navbar-brand img {
+  max-height: 100%;
+}
+
+.navbar-nav {
+  float: none;
+  justify-content: flex-end;
+}
+
+.nav-link {
+  margin-left: 20px;
+  padding: 5px 0;
+  font-weight: bold;
+  color: #fff;
+}
+
+.nav-link:hover {
+  border-bottom: 1px solid #fff;
+}

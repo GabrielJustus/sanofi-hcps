@@ -1,0 +1,2361 @@
+<div class="container">
+  <h3 class="title">Physicians</h3>
+
+  <div class="row">
+    <div class="col-6">
+      <img src="assets/images/map.png" width="90%" class="map-h" />
+    </div>
+    <div class="col-6">
+      <h4 class="text-chart">TOTAL</h4>
+      <canvas
+        baseChart
+        [data]="doughnutChartData"
+        [labels]="doughnutChartLabels"
+        [chartType]="doughnutChartType"
+        [colors]="doughnutChartTypeColors"
+        [options]="doughnutChartOpts"
+      >
+      </canvas>
+      <h3 class="text-chart-initial">240<br />physicians</h3>
+      <br />
+      <h4 class="text-chart-2">SPECIALTY</h4>
+      <div
+        [chart]="chartSpecialty"
+        class="section4-content-chart-wrapper"
+      ></div>
+    </div>
+  </div>
+  <div class="row space-top">
+    <div class="col-3"></div>
+    <div class="col-6">
+      <div class="yellow-bar"></div>
+    </div>
+    <div class="col-3"></div>
+  </div>
+
+  <h3 class="title-footer">How to activate this audience effectively?</h3>
+</div>
+
+<div class="section2">
+  <div class="container">
+    <div class="panel">
+      <div
+        class="item-list-anim"
+        [ngClass]="{ 'item-list': isCollapsed }"
+        (click)="toggleCollapsed1()"
+      >
+        <div class="row">
+          <div class="col-1">
+            <img src="assets/images/icon1.png" class="icon-item" />
+          </div>
+
+          <div class="col-7">
+            <h4 class="text-item">
+              What do physicians want to know and where do they search for that
+              information?
+            </h4>
+          </div>
+          <div class="col-2"></div>
+
+          <div class="col-2">
+            <img
+              src="assets/images/icon_expand.png"
+              class="icon-expand"
+              *ngIf="isCollapsed"
+            />
+            <img
+              src="assets/images/icon_retract.png"
+              class="icon-expand"
+              *ngIf="!isCollapsed"
+            />
+          </div>
+        </div>
+      </div>
+
+      <div id="collapseBasic" [collapse]="isCollapsed" [isAnimated]="false">
+        <div class="well well-lg card card-block card-header item-collapsed">
+          <div class="row">
+            <div class="col-6">
+              <div class="row">
+                <div class="col-3">
+                  <p class="text-panel-1">
+                    <b>96%</b><br />ACTIVELY<br />try to stay<br />up to date
+                  </p>
+                </div>
+                <div class="col-1">
+                  <br />
+                  <!-- <img src="assets/images/add.png" height="15%" /> -->
+                  <div
+                    class="add-icon"
+                    style="display: inline-block; width: 28px"
+                  >
+                    <div
+                      class="rec-yellow-tooltip rec-yellow-tooltip--section4"
+                      *ngIf="section1TooltipSearch"
+                      (click)="openSection1TooltipSearch()"
+                      style="top: -40px; left: -115px; z-index: 2"
+                    >
+                      <p class="text-p-tooltip text-p-tooltip--section4">
+                        43% of such physicians search<br />for the content on their
+                        own<br />initiative
+                      </p>
+                    </div>
+
+                    <a (click)="openSection1TooltipSearch()"
+                      ><img src="assets/images/add.png"
+                    /></a>
+                  </div>
+                </div>
+                <div class="col-5">
+                  <h4 class="text-chart-panel">SEARCH<br />CHANNEL</h4>
+                  <br />
+                  <!-- <div class="half-circle"></div> -->
+                  <div
+                    [chart]="chartSearchChannel"
+                    class="section2-content-chart-wrapper"
+                  ></div>
+                  <div class="">
+                    <img
+                      src="assets/images/book_search_icon.png"
+                      class="book-search"
+                    />
+                  </div>
+                </div>
+                <div class="col-1">
+                  <br />
+
+                  <!-- <img src="assets/images/add.png" height="15%" /> -->
+                  <div
+                    class="add-icon"
+                    style="display: inline-block; width: 28px"
+                  >
+                    <div
+                      class="rec-yellow-tooltip rec-yellow-tooltip--section4"
+                      *ngIf="section1TooltipSearch2"
+                      (click)="openSection1TooltipSearch2()"
+                      style="top: -40px; left: -15px; z-index: 2"
+                    >
+                      <p class="text-p-tooltip text-p-tooltip--section4">
+                        53% of such physicians stay up to date on their own
+                        initiative but also using content provided by the
+                        pharmaceutical industry
+                      </p>
+                    </div>
+
+                    <a (click)="openSection1TooltipSearch2()"
+                      ><img src="assets/images/add.png"
+                    /></a>
+                  </div>
+                </div>
+              </div>
+              <br /><br />
+              <div class="row">
+                <div class="col-10">
+                  <h4 class="text2-chart-panel">CONTENT</h4>
+                </div>
+                <div class="col-6">
+                  <div class="row">
+                    <div class="col-4">
+                      <img
+                        src="assets/images/icon_1_panel_1.png"
+                        alt=""
+                        class="img-icons-size"
+                      />
+                    </div>
+
+
+                    <div class="col-8">
+                      <h4 class="percent">22%</h4>
+                      <p class="text-percent">
+                        updates in <br />their specialty
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-6">
+                  <div class="row">
+                    <div class="col-4">
+                      <img
+                        src="assets/images/icon_2_panel_1.png"
+                        alt=""
+                        class="img-icons-size"
+                      />
+                    </div>
+                    <div class="col-8">
+                      <h4 class="percent">22%</h4>
+                      <p class="text-percent">
+                        updates in clinical<br />medicine and new<br />clinical
+                        treatments
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-6" style="margin-top: 10px">
+                  <div class="row">
+                    <div class="col-4">
+                      <img
+                        src="assets/images/icon_3_panel_1.png"
+                        alt=""
+                        class="img-icons-size"
+                      />
+                    </div>
+                    <div class="col-8">
+                      <h4 class="percent">14%</h4>
+                      <p class="text-percent">updates in<br />pediatrics</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-6">
+              <canvas
+                style="margin-left: 20px"
+                baseChart
+                [data]="doughnutChartData3"
+                [labels]="doughnutChartLabels3"
+                [chartType]="doughnutChartType3"
+                [colors]="doughnutChartTypeColors3"
+                [options]="doughnutChartOpts3"
+              >
+              </canvas>
+              <div class="">
+                <img
+                  src="assets/images/world_icon.png"
+                  class="world"
+                />
+              </div>
+
+              <h4 class="text2-chart-panel">FORMAT</h4>
+              <p class="text2-panel-1">
+                Despite the new technologies available, the traditional<br />method,
+                that is, text, is still the most accepted by physicians.
+              </p>
+              <div
+                class="add-icon"
+                style="
+                  display: inline-block;
+                  width: 28px;
+                  left: 250px;
+                  top: 50px;
+                  z-index: 999;
+                "
+              >
+                <div
+                  class="rec-yellow-tooltip rec-yellow-tooltip--section4"
+                  *ngIf="section1TooltipFormat"
+                  (click)="openSection1TooltipFormat()"
+                  style="top: -40px; left: -15px; z-index: 2"
+                >
+                  <p class="text-p-tooltip text-p-tooltip--section4">
+                    Video already has a considerable role among the specialties
+                  </p>
+                </div>
+
+                <a (click)="openSection1TooltipFormat()"
+                  ><img src="assets/images/add.png"
+                /></a>
+              </div>
+              <p class="sub-text-item" style="text-align:center; margin-left:50px">Prefer using:</p>
+              <div
+                [chart]="section2ChartVertical"
+                class="section4-content-chart-wrapper"
+                style="width: 520px"
+              ></div>
+
+              <div
+                class="add-icon"
+                style="
+                  display: inline-block;
+                  width: 18px;
+                  left: -200px;
+                  top: -120px;
+                  z-index: 999;
+                "
+              >
+                <div
+                  class="rec-yellow-tooltip rec-yellow-tooltip--section4"
+                  *ngIf="true"
+                  style="top: -40px; left: -15px; z-index: 2"
+                >
+                  <p class="text-p-tooltip text-p-tooltip--section4">
+                    Opportunity for Otorhinolaryngologists: acceptance of video and
+                    text is the same: 38%
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div
+        class="item-list-anim"
+        [ngClass]="{ 'item-list': isCollapsed2 }"
+        style="margin-top: 2%"
+        (click)="isCollapsed2 = !isCollapsed2"
+      >
+        <div class="row">
+          <div class="col-1">
+            <img src="assets/images/icon2.png" class="icon-item" />
+          </div>
+
+          <div class="col-7">
+            <h4 class="text-item">Means of access</h4>
+            <p class="sub-text-item">How to share information with physicians?</p>
+          </div>
+          <div class="col-2"></div>
+
+          <div class="col-2">
+            <img
+              src="assets/images/icon_expand.png"
+              class="icon-expand"
+              *ngIf="isCollapsed2"
+            />
+            <img
+              src="assets/images/icon_retract.png"
+              class="icon-expand"
+              *ngIf="!isCollapsed2"
+            />
+          </div>
+        </div>
+      </div>
+
+      <div id="collapseBasic2" [collapse]="isCollapsed2" [isAnimated]="false">
+        <div class="well well-lg card card-block card-header item-collapsed">
+          <!-- <p class="panel2-title">
+            In-person is the most preferred format, both for content related to
+            brands and products and for specialty-related general matters
+          </p> -->
+
+          <div
+            class="add-icon"
+            style="display: inline-block; width: 28px; left: 300px"
+          >
+            <div
+              class="rec-yellow-tooltip rec-yellow-tooltip--section4"
+              *ngIf="section2TooltipTopic"
+              (click)="openSection2TooltipTopic()"
+              style="top: -40px; left: -15px; z-index: 2"
+            >
+              <p class="text-p-tooltip text-p-tooltip--section4">
+                In-person is the most preferred format, both for content related
+                to brands and products and for specialty-related general matters
+              </p>
+            </div>
+
+            <a (click)="openSection2TooltipTopic()"
+              ><img src="assets/images/add.png"
+            /></a>
+          </div>
+
+          <div class="row">
+            <div class="col-7">
+              <div class="row">
+                <div class="col-3">
+                  <div class="rec-btn">
+                    <img
+                      src="assets/images/like.png"
+                      class="btn-like"
+                    />
+                    <p class="text-btn">PREFERRED<br />MEDIA</p>
+                  </div>
+                  <br />
+                  <div class="rec-btn">
+                    <img
+                      src="assets/images/deslike.png"
+                      class="btn-like"
+                    />
+                    <p class="text-btn">LEAST<br />PREFERRED</p>
+                  </div>
+                </div>
+
+                <div class="col-9">
+                  <div class="rec-panel">
+                    <div class="row">
+                      <div class="col-4">
+                        <div class="topic">
+                          <img src="assets/images/topic1.png" />
+                          <h3 class="title-topic">16%</h3>
+                          <p class="text-topic">Scientific<br />studies</p>
+                        </div>
+                      </div>
+
+                      <div class="col-4">
+                        <div class="topic">
+                          <img src="assets/images/topic2.png" />
+                          <h3 class="title-topic">11%</h3>
+                          <p class="text-topic">
+                            In-person <br />event/seminar
+                          </p>
+                        </div>
+                      </div>
+
+                      <div class="col-4">
+                        <div class="topic">
+                          <img src="assets/images/topic3.png" />
+                          <h3 class="title-topic">9%</h3>
+                          <p class="text-topic-3">
+                            Journals and periodics(printed materials)
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <br />
+                  <div class="rec-panel">
+                    <div class="row">
+                      <div class="col-4">
+                        <div class="topic">
+                          <img
+                            src="assets/images/topic4.png"
+                            style="height: 20px"
+                          />
+                          <h3 class="title-topic">4%</h3>
+                          <p class="text-topic-3">
+                            E-mail/ WhatsApp/ Apps/Phone conversation/Social
+                            media
+                          </p>
+                        </div>
+                      </div>
+
+                      <div class="col-4">
+                        <div class="topic">
+                          <img
+                            src="assets/images/topic5.png"
+                            style="height: 20px"
+                          />
+                          <h3 class="title-topic">3%</h3>
+                          <p class="text-topic">Video call</p>
+                        </div>
+                      </div>
+
+                      <div class="col-4">
+                        <div class="topic">
+                          <img
+                            src="assets/images/topic6.png"
+                            style="height: 20px"
+                          />
+                          <h3 class="title-topic">2%</h3>
+                          <p class="text-topic-3">SMS/TV</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-5">
+              <div class="circle">
+                <h4 class="text-circle-title">
+                  Can we migrate to <br />100% online? Not yet!
+                </h4>
+                <p class="text-circle-p">
+                  Physicians still prefer in-person contact, even after the
+                  pandemic. A great part of the content absorption and
+                  performance is due to the relationship with the
+                  representative/company. Interpersonal relationships are still
+                  very important and must be considered in a mixed format with
+                  new digital technologies.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div
+        class="item-list-anim"
+        style="margin-top: 2%"
+        [ngClass]="{ 'item-list': isCollapsed3 }"
+        (click)="isCollapsed3 = !isCollapsed3"
+      >
+        <div class="row">
+          <div class="col-1">
+            <img src="assets/images/icon3.png" class="icon-item" />
+          </div>
+
+          <div class="col-7">
+            <h4 class="text-item">In which event format should we invest?</h4>
+            <p class="sub-text-item">In-person events vs. Online events</p>
+          </div>
+          <div class="col-2"></div>
+
+          <div class="col-2">
+            <img
+              src="assets/images/icon_expand.png"
+              class="icon-expand"
+              *ngIf="isCollapsed3"
+            />
+            <img
+              src="assets/images/icon_retract.png"
+              class="icon-expand"
+              *ngIf="!isCollapsed3"
+            />
+          </div>
+        </div>
+      </div>
+
+      <div id="collapseBasic3" [collapse]="isCollapsed3" [isAnimated]="false">
+        <div
+          class="well well-lg card card-block card-header item-collapsed"
+          style="height: 390px !important"
+        >
+          <div class="row" style="padding-top: 30px">
+            <div class="col-6">
+              <div class="left-frame">
+                <h3 class="text-inperson">IN-PERSON EVENTS</h3>
+                <div class="row">
+                  <div class="col-3">
+                    <img
+                      src="assets/images/icon_people.png"
+                      class="icon-people"
+                    />
+                  </div>
+                  <div class="col-5">
+                    <p class="text-inperson-p">
+                      For live classes/discussion groups/debates and immersion
+                      courses, in-person was chosen as the best format
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-12">
+                <div class="add-icon" style="margin-top: 38%">
+                  <a (click)="openTooltip1()"
+                    ><img src="assets/images/add.png"
+                  /></a>
+                </div>
+              </div>
+            </div>
+            <div class="col-6">
+              <div class="right-frame">
+                <h3 class="text-onlineevents">ONLINE EVENTS</h3>
+                <div class="row">
+                  <div class="col-5" style="margin-left: 80px">
+                    <p class="text-inperson-p">
+                      Most participants (81%) preferred to watch recorded
+                      classes/lectures online
+                    </p>
+                  </div>
+                  <div class="col-3">
+                    <img
+                      src="assets/images/icon_online.png"
+                      class="icon-online"
+                    />
+                  </div>
+                </div>
+              </div>
+              <div class="col-12">
+                <div class="add-icon" style="margin-top: 38%">
+                  <a (click)="openTooltip2()"
+                    ><img src="assets/images/add.png"
+                  /></a>
+                </div>
+              </div>
+            </div>
+            <div class="col-12">
+              <div class="row">
+                <div class="col-6">
+                  <div
+                    class="rec-yellow-tooltip"
+                    (click)="openTooltip1()"
+                    *ngIf="recTooltip1"
+                  >
+                    <p class="text-p-tooltip">
+                      <b>ADVANTAGES OF IN-PERSON EVENTS:</b> <br />Interaction
+                      between lecturer and audience, networking, get to know a
+                      new place and event organizer.<br /><br />In-person format
+                      ensures relationship and discussion among professionals,
+                      which is highly valued for the purpose of obtaining
+                      updates.
+                    </p>
+                  </div>
+                </div>
+
+                <div class="col-6">
+                  <div
+                    class="rec-yellow-tooltip"
+                    (click)="openTooltip2()"
+                    *ngIf="recTooltip2"
+                    style="height: 210px"
+                  >
+                    <p class="text-p-tooltip">
+                      <b>ADVANTAGES OF ONLINE EVENTS:</b><br />Convenience,
+                      content available online, travel and finding a time in the
+                      calendar.<br />The ideal time for a digital event is on
+                      weekdays (Wednesday), in the evening, with average
+                      duration of 1 hour.<br /><br />The online format is good
+                      for content history, subsequent consultation, and is a
+                      practical way of receiving content.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="center-circle">
+              <h3 class="title-circle-percent">69%</h3>
+              <p class="text-circle-percent">prefer in-person events, but...</p>
+            </div>
+            <div class="center-circle-border"></div>
+            <div
+              class="center-circle-percent center-circle-percent--section4-70"
+            ></div>
+          </div>
+        </div>
+      </div>
+
+      <div
+        class="item-list-anim"
+        style="margin-top: 2%"
+        [ngClass]="{ 'item-list': isCollapsed4 }"
+        (click)="toggleCollapsed4()"
+      >
+        <div class="row">
+          <div class="col-1">
+            <img src="assets/images/icon4.png" class="icon-item" />
+          </div>
+
+          <div class="col-7">
+            <h4 class="text-item">E-Learning</h4>
+            <p class="sub-text-item">
+              A relevant form of learning for physicians?
+            </p>
+          </div>
+          <div class="col-2"></div>
+
+          <div class="col-2">
+            <img
+              src="assets/images/icon_expand.png"
+              class="icon-expand"
+              *ngIf="isCollapsed4"
+            />
+            <img
+              src="assets/images/icon_retract.png"
+              class="icon-expand"
+              *ngIf="!isCollapsed4"
+            />
+          </div>
+        </div>
+      </div>
+
+      <div id="collapseBasic4" [collapse]="isCollapsed4" [isAnimated]="false">
+        <div
+          class="well well-lg card card-block card-header item-collapsed"
+          style="height: 314px !important"
+        >
+          <div class="row">
+            <div class="col-5">
+              <div
+                class="add-icon"
+                style="display: inline-block; left: 200px; top: 50px"
+              >
+                <div
+                  class="rec-yellow-tooltip rec-yellow-tooltip--section4"
+                  *ngIf="section2TooltipElearn"
+                  (click)="openSection2TooltipElearn()"
+                  style="top: -40px"
+                >
+                  <p class="text-p-tooltip text-p-tooltip--section4">
+                    E-learning is a well-accepted format and can be better
+                    explored. Again, scientific basis is required to give
+                    credibility to the content presented. Practical cases
+                    focusing on patients are also of interest.
+                  </p>
+                </div>
+
+                <a (click)="openSection2TooltipElearn()"
+                  ><img src="assets/images/add.png"
+                /></a>
+              </div>
+
+              <div class="doughnut-graphic-wrapper">
+                <div class="center-circle--section4">
+                  <h3 class="title-circle-percent">50%</h3>
+                  <p class="text-circle-percent">
+                    are highly interested<br />in participating in<br />online
+                    e-learning
+                  </p>
+                </div>
+                <div class="center-circle-border--section4"></div>
+                <div
+                  class="
+                    center-circle-percent--section4
+                    center-circle-percent--section4-50
+                  "
+                ></div>
+              </div>
+            </div>
+
+            <div class="col-6">
+              <h4 class="text-chart-panel" style="text-align: left">
+                RELEVANCE
+              </h4>
+
+              <div
+                [chart]="section2ELearningChart"
+                class="section4-content-chart-wrapper"
+                style="width: auto"
+              ></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div
+        class="item-list-anim"
+        [ngClass]="{ 'item-list': isCollapsed5 }"
+        style="margin-top: 2%"
+        (click)="isCollapsed5 = !isCollapsed5"
+      >
+        <div class="row">
+          <div class="col-1">
+            <img src="assets/images/icon5.png" class="icon-item" />
+          </div>
+
+          <div class="col-7">
+            <h4 class="text-item-sample">
+              Relationship with pharmaceutical companies
+            </h4>
+          </div>
+          <div class="col-2"></div>
+
+          <div class="col-2">
+            <img
+              src="assets/images/icon_expand.png"
+              class="icon-expand"
+              *ngIf="isCollapsed5"
+            />
+            <img
+              src="assets/images/icon_retract.png"
+              class="icon-expand"
+              *ngIf="!isCollapsed5"
+            />
+          </div>
+        </div>
+      </div>
+
+      <div id="collapseBasic5" [collapse]="isCollapsed5" [isAnimated]="false">
+        <div
+          class="well well-lg card card-block card-header item-collapsed"
+          style="height: 350px !important"
+        >
+          <div class="row">
+            <div class="col-6">
+              <div class="row">
+                <div class="col-4" style="margin-left: -40px">
+                  <h4 class="title1-panel-5">94%</h4>
+                  <p class="text-panel-5">
+                    are in contact<br />with the
+                    <br />pharmaceutical<br />industry
+                  </p>
+                </div>
+                <div class="col-6">
+                  <img
+                    src="assets/images/icon_panel_5.png"
+                    width="90%"
+                    style="margin-left: -25px"
+                  />
+                </div>
+                <img
+                  src="assets/images/icon-handshake.svg"
+                  style="width: 100px; margin-left: -210px"
+                />
+              </div>
+              <div class="step2">
+                <img
+                  src="assets/images/point_icon.png"
+                  class="point-icon"
+                />
+                <p class="text-panel-6">
+                  When mixing with<br />online media, telephone<br />should not
+                  be a priority
+                </p>
+              </div>
+              <div class="step3">
+                <img
+                  src="assets/images/wpp_icon.png"
+                  class="wpp-icon"
+                />
+                <p class="text-panel-6" style="margin-left: -10px">
+                  WhatsApp is an important tool,<br />for it is widely accepted
+                  and can<br />send text, images, and videos.
+                </p>
+              </div>
+              <div class="step4">
+                <h4 class="title3-panel-5">FREQUENCY OF VISITS</h4>
+                <p class="text-panel-7">
+                  from the representative<br />is the most important factor<br />to
+                  make a company stand out<br />from the others
+                </p>
+              </div>
+            </div>
+            <div class="col-6">
+              <div class="row">
+                <div class="col-5">
+                  <div class="rec-btn-2">
+                    <p class="text-btn-2">
+                      WHAT THEY WOULD LIKE TO GET FROM PHARMACEUTICAL COMPANIES
+                    </p>
+                  </div>
+                  <br />
+                  <div class="rec-btn-2">
+                    <p class="text-btn-2">
+                      WHAT THEY WOULD LIKE TO SEE ON A DIGITAL PLATFORM
+                    </p>
+                  </div>
+                </div>
+
+                <div class="col-1">
+                  <img
+                    src="assets/images/associe_conteudo.png"
+                    class="seta-icon"
+                  />
+                  <img
+                    src="assets/images/associe_conteudo.png"
+                    class="seta-icon2"
+                  />
+                </div>
+
+                <div class="col-6">
+                  <div class="rec-panel-2">
+                    <p class="text-rec-2">
+                      Distribution of educational<br />materials and
+                      applications<br />for patients
+                    </p>
+                  </div>
+                  <br />
+                  <div class="rec-panel-2">
+                    <p class="text-rec-2">
+                      Distribution of educational<br />materials and
+                      applications<br />for patients
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div
+        class="item-list-anim"
+        style="margin-top: 2%"
+        [ngClass]="{ 'item-list': isCollapsed6 }"
+        (click)="isCollapsed6 = !isCollapsed6"
+      >
+        <div class="row">
+          <div class="col-1">
+            <img src="assets/images/icon6.png" class="icon-item" />
+          </div>
+
+          <div class="col-7">
+            <h4 class="text-item-sample">
+              Conferences & information for patients
+            </h4>
+          </div>
+          <div class="col-2"></div>
+
+          <div class="col-2">
+            <img
+              src="assets/images/icon_expand.png"
+              class="icon-expand"
+              *ngIf="isCollapsed6"
+            />
+            <img
+              src="assets/images/icon_retract.png"
+              class="icon-expand"
+              *ngIf="!isCollapsed6"
+            />
+          </div>
+        </div>
+      </div>
+
+      <div id="collapseBasic6" [collapse]="isCollapsed6" [isAnimated]="false">
+        <div class="well well-lg card card-block card-header item-collapsed">
+          <h4 class="title-panel-conferences">
+            MOST IMPORTANT CONFERENCES PER SPECIALTY
+          </h4>
+          <div class="square-conference">
+            <div class="row" style="margin-top: 15px">
+              <div class="col-3">
+                <p class="step-panel-title">Pediatricians</p>
+
+                <div class="step-panel-img">
+                  <img src="assets/images/psbp_icon.png" />
+                  <p>73%</p>
+                </div>
+
+                <p class="step-panel-text">
+                  Brazilian Pediatrics Congress <br />(Congresso Brasileiro de
+                  <br />Pediatria - SBP)
+                </p>
+              </div>
+
+              <div class="col-3">
+                <p class="step-panel-title">General practitioners</p>
+
+                <div class="step-panel-img">
+                  <img src="assets/images/conference_02.png" />
+                  <p>34%</p>
+                </div>
+
+                <p class="step-panel-text">
+                  Brazilian Internal Medicine<br />Congress (Congresso<br />Brasileiro
+                  de Clínica Médica)
+                </p>
+              </div>
+
+              <div class="col-3">
+                <p class="step-panel-title">Otorhinolaryngologists</p>
+
+                <div class="step-panel-img">
+                  <img src="assets/images/conference_03.png" />
+                  <p>52%</p>
+                </div>
+
+                <p class="step-panel-text">
+                  Brazilian Otorhinolaryngology<br />Congress (Congresso
+                  Brasileiro<br />de Otorrinolaringologia)
+                </p>
+              </div>
+
+              <div class="col-3">
+                <p class="step-panel-title">Allergists</p>
+
+                <div class="step-panel-img">
+                  <img src="assets/images/conference_04.png" />
+                  <p>60%</p>
+                </div>
+
+                <p class="step-panel-text">
+                  Brazilian Allergology and<br />Immunology Congress
+                  (Congresso<br />Brasileiro de Alergia<br />e Imunologia -
+                  ASBAI)
+                </p>
+              </div>
+            </div>
+          </div>
+          <h4 class="title-panel-conferences">
+            HOW TO HELP PHYSICIANS EDUCATE PATIENTS?
+          </h4>
+          <br />
+          <div class="row">
+            <div class="col-3">
+              <div class="doughnut-graphic-wrapper" style="margin: 0 auto">
+                <div class="center-circle--section4">
+                  <h3 class="title-circle-percent">35%</h3>
+                  <p class="text-circle-percent">
+                    of the physicians refer <br />
+                    their patients to <br />
+                    websites/sources of <br />
+                    information
+                  </p>
+                </div>
+                <div class="center-circle-border--section4"></div>
+                <div
+                  class="
+                    center-circle-percent--section4
+                    center-circle-percent--section4-36
+                  "
+                ></div>
+              </div>
+            </div>
+
+            <div class="col-1">
+              <div class="separator"></div>
+            </div>
+
+            <div class="col-3">
+              <h3 class="title-col-panel">WHAT THEY INDICATE</h3>
+
+              <div class="row">
+                <div class="col-6">
+                  <div class="topic">
+                    <img src="assets/images/tipwindow_icon.png" />
+                    <h3 class="title-topic">30%</h3>
+                    <p class="text-topic">
+                      Medical and pharmaceutical companies' websites
+                    </p>
+                  </div>
+                </div>
+
+                <div class="col-6">
+                  <div class="topic">
+                    <img src="assets/images/pencil_icon.png" />
+                    <h3 class="title-topic">15%</h3>
+                    <p class="text-topic">
+                      posts on their own websites or social media profiles
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-1">
+              <div class="separator"></div>
+            </div>
+
+            <div class="col-3">
+              <h3 class="title-col-panel-2">
+                THE MOST IMPORTANT FACTOR TO SUGGEST CONTENT IS
+              </h3>
+
+              <div class="row">
+                <div class="col-6">
+                  <div class="topic">
+                    <img src="assets/images/icon_1022.png" />
+                    <h3 class="title-topic">18%</h3>
+                    <p class="text-topic">
+                      That it is from professionals experienced in their
+                      practice areas
+                    </p>
+                  </div>
+                </div>
+
+                <div class="col-6">
+                  <div class="topic">
+                    <img src="assets/images/icon_1023.png" />
+                    <h3 class="title-topic">15%</h3>
+                    <p class="text-topic">
+                      That it is based on scientific evidence
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="section3">
+  <div class="container">
+    <h3 class="title-section3">
+      Understanding their habits and attitudes <br />
+      in relation to CHC categories...
+    </h3>
+
+    <div
+      class="item-list-anim"
+      style="margin-top: 2%"
+      [ngClass]="{ 'item-list': isCollapsed10 }"
+      (click)="toggleCollapsed10()"
+    >
+      <div class="row">
+        <div class="col-1">
+          <img src="assets/images/like.png" class="icon-item" />
+        </div>
+
+        <div class="col-7">
+          <h4 class="text-item-section3">
+            Ranking of most important attributes
+          </h4>
+        </div>
+        <div class="col-2"></div>
+
+        <div class="col-2">
+          <img
+            src="assets/images/icon_expand.png"
+            class="icon-expand"
+            *ngIf="isCollapsed10"
+          />
+          <img
+            src="assets/images/icon_retract.png"
+            class="icon-expand"
+            *ngIf="!isCollapsed10"
+          />
+        </div>
+      </div>
+    </div>
+
+    <div id="collapseBasic10" [collapse]="isCollapsed10" [isAnimated]="false">
+      <div
+        class="well well-lg card card-block card-header item-collapsed-section3"
+      >
+        <br />
+        <div class="row">
+          <div class="col-4">
+            <div class="rec-yellow-section-3">
+              <h4 class="title-rec-section3">Pain</h4>
+              <div
+                [chart]="section3PainChart"
+                class="section4-content-chart-wrapper"
+              ></div>
+            </div>
+          </div>
+          <div class="col-4">
+            <div class="rec-yellow-section-3">
+              <h4 class="title-rec-section3">Fever</h4>
+              <div
+                [chart]="section3FeverChart"
+                class="section4-content-chart-wrapper"
+              ></div>
+            </div>
+          </div>
+          <div class="col-4">
+            <div class="rec-yellow-section-3">
+              <h4 class="title-rec-section3">Fever in children</h4>
+              <div
+                [chart]="section3FeverChildrenChart"
+                class="section4-content-chart-wrapper"
+              ></div>
+            </div>
+          </div>
+        </div>
+        <br />
+        <div class="row">
+          <div class="col-4">
+            <div class="rec-yellow-section-3">
+              <h4 class="title-rec-section3">Allergy</h4>
+              <div
+                [chart]="section3AllergyChart"
+                class="section4-content-chart-wrapper"
+              ></div>
+            </div>
+          </div>
+          <div class="col-4">
+            <div class="rec-yellow-section-3">
+              <h4 class="title-rec-section3">Suplements</h4>
+              <div
+                [chart]="section3SupplementsChart"
+                class="section4-content-chart-wrapper"
+              ></div>
+            </div>
+          </div>
+          <div class="col-4">
+            <div class="rec-yellow-section-3">
+              <h4 class="title-rec-section3">Probiotics</h4>
+              <div
+                [chart]="section3ProbioticsChart"
+                class="section4-content-chart-wrapper"
+              ></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div
+      class="item-list-anim"
+      style="margin-top: 2%"
+      (click)="toggleCollapsed11()"
+    >
+      <div class="row">
+        <div class="col-1">
+          <img src="assets/images/deslike.png" class="icon-item" />
+        </div>
+
+        <div class="col-7">
+          <h4 class="text-item-section3">
+            Ranking of least important attributes
+          </h4>
+        </div>
+        <div class="col-2"></div>
+
+        <div class="col-2">
+          <img
+            src="assets/images/icon_expand.png"
+            class="icon-expand"
+            *ngIf="isCollapsed11"
+          />
+          <img
+            src="assets/images/icon_retract.png"
+            class="icon-expand"
+            *ngIf="!isCollapsed11"
+          />
+        </div>
+      </div>
+    </div>
+
+    <div id="collapseBasic11" [collapse]="isCollapsed11" [isAnimated]="false">
+      <div
+        class="well well-lg card card-block card-header item-collapsed-section3"
+      >
+        <br />
+        <div class="row">
+          <div class="col-4">
+            <div class="rec-gray-section-3">
+              <h4 class="title-rec-section3">Pain</h4>
+
+              <div
+                [chart]="section3PainChart2"
+                class="section4-content-chart-wrapper"
+              ></div>
+            </div>
+          </div>
+          <div class="col-4">
+            <div class="rec-gray-section-3">
+              <h4 class="title-rec-section3">Fever</h4>
+
+              <div
+                [chart]="section3FeverChart2"
+                class="section4-content-chart-wrapper"
+              ></div>
+            </div>
+          </div>
+          <div class="col-4">
+            <div class="rec-gray-section-3">
+              <h4 class="title-rec-section3">Fever in children</h4>
+
+              <div
+                [chart]="section3FeverChildrenChart2"
+                class="
+                  section4-content-chart-wrapper
+                  section4-content-chart-wrapper--smaller
+                "
+              ></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-4">
+            <div class="rec-gray-section-3">
+              <h4 class="title-rec-section3">Allergy</h4>
+              <div
+                [chart]="section3AllergyChart2"
+                class="section4-content-chart-wrapper"
+              ></div>
+            </div>
+          </div>
+          <div class="col-4">
+            <div class="rec-gray-section-3">
+              <h4 class="title-rec-section3">Suplements</h4>
+
+              <div
+                [chart]="section3SupplementsChart2"
+                class="section4-content-chart-wrapper"
+              ></div>
+            </div>
+          </div>
+          <div class="col-4">
+            <div class="rec-gray-section-3">
+              <h4 class="title-rec-section3">Probiotics</h4>
+
+              <div
+                [chart]="section3ProbioticsChart2"
+                class="section4-content-chart-wrapper"
+              ></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="section4">
+  <div class="container">
+    <div class="section4-tabs">
+      <ul
+        ngbNav
+        [animation]="false"
+        #nav="ngbNav"
+        [(activeId)]="activeTab"
+        class="nav-tabs"
+      >
+        <!-- PAIN & FEVER TAB -->
+        <li [ngbNavItem]="1">
+          <a ngbNavLink class="main-tab">PAIN & FEVER</a>
+
+          <ng-template ngbNavContent>
+            <div class="custom-tab-content">
+              <div class="pain-fever-content">
+                <div class="pain-fever-content-item">
+                  <h2 class="custom-tab-content-header">PAIN</h2>
+                  <h4 class="custom-tab-content-title">PHARMACEUTICAL FORM</h4>
+
+                  <div class="doughnut-graphic-wrapper">
+                    <div class="center-circle--section4">
+                      <h3 class="title-circle-percent">48%</h3>
+                      <p class="text-circle-percent">
+                        value the <br />
+                        pharmaceutical form <br />
+                        of the analgesic
+                      </p>
+                    </div>
+                    <div class="center-circle-border--section4"></div>
+                    <div
+                      class="
+                        center-circle-percent--section4
+                        center-circle-percent--section4-48
+                      "
+                    ></div>
+                  </div>
+
+                  <p class="custom-tab-content-subtitle">MOST PREFERRED</p>
+
+                  <div class="section4-content-item-wrapper mr-40">
+                    <img
+                      src="assets/images/doctors/doctors-section4-icon5.svg"
+                    />
+                    <h4 class="section4-content-item-title">41%</h4>
+                    <p class="section4-content-item-label">pills</p>
+                  </div>
+
+                  <div class="section4-content-item-wrapper">
+                    <img
+                      src="assets/images/doctors/doctors-section4-icon6.svg"
+                    />
+                    <h4 class="section4-content-item-title">31%</h4>
+                    <p class="section4-content-item-label">drops</p>
+                  </div>
+                </div>
+
+                <div class="vertical-divider"></div>
+
+                <div class="pain-fever-content-item">
+                  <h2 class="custom-tab-content-header">FEVER</h2>
+                  <h4 class="custom-tab-content-title">
+                    DIPYRONE DIFFERENTIAL
+                  </h4>
+
+                  <div class="doughnut-graphic-wrapper">
+                    <div class="center-circle--section4">
+                      <h3 class="title-circle-percent">82%</h3>
+                      <p class="text-circle-percent">
+                        perceives the difference <br />
+                        in efficient drugs for <br />
+                        fever and the <br />
+                        occurrence of side <br />
+                        effects
+                      </p>
+                    </div>
+                    <div class="center-circle-border--section4"></div>
+                    <div
+                      class="
+                        center-circle-percent--section4
+                        center-circle-percent--section4-80
+                      "
+                    ></div>
+                  </div>
+
+                  <div class="section4-content-item-wrapper mt-20">
+                    <img
+                      src="assets/images/doctors/doctors-section4-icon5.svg"
+                    />
+                    <h4 class="section4-content-item-title">
+                      Dipyrone <br />
+                      monohydrate
+                    </h4>
+                    <p class="section4-content-item-label" style="width: 100%">
+                      is more efficient and presents <br />
+                      higher risks of adverse effects
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </ng-template>
+        </li>
+
+        <!-- ALLERGY TAB -->
+        <li [ngbNavItem]="2">
+          <a ngbNavLink class="main-tab">ALLERGY</a>
+
+          <ng-template ngbNavContent>
+            <ul
+              ngbNav
+              [animation]="false"
+              #subnav1="ngbNav"
+              [(activeId)]="activeSubTab1"
+              class="nav-tabs nav-tabs--transparent"
+            >
+              <!-- 1 ST AND 2 ND GENERATION SUBTAB (ALLERGY TAB) -->
+              <li [ngbNavItem]="1">
+                <a ngbNavLink class="secondary-tab mt-5"
+                  >1 ST AND 2 ND GENERATION</a
+                >
+
+                <ng-template ngbNavContent>
+                  <div class="custom-tab-content">
+                    <h4 class="section4-title mb-40">
+                      KNOWLEDGE ABOUT THE CATEGORY
+                    </h4>
+
+                    <div class="allergy-content">
+                      <div class="allergy-content-left">
+                        <div class="doughnut-graphic-wrapper">
+                          <div class="center-circle--section4">
+                            <h3 class="title-circle-percent">93%</h3>
+                            <p class="text-circle-percent">
+                              believe patients <br />
+                              cannot distinguish <br />
+                              between influenza <br />
+                              and allergic rhinitis
+                            </p>
+                          </div>
+                          <div class="center-circle-border--section4"></div>
+                          <div
+                            class="
+                              center-circle-percent--section4
+                              center-circle-percent--section4-93
+                            "
+                          ></div>
+                        </div>
+
+                        <div>
+                          <div class="col-12">
+                            <div class="add-icon">
+                              <div
+                                class="
+                                  rec-yellow-tooltip
+                                  rec-yellow-tooltip--section4
+                                "
+                                *ngIf="section4Tooltip1"
+                                (click)="openSection4Tooltip1()"
+                                style="top: -40px; left: -15px"
+                              >
+                                <p
+                                  class="
+                                    text-p-tooltip text-p-tooltip--section4
+                                  "
+                                >
+                                  2nd generation is the most <br />prescribed,
+                                  for it's lower frequency <br />of side effects
+                                </p>
+                              </div>
+
+                              <a (click)="openSection4Tooltip1()"
+                                ><img src="assets/images/add.png"
+                              /></a>
+                            </div>
+                          </div>
+
+                          <div class="doughnut-graphic-wrapper">
+                            <div class="center-circle--section4">
+                              <h3 class="title-circle-percent">97%</h3>
+                              <p class="text-circle-percent">
+                                of physicians know <br />
+                                the difference in <br />
+                                antihistamines' <br />
+                                generations
+                              </p>
+                            </div>
+                            <div class="center-circle-border--section4"></div>
+                            <div
+                              class="
+                                center-circle-percent--section4
+                                center-circle-percent--section4-97
+                              "
+                            ></div>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="allergy-content-right">
+                        <h4
+                          class="
+                            custom-tab-content-title
+                            allergy-content-right-title
+                          "
+                        >
+                          MAIN DIFFERENCES INDICATED BY PHYSICIANS <br />
+                          BETWEEN 1 ST AND 2 ND GENERATION
+                        </h4>
+
+                        <h4 class="custom-tab-content-title">
+                          1 ST GENERATION:
+                        </h4>
+
+                        <div
+                          [chart]="section4AllergyChart1"
+                          style="height: 200px"
+                        ></div>
+
+                        <h4 class="custom-tab-content-title">
+                          2 ND GENERATION:
+                        </h4>
+
+                        <div
+                          [chart]="section4AallergyChart2"
+                          style="height: 200px"
+                        ></div>
+                      </div>
+                    </div>
+                  </div>
+                </ng-template>
+              </li>
+
+              <!-- NASAL SUBTAB (ALLERGY TAB) -->
+              <li [ngbNavItem]="2">
+                <a ngbNavLink class="secondary-tab mt-5">NASAL</a>
+
+                <ng-template ngbNavContent>
+                  <div class="custom-tab-content">
+                    <h4 class="section4-title mb-40">
+                      KNOWLEDGE ABOUT THE CATEGORY
+                    </h4>
+
+                    <div class="allergy-content" style="margin-top: 30px">
+                      <div class="allergy-content-left">
+                        <div>
+                          <div class="col-12">
+                            <div class="add-icon">
+                              <div
+                                class="
+                                  rec-yellow-tooltip
+                                  rec-yellow-tooltip--section4
+                                "
+                                *ngIf="section4Tooltip2"
+                                (click)="openSection4Tooltip2()"
+                                style="top: -10px; left: -15px"
+                              >
+                                <p
+                                  class="
+                                    text-p-tooltip text-p-tooltip--section4
+                                  "
+                                >
+                                  Associated use is generally <br />made with a
+                                  system decongestant
+                                </p>
+                              </div>
+
+                              <a (click)="openSection4Tooltip2()"
+                                ><img src="assets/images/add.png"
+                              /></a>
+                            </div>
+                          </div>
+
+                          <div class="doughnut-graphic-wrapper">
+                            <div class="center-circle--section4">
+                              <h3 class="title-circle-percent">62%</h3>
+                              <p class="text-circle-percent">
+                                prescribe the isolated <br />
+                                use of antihistamine
+                              </p>
+                            </div>
+                            <div class="center-circle-border--section4"></div>
+                            <div
+                              class="
+                                center-circle-percent--section4
+                                center-circle-percent--section4-62
+                              "
+                            ></div>
+                          </div>
+                        </div>
+
+                        <div>
+                          <div class="col-12">
+                            <div class="add-icon" style="position: relative">
+                              <div
+                                class="
+                                  rec-yellow-tooltip
+                                  rec-yellow-tooltip--section4
+                                "
+                                *ngIf="section4Tooltip3"
+                                (click)="openSection4Tooltip3()"
+                                style="width: 220px; top: -40px; left: -25px"
+                              >
+                                <p
+                                  class="
+                                    text-p-tooltip text-p-tooltip--section4
+                                  "
+                                >
+                                  69% of physicians have had patients<br />complaints
+                                  about the use of anti-allergy<br />medications,
+                                  especially in regards <br />of burning during
+                                  nasal application
+                                </p>
+                              </div>
+
+                              <a (click)="openSection4Tooltip3()"
+                                ><img src="assets/images/add.png"
+                              /></a>
+                            </div>
+                          </div>
+
+                          <div class="doughnut-graphic-wrapper">
+                            <div class="center-circle--section4">
+                              <h3 class="title-circle-percent">90%</h3>
+                              <p class="text-circle-percent">
+                                of physicians perceive <br />
+                                the benefits of the use <br />
+                                of nasal corticosteroids <br />
+                                to treat rhinitis
+                              </p>
+                            </div>
+                            <div class="center-circle-border--section4"></div>
+                            <div
+                              class="
+                                center-circle-percent--section4
+                                center-circle-percent--section4-93
+                              "
+                            ></div>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="allergy-content-right">
+                        <div class="allergy-content">
+                          <div class="doughnut-graphic-wrapper">
+                            <div
+                              class="
+                                center-circle--section4 center-circle--gray
+                              "
+                            >
+                              <h3 class="title-circle-percent">74%</h3>
+                              <p class="text-circle-percent">
+                                Route of administration <br />
+                                is a decisive factor <br />
+                                for patients’ adherence to <br />
+                                the treatment
+                              </p>
+                            </div>
+                            <div
+                              class="
+                                center-circle-border--section4
+                                center-circle-border--white
+                              "
+                            ></div>
+                            <div
+                              class="
+                                center-circle-percent--section4
+                                center-circle-percent--section4-74
+                              "
+                            ></div>
+                          </div>
+
+                          <div class="section4-content-item-wrapper">
+                            <img
+                              src="assets/images/doctors/doctors-section4-icon7.svg"
+                            />
+                            <h4 class="section4-content-item-title">
+                              Oral <br />
+                              administration
+                            </h4>
+                            <p class="section4-content-item-label">
+                              is preferred <br />
+                              by patients
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </ng-template>
+              </li>
+            </ul>
+
+            <div [ngbNavOutlet]="subnav1"></div>
+          </ng-template>
+        </li>
+
+        <!-- SUPPLEMENTS TAB -->
+        <li [ngbNavItem]="3">
+          <a ngbNavLink class="main-tab">SUPPLEMENTS</a>
+
+          <ng-template ngbNavContent>
+            <ul
+              ngbNav
+              [animation]="false"
+              #subnav2="ngbNav"
+              [(activeId)]="activeSubTab2"
+              class="nav-tabs nav-tabs--transparent"
+            >
+              <li [ngbNavItem]="1">
+                <a ngbNavLink class="secondary-tab mt-5">CONSUMPTION</a>
+
+                <ng-template ngbNavContent>
+                  <div class="row custom-tab-content">
+                    <div class="col-3">
+                      <h4
+                        class="
+                          section4-title
+                          section4-title--margin-default
+                          section4-title--border
+                        "
+                        style="width: 100%"
+                      >
+                        BARRIERS TO CONSUMPTION
+                      </h4>
+
+                      <div class="center-circle--section4">
+                        <h3 class="title-circle-percent">42%</h3>
+                        <p
+                          class="text-circle-percent text-circle-percent--small"
+                        >
+                          of patients use some form of supplementation
+                        </p>
+                      </div>
+                      <div class="center-circle-border--section4"></div>
+                      <div
+                        class="
+                          center-circle-percent--section4
+                          center-circle-percent--section4-42
+                        "
+                      ></div>
+                    </div>
+
+                    <div class="col-1">
+                      <div class="section4-vertical-divider"></div>
+                    </div>
+
+                    <div class="col-8">
+                      <h4 class="section4-title section4-title--margin-small">
+                        THE MAIN BARRIERS FOR THOSE WHO DON'T
+                      </h4>
+
+                      <div class="row">
+                        <div class="col-4">
+                          <div class="center-circle--section4">
+                            <h3 class="title-circle-percent">70%</h3>
+                            <p class="text-circle-percent">price</p>
+                          </div>
+                          <div class="center-circle-border--section4"></div>
+                          <div
+                            class="
+                              center-circle-percent--section4
+                              center-circle-percent--section4-70
+                            "
+                          ></div>
+                        </div>
+
+                        <div class="col-4">
+                          <div class="center-circle--section4">
+                            <h3 class="title-circle-percent">51%</h3>
+                            <p class="text-circle-percent">
+                              actual perception of product benefits
+                            </p>
+                          </div>
+                          <div class="center-circle-border--section4"></div>
+                          <div
+                            class="
+                              center-circle-percent--section4
+                              center-circle-percent--section4-50
+                            "
+                          ></div>
+                        </div>
+
+                        <div class="col-4">
+                          <div class="section4-warning">
+                            <img
+                              class="section4-warning-image"
+                              src="assets/images/doctors/icon-warning.svg"
+                            />
+
+                            <p class="section4-warning-text">
+                              To justify the doctor suggesting a category that
+                              is less essential and is costly for the consumer,
+                              physicians must have the support of scientific data
+                              to justify the prescription and treatment.
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </ng-template>
+              </li>
+              <li [ngbNavItem]="2">
+                <a ngbNavLink class="secondary-tab mt-5">PRESCRIPTIONS</a>
+                <ng-template ngbNavContent>
+                  <div class="row custom-tab-content">
+                    <div class="col-3">
+                      <h4
+                        class="
+                          section4-title
+                          section4-title--margin-default
+                          section4-title--border
+                        "
+                        style="margin-left: 0; width: 100%"
+                      >
+                        MOST CONSUMED
+                      </h4>
+
+                      <div class="section-4-content-icon-wrapper">
+                        <div class="section-4-content-icon-item">
+                          <label class="section-4-content-icon-label-title"
+                            >56%</label
+                          >
+                          <img
+                            class="section-4-content-icon-image"
+                            src="assets/images/doctors/doctors-section4-icon8.svg"
+                          />
+
+                          <label class="section-4-content-icon-label-text"
+                            >Vitamin D</label
+                          >
+                        </div>
+
+                        <div class="section-4-content-icon-item">
+                          <label class="section-4-content-icon-label-title"
+                            >31%</label
+                          >
+                          <img
+                            class="section-4-content-icon-image--medium"
+                            src="assets/images/doctors/doctors-section4-icon8.svg"
+                          />
+
+                          <label class="section-4-content-icon-label-text"
+                            >Multivitamin</label
+                          >
+                        </div>
+
+                        <div class="section-4-content-icon-item">
+                          <label class="section-4-content-icon-label-title"
+                            >19%</label
+                          >
+                          <img
+                            class="section-4-content-icon-image--small"
+                            src="assets/images/doctors/doctors-section4-icon8.svg"
+                          />
+
+                          <label class="section-4-content-icon-label-text"
+                            >Calcium and Vitamin C</label
+                          >
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="col-1">
+                      <div
+                        class="section4-vertical-divider"
+                        style="margin-left: 35px"
+                      ></div>
+                    </div>
+
+                    <div class="col-8">
+                      <h4
+                        class="section4-title section4-title--margin-small"
+                        style="margin-bottom: 50px"
+                      >
+                        HOW IT IS PRESCRIBED
+                      </h4>
+
+                      <div class="row">
+                        <div class="col-4">
+                          <div class="mt-30">
+                            <div class="center-circle--section4">
+                              <h3 class="title-circle-percent">50%</h3>
+                              <p class="text-circle-percent">
+                                is made based on laboratory tests
+                              </p>
+                            </div>
+                            <div class="center-circle-border--section4"></div>
+                            <div
+                              class="
+                                center-circle-percent--section4
+                                center-circle-percent--section4-50
+                              "
+                            ></div>
+                          </div>
+                        </div>
+
+                        <div class="col-4">
+                          <div class="center-block">
+                            <div class="row">
+                              <div class="col-12">
+                                <div class="add-icon">
+                                  <div
+                                    class="
+                                      rec-yellow-tooltip
+                                      rec-yellow-tooltip--section4
+                                    "
+                                    *ngIf="section4Tooltip5"
+                                    (click)="openSection4Tooltip5()"
+                                    style="top: -40px; left: -15px"
+                                  >
+                                    <p
+                                      class="
+                                        text-p-tooltip text-p-tooltip--section4
+                                      "
+                                    >
+                                      The most used are: Brazilian<br />Society
+                                      of Pediatrics and SBEM Brazilian Society of
+                                      Endocrinology <br />and Metabology
+                                    </p>
+                                  </div>
+
+                                  <a (click)="openSection4Tooltip5()"
+                                    ><img
+                                      src="assets/images/add.png"
+                                  /></a>
+                                </div>
+                              </div>
+
+                              <div class="col-12">
+                                <div class="center-circle--section4">
+                                  <h3 class="title-circle-percent">45%</h3>
+                                  <p
+                                    class="
+                                      text-circle-percent
+                                      text-circle-percent--small
+                                    "
+                                  >
+                                    use guides by medical associations for
+                                    prescription
+                                  </p>
+                                </div>
+                                <div
+                                  class="center-circle-border--section4"
+                                ></div>
+                                <div
+                                  class="
+                                    center-circle-percent--section4
+                                    center-circle-percent--section4-42
+                                  "
+                                ></div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+
+                        <div class="col-4">
+                          <div class="section4-warning">
+                            <img
+                              class="section4-warning-image"
+                              src="assets/images/doctors/icon-warning.svg"
+                            />
+
+                            <p class="section4-warning-text">
+                              Those physicians have very little knowledge of
+                              supplements and how to prescribe them and
+                              frequently they don’t due to lack of knowledge.
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </ng-template>
+              </li>
+              <li [ngbNavItem]="3">
+                <a ngbNavLink class="secondary-tab mt-5">ENERGY</a>
+
+                <ng-template ngbNavContent>
+                  <div class="row custom-tab-content">
+                    <div class="col-6">
+                      <h4
+                        class="
+                          section4-title
+                          section4-title--margin-default
+                          section4-title--border
+                        "
+                        style="margin-left: 0; width: 20%"
+                      >
+                        ENERGY
+                      </h4>
+
+                      <div class="row">
+                        <div class="col-6">
+                          <div class="center-block">
+                            <div class="row">
+                              <div class="col-12">
+                                <div class="add-icon">
+                                  <div
+                                    class="
+                                      rec-yellow-tooltip
+                                      rec-yellow-tooltip--section4
+                                    "
+                                    *ngIf="section4Tooltip6"
+                                    (click)="openSection4Tooltip6()"
+                                    style="top: -25px; left: 10px"
+                                  >
+                                    <p
+                                      class="
+                                        text-p-tooltip text-p-tooltip--section4
+                                      "
+                                    >
+                                      Most prescribe products containing
+                                      <br />Rhodiola (herbal medicine),
+                                      arginine, <br />ginseng, vitamins and
+                                      minerals.
+                                    </p>
+                                  </div>
+
+                                  <a (click)="openSection4Tooltip6()"
+                                    ><img
+                                      src="assets/images/add.png"
+                                  /></a>
+                                </div>
+                              </div>
+
+                              <div class="col-12">
+                                <div class="center-circle--section4">
+                                  <h3 class="title-circle-percent">28%</h3>
+                                  <p class="text-circle-percent">
+                                    prescribe supplements to increase energy
+                                  </p>
+                                </div>
+                                <div
+                                  class="center-circle-border--section4"
+                                ></div>
+                                <div
+                                  class="
+                                    center-circle-percent--section4
+                                    center-circle-percent--section4-28
+                                  "
+                                ></div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+
+                        <div class="col-6">
+                          <div class="center-block">
+                            <div class="row">
+                              <div class="col-12" style="height: 30px"></div>
+
+                              <div class="col-12">
+                                <div class="center-circle--section4">
+                                  <h3 class="title-circle-percent">79%</h3>
+                                  <p
+                                    class="
+                                      text-circle-percent
+                                      text-circle-percent--small
+                                    "
+                                  >
+                                    of physicians do not prescribe arginine to
+                                    increase energy
+                                  </p>
+                                </div>
+                                <div
+                                  class="
+                                    center-circle-border--section4
+                                    center-circle-border--section4-80
+                                  "
+                                ></div>
+                                <div
+                                  class="
+                                    center-circle-percent--section4
+                                    center-circle-percent--section4-80
+                                  "
+                                ></div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="col-1">
+                      <div
+                        class="
+                          section4-vertical-divider
+                          section4-vertical-divider--medium
+                        "
+                      ></div>
+                    </div>
+
+                    <div class="col-5">
+                      <h4
+                        class="
+                          section4-title
+                          section4-title--margin-default
+                          section4-title--border
+                        "
+                        style="margin-bottom: 100px"
+                      >
+                        OTHER REASONS TO PRESCRIBE ARGININE
+                      </h4>
+
+                      <div class="row">
+                        <div class="col-4">
+                          <div class="section4-content-item-wrapper">
+                            <div class="section4-content-item-image">
+                              <img
+                                src="assets/images/doctors/doctors-section4-icon10.svg"
+                              />
+                            </div>
+
+                            <p
+                              class="section4-content-item-label"
+                              style="height: 30px"
+                            >
+                              Tiredness, weariness, fatigue
+                            </p>
+                          </div>
+                        </div>
+
+                        <div class="col-4">
+                          <div class="section4-content-item-wrapper">
+                            <div class="section4-content-item-image">
+                              <img
+                                src="assets/images/doctors/doctors-section4-icon9.svg"
+                              />
+                            </div>
+
+                            <p class="section4-content-item-label">Weakness</p>
+                          </div>
+                        </div>
+
+                        <div class="col-4">
+                          <div class="section4-content-item-wrapper">
+                            <div class="section4-content-item-image">
+                              <img
+                                src="assets/images/doctors/doctors-section4-icon11.svg"
+                              />
+                            </div>
+
+                            <p class="section4-content-item-label">Asthenia</p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </ng-template>
+              </li>
+              <li [ngbNavItem]="4">
+                <a ngbNavLink class="secondary-tab mt-5">IMMUNITY</a>
+                <ng-template ngbNavContent>
+                  <div class="row custom-tab-content" style="padding-top: 30px;">
+                    <div class="col-1">
+                      <h4
+                        class="section4-title section4-title--margin-default"
+                        style="margin-left: 0; margin-top: 10px"
+                      >
+                        IMMUNITY
+                      </h4>
+
+                      <div
+                        class="
+                          section4-content-item-wrapper
+                          section4-content-item-wrapper--larger
+                        "
+                      >
+                        <img
+                          src="assets/images/doctors/doctors-section4-icon12.svg"
+                        />
+
+                        <h4
+                          class="
+                            section4-content-item-title
+                            section4-content-item-title--small
+                          "
+                          style="font-size: 17px; width: 130%"
+                        >
+                          Vitamin C and vitamin D
+                        </h4>
+
+                        <p class="section4-content-item-label">
+                          Tiredness, weariness, fatigue
+                        </p>
+                      </div>
+                    </div>
+
+                    <div class="col-1">
+                      <div
+                        class="
+                          section4-vertical-divider
+                          section4-vertical-divider--bigger
+                        "
+                        style="margin-left: 50px; height: 500px"
+                      ></div>
+                    </div>
+
+                    <div class="col-5">
+                      <h4
+                        class="
+                          section4-title
+                          section4-title--margin-default
+                          section4-title--border
+                        "
+                        style="width: 90%"
+                      >
+                        THOSE VITAMINS ARE ALSO PRESCRIBED IN THE FOLLOWING
+                        CASES
+                      </h4>
+
+                      <div class="row">
+                        <div class="col-12">
+                          <h4 class="section4-title section4-title--normal">
+                            VITAMIN C
+                          </h4>
+
+                          <div
+                            [chart]="section4VitaminCChart"
+                            class="section4-content-chart-wrapper"
+                            style="margin-top: -10px;"
+                          ></div>
+                        </div>
+
+                        <div class="col-12">
+                          <h4 class="section4-title section4-title--normal">
+                            VITAMIN D
+                          </h4>
+
+                          <div
+                            [chart]="section4VitaminDChart"
+                            class="section4-content-chart-wrapper"
+                            style="width: 340px; margin-top: -10px;"
+                          ></div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="col-5">
+                      <div class="section4-content-background">
+                        <h4
+                          class="
+                            section4-title
+                            section4-title--margin-default
+                            section4-title--border
+                          "
+                          style="margin-bottom: 55px; margin-top: 0"
+                        >
+                          OTHER ASPECTS
+                        </h4>
+
+                        <div class="row">
+                          <div class="col-12">
+                            <h4 class="section4-title section4-title--normal" style="margin-top: -20px;">
+                              STRESS
+                            </h4>
+                            <div
+                              [chart]="section4StressChart"
+                              class="section4-content-chart-wrapper"
+                              style="margin-top: -10px;"
+                            ></div>
+                          </div>
+
+                          <div class="col-12">
+                            <h4 class="section4-title section4-title--normal">
+                              SLEEP IMPROVEMENT
+                            </h4>
+                            <div
+                              [chart]="section4SleepChart"
+                              class="section4-content-chart-wrapper"
+                            ></div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </ng-template>
+              </li>
+            </ul>
+
+            <div [ngbNavOutlet]="subnav2" class=""></div>
+          </ng-template>
+        </li>
+
+        <!-- PROBIOTICS TAB -->
+        <li [ngbNavItem]="4">
+          <a ngbNavLink class="main-tab">PROBIOTICS</a>
+          <ng-template ngbNavContent>
+            <div class="row">
+              <div class="col-12">
+                <h4 class="section4-title section4-title--margin-default">
+                  PREFERENCES FOR PRESCRIPTION
+                </h4>
+              </div>
+            </div>
+
+            <div class="custom-tab-content-probiotics">
+              <div class="doughnut-graphic-wrapper">
+                <div class="center-circle--section4">
+                  <h3 class="title-circle-percent">80%</h3>
+                  <p class="text-circle-percent">
+                    prescribe <br />
+                    probiotics
+                  </p>
+                </div>
+                <div class="center-circle-border--section4"></div>
+                <div
+                  class="
+                    center-circle-percent--section4
+                    center-circle-percent--section4-80
+                  "
+                ></div>
+              </div>
+
+              <div class="section4-content-item-collection">
+                <div class="section4-content-item-wrapper">
+                  <img
+                    src="assets/images/doctors/doctors-section4-icon1.svg"
+                  />
+                  <h4 class="section4-content-item-title">96%</h4>
+                  <p class="section4-content-item-label" style="width: 100%">
+                    off-the-shelf <br />
+                    probiotics
+                  </p>
+                </div>
+
+                <div class="section4-content-item-wrapper">
+                  <img
+                    src="assets/images/doctors/doctors-section4-icon2.svg"
+                  />
+                  <h4 class="section4-content-item-title">66%</h4>
+                  <p class="section4-content-item-label" style="width: 100%">
+                    prescribe multi-strain <br />
+                    probiotics due to <br />
+                    increased efficacy
+                  </p>
+                </div>
+
+                <div class="section4-content-item-wrapper">
+                  <img
+                    src="assets/images/doctors/doctors-section4-icon3.svg"
+                  />
+                  <h4 class="section4-content-item-title">71%</h4>
+                  <p class="section4-content-item-label" style="width: 100%">
+                    say there is no <br />
+                    age restriction
+                  </p>
+                </div>
+
+                <div class="section4-content-item-wrapper">
+                  <img
+                    src="assets/images/doctors/doctors-section4-icon4.svg"
+                  />
+                  <h4 class="section4-content-item-title">64%</h4>
+                  <p class="section4-content-item-label" style="width: 100%">
+                    prescribe it in <br />
+                    association with <br />
+                    antibiotics
+                  </p>
+                </div>
+              </div>
+
+              <div>
+                <div class="col-12">
+                  <div class="add-icon">
+                    <div
+                      class="rec-yellow-tooltip rec-yellow-tooltip--section4"
+                      *ngIf="section4Tooltip7"
+                      (click)="openSection4Tooltip7()"
+                      style="top: -15px; left: -20px"
+                    >
+                      <p class="text-p-tooltip text-p-tooltip--section4">
+                        <b>Enterogermina</b> was the most prescribed probiotic
+                      </p>
+                    </div>
+
+                    <a (click)="openSection4Tooltip7()"
+                      ><img src="assets/images/add.png"
+                    /></a>
+                  </div>
+                </div>
+
+                <div class="doughnut-graphic-wrapper">
+                  <div class="center-circle--section4">
+                    <h3 class="title-circle-percent">36%</h3>
+                    <p class="text-circle-percent">
+                      Probiotics are most <br />
+                      frequently recommended <br />
+                      when the patient has <br />
+                      gastrointestinal disorders
+                    </p>
+                  </div>
+                  <div class="center-circle-border--section4"></div>
+                  <div
+                    class="
+                      center-circle-percent--section4
+                      center-circle-percent--section4-36
+                    "
+                  ></div>
+                </div>
+              </div>
+            </div>
+          </ng-template>
+        </li>
+      </ul>
+
+      <div [ngbNavOutlet]="nav" class=""></div>
+    </div>
+  </div>
+</div>

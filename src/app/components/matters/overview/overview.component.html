@@ -1,0 +1,226 @@
+<div class="container--white">
+  <div class="container">
+    <div class="title__wrapper">
+      <h3 class="title">
+        Analysis comparing the following professional categories
+        <img src="assets/images/overview/arrow-right.svg" />
+      </h3>
+    </div>
+    <ul class="specialties">
+      <li class="specialties__list">
+        <img
+          class="specialties__img"
+          src="assets/images/overview/doctor.svg"
+        />
+        <span class="specialties__name">Doctors</span>
+      </li>
+      <li class="specialties__list">
+        <img
+          class="specialties__img"
+          src="assets/images/overview/nutritionists.svg"
+        />
+        <span class="specialties__name">Nutritionists</span>
+      </li>
+      <li class="specialties__list">
+        <img
+          class="specialties__img"
+          src="assets/images/overview/therapists.svg"
+        />
+        <span class="specialties__name">Physical Therapists</span>
+      </li>
+      <li class="specialties__list">
+        <img
+          class="specialties__img"
+          src="assets/images/overview/pharmacists.svg"
+        />
+        <span class="specialties__name">Pharmacists</span>
+      </li>
+      <li class="specialties__list">
+        <img
+          class="specialties__img"
+          src="assets/images/overview/dugstore.svg"
+        />
+        <span class="specialties__name">Drugstore Clerks</span>
+      </li>
+    </ul>
+    <div class="row space-top">
+      <div class="col-3"></div>
+      <div class="col-6">
+        <div class="yellow-bar"></div>
+      </div>
+      <div class="col-3"></div>
+    </div>
+    <h3 class="title-footer">How to activate this audience effectively?</h3>
+  </div>
+</div>
+
+<div class="section2">
+  <div class="container">
+    <div class="panel">
+      <app-card-source-informations></app-card-source-informations>
+      <app-card-share-information></app-card-share-information>
+      <app-card-type-events></app-card-type-events>
+      <app-card-digital-event></app-card-digital-event>
+      <app-card-e-learning></app-card-e-learning>
+      <app-card-relationship-companies></app-card-relationship-companies>
+    </div>
+  </div>
+</div>
+
+<div class="section3">
+  <div class="container">
+    <h3 class="title-section3">
+      UNDERSTANDING THEIR HABITS AND ATTITUDES IN RELATION TO CHC CATEGORIES...
+    </h3>
+    <app-tab
+      [tabs]="[
+        { id: 'painAndFever', label: 'PAIN & FEVER' },
+        { id: 'antihistamines', label: 'ANTIHISTAMINES' },
+        { id: 'supplements', label: 'SUPPLEMENTS' },
+        { id: 'probiotics', label: 'PROBIOTICS' },
+        { id: 'laxatives', label: 'LAXATIVES/PROBIOTICS' }
+      ]"
+      (changeTabActive)="visibleTabContent = $event"
+    >
+      <div *ngIf="visibleTabContent == 'painAndFever'">
+        <table style="width: 100%">
+          <tr>
+            <td class="title-table bg">DOCTORS</td>
+            <td class="title-table bg">NUTRITIONISTS</td>
+            <td class="title-table bg">PHYSICAL THERAPISTS</td>
+            <td class="title-table bg">PHARMACISTS</td>
+            <td class="title-table bg">DRUGSTORE CLERKS</td>
+          </tr>
+          <tr>
+            <td class="text-table">
+              Adults: efficacy, relation to pain type and intensity are the most
+              important atributes for prescription. <br>Children: products safety is
+              the most important atribute for prescription.
+            </td>
+            <td class="text-table" style="text-align: center">Not evaluated for this specialty</td>
+            <td class="text-table" style="text-align: center">Not evaluated for this specialty</td>
+            <td class="text-table">
+              Adults: efficacy, relation to pain type and intensity are the most
+              important atributes for prescription. <br>Children: products safety is
+              the most important atribute for prescription.
+            </td>
+            <td class="text-table">
+              Adults: efficacy, relation to pain type and intensity are the most
+              important atributes for prescription. <br>Children: products safety is
+              the most important atribute for prescription.
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div *ngIf="visibleTabContent == 'antihistamines'">
+        <table style="width: 100%">
+          <tr>
+            <td class="title-table bg">DOCTORS</td>
+            <td class="title-table bg">NUTRITIONISTS</td>
+            <td class="title-table bg">PHYSICAL THERAPISTS</td>
+            <td class="title-table bg">PHARMACISTS</td>
+            <td class="title-table bg">DRUGSTORE CLERKS</td>
+          </tr>
+          <tr>
+            <td class="text-table">
+              Impact on school performance may change preferences and
+              prescriptions.
+            </td>
+            <td class="text-table" style="text-align: center">Not evaluated for this specialty</td>
+            <td class="text-table" style="text-align: center">Not evaluated for this specialty</td>
+            <td class="text-table">
+              Benefits of corticosteroids must be developed
+            </td>
+            <td class="text-table">
+              Differentiation between 1st and 2nd generation is not clear.
+              \nBenefits of corticosteroids must be developed
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div *ngIf="visibleTabContent == 'supplements'">
+        <table style="width: 100%">
+          <tr>
+            <td class="title-table bg">DOCTORS</td>
+            <td class="title-table bg">NUTRITIONISTS</td>
+            <td class="title-table bg">PHYSICAL THERAPISTS</td>
+            <td class="title-table bg">PHARMACISTS</td>
+            <td class="title-table bg">DRUGSTORE CLERKS</td>
+          </tr>
+          <tr>
+            <td class="text-table">
+              Only 45% follow some guideline. <br>Topics such as 'arginine' and
+              'energy' need to be developed
+            </td>
+            <td class="text-table">
+            High percentage of supplement recommendations - Arginine needs
+              to be developed
+            </td>
+            <td class="text-table">
+              Not frequent. Need stronger scientific theoretical support and
+              more contact with the pharmaceutical industry
+            </td>
+            <td class="text-table">
+              Need to develop more ability with this category
+            </td>
+            <td class="text-table">
+              Need to develop more ability with this category
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div *ngIf="visibleTabContent == 'probiotics'">
+        <table style="width: 100%">
+          <tr>
+            <td class="title-table bg">DOCTORS</td>
+            <td class="title-table bg">NUTRITIONISTS</td>
+            <td class="title-table bg">PHYSICAL THERAPISTS</td>
+            <td class="title-table bg">PHARMACISTS</td>
+            <td class="title-table bg">DRUGSTORE CLERKS</td>
+          </tr>
+          <tr>
+            <td class="text-table">Preventive prescription is minor</td>
+            <td class="text-table">
+            Large portion prescribing compounded products <br>Studies proving
+              safety and effectiveness may strengthen and qualify the
+              relationship with the industry
+            </td>
+            <td class="text-table" style="text-align: center">Not evaluated for this specialty</td>
+            <td class="text-table">
+              They suggest it, but they want to know more; there is a
+              possibility they will suggest it more often
+            </td>
+            <td class="text-table">
+              They suggest it, but they want to know more; there is a
+              possibility they will suggest it more often
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div *ngIf="visibleTabContent == 'laxatives'">
+        <table style="width: 100%">
+          <tr>
+            <td class="title-table bg">DOCTORS</td>
+            <td class="title-table bg">NUTRITIONISTS</td>
+            <td class="title-table bg">PHYSICAL THERAPISTS</td>
+            <td class="title-table bg">PHARMACISTS</td>
+            <td class="title-table bg">DRUGSTORE CLERKS</td>
+          </tr>
+          <tr>
+            <td class="text-table" style="text-align: center">Not evaluated for this specialty</td>
+            <td class="text-table">
+              Low prescription, category that needs be developed
+            </td>
+            <td class="text-table" style="text-align: center">Not evaluated for this specialty</td>
+            <td class="text-table">
+              Need to develop more ability with this category
+            </td>
+            <td class="text-table">
+              Need to develop more ability with this category
+            </td>
+          </tr>
+        </table>
+      </div>
+    </app-tab>
+  </div>
+</div>

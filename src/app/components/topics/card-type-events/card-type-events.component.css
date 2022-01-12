@@ -1,0 +1,167 @@
+.left-frame {
+  height: 205px;
+  background-color: #94d0f2;
+  width: 103%;
+  margin-left: 3px;
+  position: absolute;
+  border-top-left-radius: 11px;
+  border-bottom-left-radius: 11px;
+}
+
+.text-inperson {
+  font-family: "Lato";
+  color: #023866;
+  font-size: 18px;
+  text-decoration: underline;
+  font-weight: bold;
+  margin-left: 25px;
+  margin-top: 25px;
+}
+
+.text-inperson-p {
+  font-family: "Lato";
+  color: #023866;
+  text-align: right;
+  font-size: 12px;
+  hyphens: none;
+  margin-top: 10px;
+  margin-left: 20px;
+}
+
+.icon-online {
+  height: 50%;
+  margin-top: 15px;
+}
+
+.icon-people {
+  height: 50%;
+  margin-left: 40px;
+  margin-top: 15px;
+}
+
+.add-icon {
+  text-align: center;
+  position: relative;
+  cursor: pointer;
+}
+
+.add-icon img {
+  height: 30px;
+}
+
+.right-frame {
+  height: 205px;
+  background-color: #41c1f2;
+  width: 95%;
+  margin-left: -14px;
+  border-top-right-radius: 11px;
+  border-bottom-right-radius: 11px;
+  position: absolute;
+}
+
+.text-onlineevents {
+  font-family: "Lato";
+  color: #023866;
+  font-size: 18px;
+  text-decoration: underline;
+  font-weight: bold;
+  margin-right: 25px;
+  margin-top: 25px;
+  text-align: right;
+}
+
+.rec-yellow-tooltip {
+  width: 264px;
+  height: 192px;
+  background: #f8b133 0% 0% no-repeat padding-box;
+  border-radius: 7px;
+  margin-top: -8%;
+  margin-left: 30%;
+  display: block;
+  cursor: pointer;
+}
+
+.text-p-tooltip {
+  text-align: left;
+  letter-spacing: 0px;
+  color: #023866;
+  font-family: "Lato";
+  font-size: 12px;
+  padding: 20px;
+}
+
+.center-circle {
+  width: 150px;
+  height: 150px;
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 50%;
+  margin-top: 28px;
+  background: #fff;
+  z-index: 999;
+}
+
+.center-circle-border {
+  width: 174px;
+  height: 174px;
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 50%;
+  margin-top: 16px;
+  background: transparent;
+  border: 4px solid #fff;
+}
+
+.title-circle-percent {
+  color: #003866;
+  font-family: "Lato";
+  font-weight: bold;
+  font-size: 25px;
+  text-align: center;
+}
+
+.center-circle-percent {
+  width: 164px;
+  height: 164px;
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 50%;
+  z-index: 1;
+  margin-top: 21px;
+  background: linear-gradient(270deg, #003866 50%, transparent 50%),
+    linear-gradient(0deg, #003866 50%, transparent 50%);
+}
+
+.text-circle-percent {
+  color: #003866;
+  font-family: "Lato";
+  font-weight: 400;
+  font-size: 11px;
+  text-align: center;
+  padding-left: 10px;
+  padding-right: 10px;
+  margin-top: 36px;
+}
+
+.center-circle-percent--section4-62 {
+  background: linear-gradient(270deg, #003866 50%, transparent 50%),
+    linear-gradient(-50deg, #003866 50%, transparent 50%);
+}
+.center-circle-percent--section4-50 {
+background: linear-gradient(270deg, #003866 50%, transparent 50%),
+  linear-gradient(270deg, #003866 50%, transparent 50%);
+}
+
+.center-circle-percent--section4-70 {
+  background: linear-gradient(270deg, #003866 50%, transparent 50%),
+    linear-gradient(350deg, #003866 50%, transparent 50%);
+}
