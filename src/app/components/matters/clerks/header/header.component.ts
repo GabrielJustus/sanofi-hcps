@@ -18,8 +18,8 @@ export class HeaderComponent implements OnInit {
   chartSpecialty =  this.createHorizontalStackedChart();
 
   // Doughnut
-  public doughnutChartLabels: Label[] = ['ABRAFARMA Networks', 'FEBRAFAR member', 'Other'];
-  public doughnutChartData: MultiDataSet = [[41, 44, 40]];
+  public doughnutChartLabels: Label[] = [];
+  public doughnutChartData: MultiDataSet = [[60, 30, 35]];
   public doughnutChartType: ChartType = 'doughnut';
   public doughnutChartTypeColors: any[] = [
     {

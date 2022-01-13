@@ -17,16 +17,15 @@ export class CardSourceInformationsComponent implements OnInit {
   );
 
   public doughnutChartLabels3: Label[] = [
-    '68%\nINTERNET\nis the most\nused medium for\n the searches,\n regardless of\nprofessional category,\n prevailing among\nclerks',
-    'among nutritionists\n(37%)',
-    'PubMed\n(20%)',
-    'physical therapists (16%),\n scientific articles and studies.',
+    'Scientific articles and studies\namong physical therapists\n(16%)',
+    'Scientific articles and studies\namong nutritionists(37%)',
+    'Pubmed\namong physicians\n(20%)',
   ];
-  public doughnutChartData3: MultiDataSet = [[68, 37, 20, 16]];
+  public doughnutChartData3: MultiDataSet = [[16, 37, 20]];
   public doughnutChartType3: ChartType = 'doughnut';
   public doughnutChartTypeColors3: any[] = [
     {
-      backgroundColor: ['#023866', '#006EB6', '#41C1F2', '#DADADA'],
+      backgroundColor: ['#023866', '#006EB6', '#41C1F2'],
     },
   ];
   public doughnutChartOpts3: ChartOptions = {

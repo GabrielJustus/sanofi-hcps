@@ -1217,6 +1217,127 @@
       </div>
     </div>
 
+    <div
+      class="item-list-anim"
+      style="margin-top: 2%"
+      [ngClass]="{ 'item-list': isCollapsed10 }"
+      (click)="toggleCollapsed11()"
+    >
+      <div class="row">
+        <div class="col-1">
+          <img src="assets/images/like.png" class="icon-item" />
+        </div>
+
+        <div class="col-7">
+          <h4 class="text-item-section3">
+            Ranking of most important attributes
+          </h4>
+        </div>
+        <div class="col-2"></div>
+
+        <div class="col-2">
+          <img
+            src="assets/images/icon_expand.png"
+            class="icon-expand"
+            *ngIf="isCollapsed11"
+          />
+          <img
+            src="assets/images/icon_retract.png"
+            class="icon-expand"
+            *ngIf="!isCollapsed11"
+          />
+        </div>
+      </div>
+    </div>
+
+    <div id="collapseBasic11" [collapse]="isCollapsed11" [isAnimated]="false">
+      <div
+        class="well well-lg card card-block card-header item-collapsed-section3"
+      >
+        <br />
+        <div class="row">
+          <div class="col-6">
+            <div class="rec-yellow-section-3">
+              <h4 class="title-rec-section3">Probiotics</h4>
+              <div
+                [chart]="section3ProbioticsChart"
+                class="section4-content-chart-wrapper"
+              ></div>
+            </div>
+          </div>
+          <div class="col-6">
+            <div class="rec-yellow-section-3">
+              <h4 class="title-rec-section3">Supplements</h4>
+              <div
+                [chart]="section3SupplementsChart"
+                class="section4-content-chart-wrapper"
+              ></div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <div
+      class="item-list-anim"
+      style="margin-top: 2%"
+      (click)="toggleCollapsed12()"
+    >
+      <div class="row">
+        <div class="col-1">
+          <img src="assets/images/deslike.png" class="icon-item" />
+        </div>
+
+        <div class="col-7">
+          <h4 class="text-item-section3">
+            Ranking of least important attributes
+          </h4>
+        </div>
+        <div class="col-2"></div>
+
+        <div class="col-2">
+          <img
+            src="assets/images/icon_expand.png"
+            class="icon-expand"
+            *ngIf="isCollapsed12"
+          />
+          <img
+            src="assets/images/icon_retract.png"
+            class="icon-expand"
+            *ngIf="!isCollapsed12"
+          />
+        </div>
+      </div>
+    </div>
+
+    <div id="collapseBasic12" [collapse]="isCollapsed12" [isAnimated]="false">
+      <div
+        class="well well-lg card card-block card-header item-collapsed-section3"
+      >
+        <br />
+        <div class="row">
+          <div class="col-6">
+            <div class="rec-gray-section-3">
+              <h4 class="title-rec-section3">Probiotics</h4>
+              <div
+                [chart]="section3ProbioticsChart2"
+                class="section4-content-chart-wrapper"
+              ></div>
+            </div>
+          </div>
+          <div class="col-6">
+            <div class="rec-gray-section-3">
+              <h4 class="title-rec-section3">Supplements</h4>
+              <div
+                [chart]="section3SupplementsChart2"
+                class="section4-content-chart-wrapper"
+              ></div>
+            </div>
+          </div>
+
+        </div>
+
   </div>
 </div>
 
@@ -1487,7 +1608,7 @@
         <!-- SUPPLEMENTS TAB -->
         <li [ngbNavItem]="4">
 
-          <a ngbNavLink class="main-tab">PROBIOTICS</a>
+          <a ngbNavLink class="main-tab">PROBIOTICS/ LAXATIVES</a>
 
           <ng-template ngbNavContent>
             <ul
@@ -1647,6 +1768,22 @@
                   </div>
                 </ng-template>
               </li>
+              <li [ngbNavItem]="3">
+                <a ngbNavLink class="secondary-tab mt-5">LAXATIVES</a>
+
+                <ng-template ngbNavContent>
+                  <div class="custom-tab-content" style="height: 400px;">
+                    <div class="row">
+                      <p
+                                    class="title-end-section-nut"
+                                    style="text-align: center !important; padding-top: 3%"
+                                  >
+                                    97% OF NUTRITIONISTS DO NOT PRESCRIBE LAXATIVES
+                                  </p>
+                    </div>
+                  </div>
+                </ng-template>
+              </li>
             </ul>
 
             <div [ngbNavOutlet]="subnav2" class=""></div>
@@ -1654,67 +1791,6 @@
         </li>
 
         <!-- PROBIOTICS TAB -->
-        <li [ngbNavItem]="5">
-          <a ngbNavLink class="main-tab">LAXATIVES</a>
-          <ng-template ngbNavContent>
-            <p
-              class="title-end-section-nut"
-              style="text-align: center !important; padding-top: 3%"
-            >
-              97% OF NUTRITIONISTS DO NOT PRESCRIBE LAXATIVES
-            </p>
-            <br />
-            <div class="row" style="margin-left: 15%">
-              <div class="col-5">
-                <p
-                  class="title-end-section-nut"
-                  style="text-align: center !important; padding-top: 2%"
-                >
-                  RANKING OF SUPPLEMENTS
-                </p>
-
-                <p class="most-important">MOST IMPORTANT ATRIBUTES</p>
-                <div
-                  [chart]="mostImportantChart"
-                  class="section4-content-chart-wrapper"
-                  style="width: auto"
-                ></div>
-                <br />
-                <p class="most-important">LEAST IMPORTANT ATRIBUTES</p>
-                <div
-                  [chart]="leastImportantChart"
-                  class="section4-content-chart-wrapper"
-                  style="width: auto; margin-left: -38%"
-                ></div>
-              </div>
-              <div class="col-5">
-                <div class="rec-gray-4">
-                  <p
-                    class="title-end-section-nut"
-                    style="text-align: center !important; padding-top: 2%"
-                  >
-                    RANKING OF SUPPLEMENTS
-                  </p>
-
-                  <p class="most-important">MOST IMPORTANT ATRIBUTES</p>
-                  <div
-                    [chart]="mostImportantChart2"
-                    class="section4-content-chart-wrapper"
-                    style="width: auto; margin-left: 8%"
-                  ></div>
-                  <br />
-                  <p class="most-important">LEAST IMPORTANT ATRIBUTES</p>
-                  <div
-                    [chart]="leastImportantChart2"
-                    class="section4-content-chart-wrapper"
-                    style="width: auto"
-                  ></div>
-                </div>
-              </div>
-            </div>
-            <br /><br />
-          </ng-template>
-        </li>
       </ul>
 
       <div [ngbNavOutlet]="nav" class=""></div>

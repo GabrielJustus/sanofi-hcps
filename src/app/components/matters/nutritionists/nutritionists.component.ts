@@ -22,6 +22,7 @@ export class NutritionistsComponent implements OnInit {
 
   isCollapsed10 = true;
   isCollapsed11 = true;
+  isCollapsed12 = true;
 
   recTooltip1 = false;
   recTooltip2 = false;
@@ -1240,35 +1241,30 @@ export class NutritionistsComponent implements OnInit {
   );
 
   /* SECTION 3 CHARTS 1 */
-  section3PainChart = this.createHorizontalBarChart(
+  section3LaxativeChart = this.createHorizontalBarChart(
     [21, 14, 13],
     ['Efficacy', 'Product safety', 'Pain intensity'],
     45
   );
 
-  section3FeverChart = this.createHorizontalBarChart(
+  section3LaxativeChart2 = this.createHorizontalBarChart(
     [20, 19, 13],
     ['Active ingredient', 'Product safety', 'Scientific proof of benefits'],
     45
   );
 
-  section3FeverChildrenChart = this.createHorizontalBarChart(
+  section3SupplementsChart = this.createHorizontalBarChart(
     [39, 39, 14],
     ['Safety', 'Efficacy', 'Flavor'],
     45
   );
 
-  section3AllergyChart = this.createHorizontalBarChart(
+  section3SupplementsChart2 = this.createHorizontalBarChart(
     [18, 18, 18],
     ['Active ingredient', 'Scientific proof of benefits', 'Product safety'],
     45
   );
 
-  section3SupplementsChart = this.createHorizontalBarChart(
-    [19, 11, 10],
-    ['Efficacy', 'Safety', 'Prior experience with the brand'],
-    45
-  );
 
   section3ProbioticsChart = this.createHorizontalBarChart(
     [22, 15, 15],
@@ -1313,16 +1309,6 @@ export class NutritionistsComponent implements OnInit {
     20
   );
 
-  section3SupplementsChart2 = this.createHorizontalBarChart(
-    [8, 7, 4],
-    [
-      'Prior experience with the brand / dosage',
-      'Price / form of the supplement',
-      'Frequency of contact with representative / samples',
-    ],
-    20
-  );
-
   section3ProbioticsChart2 = this.createHorizontalBarChart(
     [6, 5, 3],
     [
@@ -1330,7 +1316,7 @@ export class NutritionistsComponent implements OnInit {
       'Price / thermoresistance / brand',
       'Samples / patient preference',
     ],
-    20
+    45
   );
 
   /* SECTION 4 CHARTS */
@@ -1519,110 +1505,31 @@ export class NutritionistsComponent implements OnInit {
 
   toggleCollapsed10() {
     this.isCollapsed10 = !this.isCollapsed10;
-
-    if (!this.isCollapsed10) {
-      /* SECTION 3 CHARTS 1 */
-      this.section3PainChart = this.createHorizontalBarChart(
-        [53, 50],
-        ['vitamin C', 'multivitamin'],
-        45
-      );
-
-      this.section3FeverChart = this.createHorizontalBarChart(
-        [20, 19, 13],
-        ['Active ingredient', 'Product safety', 'Scientific proof of benefits'],
-        45
-      );
-
-      this.section3FeverChildrenChart = this.createHorizontalBarChart(
-        [39, 39, 14],
-        ['Safety', 'Efficacy', 'Flavor'],
-        45
-      );
-
-      this.section3AllergyChart = this.createHorizontalBarChart(
-        [18, 18, 18],
-        ['Active ingredient', 'Scientific proof of benefits', 'Product safety'],
-        45
-      );
-
-      this.section3SupplementsChart = this.createHorizontalBarChart(
-        [19, 11, 10],
-        ['Efficacy', 'Safety', 'Prior experience with the brand'],
-        45
-      );
-
-      this.section3ProbioticsChart = this.createHorizontalBarChart(
-        [22, 15, 15],
-        ['Scientific proof of benefits', 'Active ingredient', 'Product safety'],
-        45
-      );
-    }
   }
 
   toggleCollapsed11() {
     this.isCollapsed11 = !this.isCollapsed11;
 
     if (!this.isCollapsed11) {
-      /* SECTION 3 CHARTS 2 */
-      this.section3PainChart2 = this.createHorizontalBarChart(
-        [6, 5, 4],
-        [
-          'Pain location / pharmaceutical form of the drug',
-          'Price / prior patient experience with the brand',
-          'Patient preference / brand',
-        ],
-        20
-      );
+      /* SECTION 3 CHARTS 1 */
+      this.section3ProbioticsChart = this.createHorizontalBarChart([19, 13, 12], ['Efficacy', 'Trust in pharmaceutical company', 'Safety'], 100);
 
-      this.section3FeverChart2 = this.createHorizontalBarChart(
-        [7, 6, 4],
-        [
-          'Trust in pharmaceutical company',
-          'Price',
-          'Samples/frequency of contact with representative',
-        ],
-        20
-      );
+      this.section3SupplementsChart = this.createHorizontalBarChart([27, 13, 11], ['Scientif proof of benefits', 'Product safety/trust in pharmaceutical company', 'Active ingredient'], 30);
 
-      this.section3FeverChildrenChart2 = this.createHorizontalBarChart(
-        [8, 1],
-        ['Pharmaceutical form (drops / liquid solution)', 'Price'],
-        20
-      );
 
-      this.section3AllergyChart2 = this.createHorizontalBarChart(
-        [7, 6, 4],
-        [
-          'Trust in pharmaceutical company / drug form',
-          'Price',
-          'Frequency of contact with representative / samples',
-        ],
-        20
-      );
-
-      this.section3SupplementsChart2 = this.createHorizontalBarChart(
-        [8, 7, 4],
-        [
-          'Prior experience with the brand / dosage',
-          'Price / form of the supplement',
-          'Frequency of contact with representative / samples',
-        ],
-        20
-      );
-
-      this.section3ProbioticsChart2 = this.createHorizontalBarChart(
-        [6, 5, 3],
-        [
-          'Dosage / frequency of contact with representative / form of probiotic / patients prior experience with the brand / resistance',
-          'Price / thermoresistance / brand',
-          'Samples / patient preference',
-        ],
-        20
-      );
     }
   }
 
+  toggleCollapsed12() {
+    this.isCollapsed12 = !this.isCollapsed12;
+
+    if (!this.isCollapsed12) {
+      /* SECTION 3 CHARTS 2 */
+      this.section3ProbioticsChart2 = this.createHorizontalBarChart([5, 4, 3], ['Resistance to antibiotics/brand', 'prior patient experience with the brand', 'Patient preference'], 100);
+
+      this.section3SupplementsChart2 = this.createHorizontalBarChart([8, 6, 5], ['Prior experience with the brand', 'Price/dosage/frequency of contact with representative', 'Pharmaceutical forms/samples'], 30);
+    }
+  }
 
   public doughnutChartLabels4: Label[] = [
     'Dysbiosis (35%)',
